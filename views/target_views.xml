@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+    
+        <!-- Views -->
+        <record id="view_sale_order_target_form" model="ir.ui.view">
+            <field name="name">sale.order.target.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <field name="second_approval" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[@name='action_quotation_send']" position="before">
+                    <button name="action_approve_quot" string="Approve Quotation" type="object"
+                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'draft')]}"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_contract_target_form" model="ir.ui.view">
+            <field name="name">contract.target.form</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='main']" position="after">
+                    <group name="user_info">
+                        <group>
+                            <field name="username"/>
+                            <field name="password"/>
+                        </group>
+                        <group>
+                            <button name="%(target_features.action_user_type)d" string="Send Activation Email" type="action" class="oe_highlight"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_res_partner_target_form" model="ir.ui.view">
+            <field name="name">res.partner.target.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='title']" position="after">
+                    <field name="partner_url" widget="url"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <!-- Actions -->
+        <record id="sale.action_quotations" model="ir.actions.act_window">
+            <field name="domain">[('state','in',('draft', 'approved', 'sent', 'cancel'))]</field>
+        </record>
+            
+    </data>            
+</openerp>

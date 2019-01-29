@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+    
+        <!-- Views -->
+        <record id="view_user_type_form" model="ir.ui.view">
+            <field name="name">user.type.form</field>
+            <field name="model">user.type.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Type of User">
+                    <span>Please select the type of user: </span>
+                    <group>
+                        <field name="user_type" nolabel="1"/>
+                        <field name="email_template_id" invisible="1"/>
+                        <field name="email_body" nolabel="1" attrs="{'invisible': [('email_template_id', '==', False)]}"/>
+                        <field name="contract_id" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="send_email" string="Send Mail" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <record id="action_user_type" model="ir.actions.act_window">
+            <field name="name">Type of User</field>
+            <field name="res_model">user.type.wiz</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_contract_id': active_id}</field>
+        </record>
+            
+    </data>            
+</openerp>

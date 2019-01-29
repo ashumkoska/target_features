@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <!-- Templates Attachments -->
+        <record id="mail_attach_1" model="ir.attachment">
+            <field name="datas_fname">БизнисМрежа.мк - општи услови.pdf</field>
+            <field name="name">БизнисМрежа.мк - општи услови.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/БизнисМрежа.мк - општи услови.pdf"/>
+        </record>
+        <record id="mail_attach_2" model="ir.attachment">
+            <field name="datas_fname">Опис на модули на БизнисМрежа.мк.pdf</field>
+            <field name="name">Опис на модули на БизнисМрежа.мк.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/Опис на модули на БизнисМрежа.мк.pdf"/>
+        </record>
+        <record id="mail_attach_3" model="ir.attachment">
+            <field name="datas_fname">Табела на тарифирање.pdf</field>
+            <field name="name">Табела на тарифирање.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/Табела на тарифирање.pdf"/>
+        </record>
+        <record id="mail_attach_4" model="ir.attachment">
+            <field name="datas_fname">УПАТСТВО ЗА КОРИСТЕЊЕ Верзија 1.3.pdf</field>
+            <field name="name">УПАТСТВО ЗА КОРИСТЕЊЕ Верзија 1.3.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/УПАТСТВО ЗА КОРИСТЕЊЕ Верзија 1.3.pdf"/>
+        </record>
+    
+        <!-- Email Templates -->
+        <!-- Prepaid Users -->
+        <record id="mail_prepaid_activation_notif" model="email.template">
+            <field name="name">User Activation (Prepaid)</field>
+            <field name="model_id" ref="analytic.model_account_analytic_account"/>
+            <field name="email_from">${user.email or ''}</field>
+            <field name="email_to">${object.partner_id.email|safe}</field>
+            <field name="subject">Активација на кориснички профил на БизнисMрежа.мк</field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('target_features.mail_attach_1'),
+                                                        ref('target_features.mail_attach_2'),
+                                                        ref('target_features.mail_attach_3'),
+                                                        ref('target_features.mail_attach_4')])]"/>
+            <field name="body_html"><![CDATA[
+<p>Почитувани, </p>
+<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>
+<p><a href="http://www.biznismreza.mk/">www.biznismreza.mk</a></p>
+<p>
+    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>
+    <span>Лозинка: </span><b>${object.password or ''}</b>
+</p>
+<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         
+
+<img src="/target_features/static/src/img/activation.jpg" style="max-width: 444px;"/>
+
+<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>
+<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>
+<p>
+    <span>Ваш советник: </span><b>Фросина Мирчески</b><br/>
+    <span>Телефон: </span><b>071/397-498</b><br/>
+    <span>Е-пошта: </span><a href="mailto:support@targetgroup.mk">support@targetgroup.mk</a>
+</p>
+<p class="text-muted">
+    <span>Со почит, </span><br/>
+    <b style="color: red;">ТАРГЕТ ГРУП ДОО Скопје</b><br/>
+    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>
+    <span>1000 Скопје, Р. Македонија</span><br/>
+    <span>Тел/Факс: +389 (2) 3117 100</span><br/>
+    <span>Е-маил: </span><a href="mailto:info@targetgroup.mk">info@targetgroup.mk</a><br/>
+    <a href="http://targetgroup.mk/">www.targetgroup.mk</a>
+</p>
+<p>
+    <b style="color: red;"><i>Успех е да се биде во тек со промените</i></b><br/>
+    <a href="http://targetgroup.mk/">
+      <img src="/target_features/static/src/img/logo.jpg" style="max-width: 156px;"/>
+    </a>
+</p>
+<p class="text-muted">
+    <hr/>
+    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>
+    <hr/>
+    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>
+    <hr/>
+    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>
+</p>
+                ]]>
+            </field>
+        </record>
+        
+        <!-- Package Users -->
+        <record id="mail_package_activation_notif" model="email.template">
+            <field name="name">User Activation (Package)</field>
+            <field name="model_id" ref="analytic.model_account_analytic_account"/>
+            <field name="email_from">${user.email or ''}</field>
+            <field name="email_to">${object.partner_id.email|safe}</field>
+            <field name="subject">Активација на кориснички профил на БизнисMрежа.мк</field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('target_features.mail_attach_1'),
+                                                        ref('target_features.mail_attach_2'),
+                                                        ref('target_features.mail_attach_3'),
+                                                        ref('target_features.mail_attach_4')])]"/>
+            <field name="body_html"><![CDATA[
+<p>Почитувани, </p>
+<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>
+<p><a href="http://www.biznismreza.mk/">www.biznismreza.mk</a></p>
+<p>
+    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>
+    <span>Лозинка: </span><b>${object.password or ''}</b>
+</p>
+<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         
+
+<img src="/target_features/static/src/img/activation.jpg" style="max-width: 444px;"/>
+
+<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>
+<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>
+<p>
+    <span>Ваш советник: </span><b>Елена Цветкова</b><br/>
+    <span>Телефон: </span><b>076/265-661</b><br/>
+    <span>Е-пошта: </span><a href="mailto:support@targetgroup.mk">support@targetgroup.mk</a>
+</p>
+<p class="text-muted">
+    <span>Со почит, </span><br/>
+    <b style="color: red;">ТАРГЕТ ГРУП ДОО Скопје</b><br/>
+    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>
+    <span>1000 Скопје, Р. Македонија</span><br/>
+    <span>Тел/Факс: +389 (2) 3117 100</span><br/>
+    <span>Е-маил: </span><a href="mailto:info@targetgroup.mk">info@targetgroup.mk</a><br/>
+    <a href="http://targetgroup.mk/">www.targetgroup.mk</a>
+</p>
+<p>
+    <b style="color: red;"><i>Успех е да се биде во тек со промените</i></b><br/>
+    <a href="http://targetgroup.mk/">
+      <img src="/target_features/static/src/img/logo.jpg" style="max-width: 156px;"/>
+    </a>
+</p>
+<p class="text-muted">
+    <hr/>
+    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>
+    <hr/>
+    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>
+    <hr/>
+    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>
+</p>
+                ]]>
+            </field>
+        </record>
+            
+    </data>            
+</openerp>
