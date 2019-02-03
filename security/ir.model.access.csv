@@ -1,0 +1,3 @@
+"id","name","model_id/id","group_id/id","perm_read","perm_write","perm_create","perm_unlink"
+"partner_note_all","partner_note_all","target_features.model_partner_note",,"True","False","False","False"
+"partner_note_manager","partner_note_manager","target_features.model_partner_note","target_features.role_target_manager_res_groups","True","True","True","True"

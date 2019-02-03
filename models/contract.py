@@ -16,3 +16,7 @@ class account_analytic_account(models.Model):
                               ('sent', 'Email Sent'),
                               ('close', 'Closed'),
                               ('cancelled', 'Cancelled')])
+    
+    @api.model
+    def check_expired_contracts(self):
+        pass

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data noupdate="0">
+
+        <!-- Record Rules -->
+        <record id="crm_leads_farmer" model="ir.rule">
+            <field name="name">Leads (Farmer)</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="domain_force">[('name', '=', user.name)]</field>
+            <field name="groups" eval="[(4, ref('target_features.role_target_farmer_res_groups'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+    </data>            
+</openerp>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data noupdate="1">
+    
+        <!-- Templates Attachments -->
+        <record id="mail_attach_1" model="ir.attachment">
+            <field name="datas_fname">БизнисМрежа.мк - општи услови.pdf</field>
+            <field name="name">БизнисМрежа.мк - општи услови.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/БизнисМрежа.мк - општи услови.pdf"/>
+        </record>
+        <record id="mail_attach_2" model="ir.attachment">
+            <field name="datas_fname">Опис на модули на БизнисМрежа.мк.pdf</field>
+            <field name="name">Опис на модули на БизнисМрежа.мк.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/Опис на модули на БизнисМрежа.мк.pdf"/>
+        </record>
+        <record id="mail_attach_3" model="ir.attachment">
+            <field name="datas_fname">Табела на тарифирање.pdf</field>
+            <field name="name">Табела на тарифирање.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/Табела на тарифирање.pdf"/>
+        </record>
+        <record id="mail_attach_4" model="ir.attachment">
+            <field name="datas_fname">УПАТСТВО ЗА КОРИСТЕЊЕ Верзија 1.3.pdf</field>
+            <field name="name">УПАТСТВО ЗА КОРИСТЕЊЕ Верзија 1.3.pdf</field>
+            <field name="datas" type="base64" file="target_features/static/src/attachments/УПАТСТВО ЗА КОРИСТЕЊЕ Верзија 1.3.pdf"/>
+        </record>
+
+        <!-- Partner Tags -->
+        <record id="partner_note_inactive" model="partner.note">
+            <field name="name">Inactive</field>
+        </record>
+        
+        <!-- Scheduled Actions -->
+        <record id="ir_cron_contract_expiration" model="ir.cron">
+            <field name="name">Contract Expiration</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'account.analytic.account'"/>
+            <field name="function" eval="'check_expired_contracts'"/>
+            <field eval="'()'" name="args"/>
+        </record>
+
+    </data>            
+</openerp>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+    
+        <!-- Views -->
+        <record id="view_partner_note_form" model="ir.ui.view">
+            <field name="name">partner.note.form</field>
+            <field name="model">partner.note</field>
+            <field name="arch" type="xml">
+                <form string="Partner Tag">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+        <record id="view_partner_note_tree" model="ir.ui.view">
+            <field name="name">partner.note.tree</field>
+            <field name="model">partner.note</field>
+            <field name="arch" type="xml">
+                <tree string="Partner Tags" editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_partner_note_search" model="ir.ui.view">
+            <field name="name">partner.note.search</field>
+            <field name="model">partner.note</field>
+            <field name="arch" type="xml">
+                <search string="Partner Tag">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="action_partner_notes" model="ir.actions.act_window">
+            <field name="name">Partner Tags</field>
+            <field name="res_model">partner.note</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem id="menu_partner_notes" name="Partner Tags" parent="base.menu_base_config"
+                  action="target_features.action_partner_notes" sequence="38"/>
+            
+    </data>            
+</openerp>

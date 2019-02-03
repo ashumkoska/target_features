@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data noupdate="0">
+    
+        <!-- Group Categories -->
+        <record id="categ_target" model="ir.module.category">
+            <field name="name">Target Roles</field>
+        </record>
+
+        <!-- Roles -->
+        <record id="role_target_farmer" model="res.users.role">
+            <field name="name">Farmer</field>
+            <field name="category_id" ref="target_features.categ_target"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user')),
+                                             (4, ref('base.group_sale_salesman'))]"/>
+        </record>
+        <record id="role_target_sales" model="res.users.role">
+            <field name="name">Sales Person</field>
+            <field name="category_id" ref="target_features.categ_target"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="role_target_manager" model="res.users.role">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="target_features.categ_target"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="role_target_accountant" model="res.users.role">
+            <field name="name">Accountant</field>
+            <field name="category_id" ref="target_features.categ_target"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+    </data>            
+</openerp>

@@ -11,11 +11,18 @@
     'description': 'Additional Features for Target',
     'depends': [
         'purchase',
-        'Target_Neodata'
+        'Target_Neodata',
+        'marketing_crm',
+        'base_user_role'
     ],
-    'data': [        
+    'data': [
+        'security/ir.model.access.csv',
+        'security/target_roles.xml', 
+        'security/target_rules.xml', 
+        'data/target_data.xml', 
         'wizard/user_type_wiz.xml',
         'wizard/import_partners_wiz.xml',
+        'views/partner_note_views.xml',
         'views/target_views.xml', 
         'views/target_templates.xml'
     ],
