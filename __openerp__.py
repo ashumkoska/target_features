@@ -21,10 +21,11 @@
         'security/target_rules.xml', 
         'data/target_data.xml', 
         'wizard/user_type_wiz.xml',
-        'wizard/import_partners_wiz.xml',
+        'wizard/import_partners_leads_wiz.xml',
         'views/partner_note_views.xml',
         'views/target_views.xml', 
-        'views/target_templates.xml'
+        'views/activation_templates.xml',
+        'views/expiration_templates.xml'
     ],
     'installable': True,
     'auto_install': True

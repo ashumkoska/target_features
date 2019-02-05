@@ -33,7 +33,7 @@ class user_type_wiz(models.TransientModel):
     _description = 'User Type Wizard'
 
     user_type = fields.Selection([('prepaid', 'Prepaid User'),
-                                  ('package', 'Package User')], string='Type of User')
+                                  ('package', 'Package User')], string='Type of User', required=True)
     email_template_id = fields.Many2one('email.template', string='Template')
     email_body = fields.Html(string='Body')
     contract_id = fields.Many2one('account.analytic.account', string='Contract', readonly=True)

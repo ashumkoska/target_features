@@ -34,5 +34,5 @@
             <field name="context">{'default_contract_id': active_id}</field>
         </record>
             
-    </data>            
+    </data>
 </openerp>

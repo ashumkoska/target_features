@@ -117,45 +117,6 @@
                 ]]>
             </field>
         </record>
-        
-        <!-- Contract Expiration (3 Months) -->
-        <record id="mail_contract_expiration_3" model="email.template">
-            <field name="name">Contract Expiration (3 Months)</field>
-            <field name="model_id" ref="analytic.model_account_analytic_account"/>
-            <field name="email_from">${user.email or ''}</field>
-            <field name="email_to">${object.partner_id.email|safe}</field>
-            <field name="subject">Contract Expiration (3 Months)</field>
-            <field name="body_html"><![CDATA[
-<p>Your contract will expire in 3 months. </p>
-                ]]>
-            </field>
-        </record>
-        
-        <!-- Contract Expiration (2 Months) -->
-        <record id="mail_contract_expiration_2" model="email.template">
-            <field name="name">Contract Expiration (2 Months)</field>
-            <field name="model_id" ref="analytic.model_account_analytic_account"/>
-            <field name="email_from">${user.email or ''}</field>
-            <field name="email_to">${object.partner_id.email|safe}</field>
-            <field name="subject">Contract Expiration (2 Months)</field>
-            <field name="body_html"><![CDATA[
-<p>Your contract will expire in 2 months. </p>
-                ]]>
-            </field>
-        </record>
-        
-        <!-- Contract Expiration (1 Month) -->
-        <record id="mail_contract_expiration_1" model="email.template">
-            <field name="name">Contract Expiration (1 Month)</field>
-            <field name="model_id" ref="analytic.model_account_analytic_account"/>
-            <field name="email_from">${user.email or ''}</field>
-            <field name="email_to">${object.partner_id.email|safe}</field>
-            <field name="subject">Contract Expiration (1 Month)</field>
-            <field name="body_html"><![CDATA[
-<p>Your contract will expire in 1 month. </p>
-                ]]>
-            </field>
-        </record>
             
     </data>            
 </openerp>

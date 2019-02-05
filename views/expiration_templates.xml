@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+    
+        <!-- Email Templates -->
+        
+        <!-- Contract Expiration (1 Month) -->
+        <record id="mail_contract_expiration_1" model="email.template">
+            <field name="name">Contract Expiration (1 Month)</field>
+            <field name="model_id" ref="analytic.model_account_analytic_account"/>
+            <field name="email_from">${user.email or ''}</field>
+            <field name="email_to">${object.partner_id.email|safe}</field>
+            <field name="subject">Истекување на договор</field>
+            <field name="body_html"><![CDATA[
+<p>Почитувани, </p>
+<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>
+<p>
+Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, 
+односно Ви преостануваат уште 3 (три) месеци за користење на споменатата услуга.
+</p>
+<p>
+Се надеваме дека во текот на изминатиот период стекнавте позитивен впечаток за БизнисМрежа.мк и веруваме во успешно продолжување на нашата досегашна соработка, 
+а доколку имате било какви критики ќе Ве замолиме да не исконтактирате или да ни одговорите повратно на овој меил со цел да ги разгледаме и доколку постои можност да ги
+усвоиме Вашите забелешки.
+</p>
+<p class="text-muted">
+    <span>Со почит, </span><br/>
+    <b style="color: red;">ТАРГЕТ ГРУП ДОО Скопје</b><br/>
+    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>
+    <span>1000 Скопје, Р. Македонија</span><br/>
+    <span>Тел/Факс: +389 (2) 3117 100</span><br/>
+    <span>Е-маил: </span><a href="mailto:info@targetgroup.mk">info@targetgroup.mk</a><br/>
+    <a href="http://targetgroup.mk/">www.targetgroup.mk</a>
+</p>
+<p>
+    <b style="color: red;"><i>Успех е да се биде во тек со промените</i></b><br/>
+    <a href="http://targetgroup.mk/">
+      <img src="/target_features/static/src/img/logo.jpg" style="max-width: 156px;"/>
+    </a>
+</p>
+                ]]>
+            </field>
+        </record>
+        
+        <!-- Contract Expiration (2 Months) -->
+        <record id="mail_contract_expiration_2" model="email.template">
+            <field name="name">Contract Expiration (2 Months)</field>
+            <field name="model_id" ref="analytic.model_account_analytic_account"/>
+            <field name="email_from">${user.email or ''}</field>
+            <field name="email_to">${object.partner_id.email|safe}</field>
+            <field name="subject">Истекување на договор</field>
+            <field name="body_html"><![CDATA[
+<p>Почитувани, </p>
+<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>
+<p>
+Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, 
+односно Ви преостануваат уште 2 (два) месеци за користење на споменатата услуга.
+</p>
+<p>
+За дополнителни прашања Ви стоиме на располагање.
+</p>
+<p class="text-muted">
+    <span>Со почит, </span><br/>
+    <b style="color: red;">ТАРГЕТ ГРУП ДОО Скопје</b><br/>
+    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>
+    <span>1000 Скопје, Р. Македонија</span><br/>
+    <span>Тел/Факс: +389 (2) 3117 100</span><br/>
+    <span>Е-маил: </span><a href="mailto:info@targetgroup.mk">info@targetgroup.mk</a><br/>
+    <a href="http://targetgroup.mk/">www.targetgroup.mk</a>
+</p>
+<p>
+    <b style="color: red;"><i>Успех е да се биде во тек со промените</i></b><br/>
+    <a href="http://targetgroup.mk/">
+      <img src="/target_features/static/src/img/logo.jpg" style="max-width: 156px;"/>
+    </a>
+</p>
+                ]]>
+            </field>
+        </record>
+        
+        <!-- Contract Expiration (3 Months) -->
+        <record id="mail_contract_expiration_3" model="email.template">
+            <field name="name">Contract Expiration (3 Months)</field>
+            <field name="model_id" ref="analytic.model_account_analytic_account"/>
+            <field name="email_from">${user.email or ''}</field>
+            <field name="email_to">${object.partner_id.email|safe}</field>
+            <field name="subject">Истекување на договор</field>
+            <field name="body_html"><![CDATA[
+<p>Почитувани, </p>
+<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>
+<p>
+Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, 
+односно Ви преостанува уште 1 (еден) месец за користење на споменатата услуга.
+</p>
+<p>
+Воедно, би сакале да Ве известиме дека во најскоро време ќе бидете исконтактирани од нашиот тим со цел да утврдиме дали постои интерес од Ваша страна и за понатамошно
+продолжување на нашата досегашна соработка.
+</p>
+<p>
+За дополнителни прашања Ви стоиме на располагање.
+</p>
+<p class="text-muted">
+    <span>Со почит, </span><br/>
+    <b style="color: red;">ТАРГЕТ ГРУП ДОО Скопје</b><br/>
+    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>
+    <span>1000 Скопје, Р. Македонија</span><br/>
+    <span>Тел/Факс: +389 (2) 3117 100</span><br/>
+    <span>Е-маил: </span><a href="mailto:info@targetgroup.mk">info@targetgroup.mk</a><br/>
+    <a href="http://targetgroup.mk/">www.targetgroup.mk</a>
+</p>
+<p>
+    <b style="color: red;"><i>Успех е да се биде во тек со промените</i></b><br/>
+    <a href="http://targetgroup.mk/">
+      <img src="/target_features/static/src/img/logo.jpg" style="max-width: 156px;"/>
+    </a>
+</p>
+                ]]>
+            </field>
+        </record>
+            
+    </data>            
+</openerp>

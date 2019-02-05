@@ -26,4 +26,3 @@ class partner_note(models.Model):
     _description = 'Partner Tag'
     
     name = fields.Char(string='Name', required=True)
-

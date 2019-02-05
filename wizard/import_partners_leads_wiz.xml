@@ -5,16 +5,17 @@
     
         <!-- Views -->
         <record id="view_import_partners_form" model="ir.ui.view">
-            <field name="name">import.partners.form</field>
-            <field name="model">import.partners.wiz</field>
+            <field name="name">import.partners.leads.form</field>
+            <field name="model">import.partners.leads.wiz</field>
             <field name="arch" type="xml">
-                <form string="Import Partners">
-                    <span>Please select the file containing the partners you want to import: </span>
+                <form string="Import Leads">
+                    <span>Please select the file containing the leads you want to import: </span>
                     <group>
-                        <field name="partners_file" nolabel="1"/>
+                        <field name="leads_filename" invisible="1"/>
+                        <field name="leads_file" filename="leads_filename" nolabel="1"/>
                     </group>
                     <footer>
-                        <button name="import_partners" string="Import Partners" type="object" class="oe_highlight"/>
+                        <button name="import_partners_leads" string="Import" type="object" class="oe_highlight"/>
                         or
                         <button string="Cancel" class="oe_link" special="cancel" />
                     </footer>
@@ -23,14 +24,14 @@
         </record>
         
         <record id="action_import_partners" model="ir.actions.act_window">
-            <field name="name">Import Partners</field>
-            <field name="res_model">import.partners.wiz</field>
+            <field name="name">Import Leads</field>
+            <field name="res_model">import.partners.leads.wiz</field>
             <field name="view_type">form</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
         </record>
            
-        <menuitem id="menu_import_partners" name="Import Partners" parent="base.menu_sales"
+        <menuitem id="menu_import_partners" name="Import Leads" parent="base.menu_sales"
                   action="action_import_partners" sequence="15"/>
             
     </data>            
