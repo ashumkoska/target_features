@@ -14,7 +14,8 @@
                 </xpath>
                 <xpath expr="//button[@name='action_quotation_send']" position="before">
                     <button name="action_approve_quot" string="Approve Quotation" type="object"
-                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'draft')]}"/>
+                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'draft')]}"
+                            groups="target_features.role_target_manager_res_groups"/>
                 </xpath>
             </field>
         </record>
@@ -31,7 +32,7 @@
                             <field name="password"/>
                         </group>
                         <group>
-                            <button name="%(target_features.action_user_type)d" string="Send Activation Email" type="action" class="oe_highlight"/>
+                            <button name="send_activation_mail" string="Send Activation Email" type="object" class="oe_highlight"/>
                         </group>
                     </group>
                 </xpath>
@@ -118,6 +119,18 @@
             </field>
         </record>
         
+        <record id="view_crm_lead_only_target_form" model="ir.ui.view">
+            <field name="name">crm.lead.only.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>            
+            <field name="arch" type="xml">
+                <xpath expr="//button[1]" position="replace">
+                    <button name="%(crm.action_crm_lead2opportunity_partner)d" string="Convert to Opportunity" type="action"
+                            help="Convert to Opportunity" class="oe_highlight" groups="target_features.role_target_sales_res_groups"/>
+                </xpath>
+            </field>
+        </record>
+        
         <record id="view_crm_lead_target_search" model="ir.ui.view">
             <field name="name">crm.own.leads.search</field>
             <field name="model">crm.lead</field>
@@ -136,6 +149,17 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='case_default']" position="after">
                     <field name="farmer_visible"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_account_invoice_target_form" model="ir.ui.view">
+            <field name="name">account.invoice.target.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='invoice_open']" position="attributes">
+                    <attribute name="groups">target_features.role_target_accountant_res_groups</attribute>
                 </xpath>
             </field>
         </record>

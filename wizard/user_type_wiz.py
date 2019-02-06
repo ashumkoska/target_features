@@ -2,7 +2,6 @@
 
 import re
 from openerp import api, models, fields, _
-from openerp.exceptions import ValidationError
 
 HTML_ENTITIES = {
     '&nbsp;': ' ',
@@ -53,11 +52,7 @@ class user_type_wiz(models.TransientModel):
             self.email_body = False
     
     @api.one
-    def send_email(self):
-        if not self.contract_id.username:
-            raise ValidationError(_('Please enter a username.'))
-        elif not self.contract_id.password:
-            raise ValidationError(_('Please enter a password.'))
+    def send_email(self):        
         if cleanhtml(self.email_body) != cleanhtml(self.email_template_id.body_html):
             self.email_template_id.write({'body_html': self.email_body})
         self.email_template_id.send_mail(self.contract_id.id)

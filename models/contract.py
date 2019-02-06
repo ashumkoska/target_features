@@ -3,6 +3,7 @@
 from openerp import api, models, fields, _
 from datetime import date
 from dateutil.relativedelta import relativedelta
+from openerp.exceptions import ValidationError
 
 
 class account_analytic_account(models.Model):
@@ -21,6 +22,23 @@ class account_analytic_account(models.Model):
     expiration_sent_1 = fields.Boolean(string='Expiration Sent (1 Month)', readonly=True)
     expiration_sent_2 = fields.Boolean(string='Expiration Sent (2 Month)', readonly=True)
     expiration_sent_3 = fields.Boolean(string='Expiration Sent (3 Month)', readonly=True)
+    
+    @api.multi
+    def send_activation_mail(self):
+        self.ensure_one()
+        if not self.username:
+            raise ValidationError(_('Please enter a username.'))
+        elif not self.password:
+            raise ValidationError(_('Please enter a password.'))
+        return {            
+            'name': _('Type of User'),
+            'type': 'ir.actions.act_window',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'user.type.wiz',
+            'target': 'new',
+            'context': {'default_contract_id': self.id}
+        }
     
     @api.model
     def check_expired_contracts(self):
