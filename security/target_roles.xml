@@ -12,8 +12,7 @@
         <record id="role_target_farmer" model="res.users.role">
             <field name="name">Farmer</field>
             <field name="category_id" ref="target_features.categ_target"/>
-            <field name="implied_ids" eval="[(4, ref('base.group_user')),
-                                             (4, ref('base.group_sale_salesman'))]"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
         <record id="role_target_sales" model="res.users.role">
             <field name="name">Sales Person</field>
@@ -33,6 +32,11 @@
             <field name="category_id" ref="target_features.categ_target"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user')),
                                              (4, ref('account.group_account_manager'))]"/>
+        </record>
+        
+        <!-- Changed Odoo Groups -->
+        <record id="base.group_user" model="res.groups">
+            <field name="implied_ids" eval="[(3, ref('base.group_multi_salesteams'))]"/>
         </record>
 
     </data>            

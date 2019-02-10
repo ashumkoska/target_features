@@ -171,6 +171,9 @@
         <record id="crm.crm_case_category_act_leads_all" model="ir.actions.act_window">
             <field name="context">{'default_type': 'lead', 'stage_type': 'lead', 'needaction_menu_ref': 'crm.menu_crm_opportunities', 'search_default_my_leads': 1}</field>
         </record>
+        <record id="sale.action_quotations" model="ir.actions.act_window">
+            <field name="domain">[('state','in',('draft', 'approved', 'sent', 'cancel'))]</field>
+        </record>
             
     </data>            
 </openerp>

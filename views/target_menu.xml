@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <record id="base.menu_base_partner" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_farmer_res_groups'))]"/>
+        </record>
+        
+        <record id="account_analytic_analysis.menu_action_account_analytic_overdue_all" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_sales_res_groups')),
+                                           (4, ref('target_features.role_target_manager_res_groups')),
+                                           (4, ref('target_features.role_target_accountant_res_groups'))]"/>
+        </record>
+        
+        <record id="base.menu_invoiced" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_sales_res_groups')),
+                                           (4, ref('target_features.role_target_manager_res_groups')),
+                                           (4, ref('target_features.role_target_accountant_res_groups'))]"/>
+        </record>
+        
+        <record id="base.menu_product" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_sales_res_groups')),
+                                           (4, ref('target_features.role_target_manager_res_groups')),
+                                           (4, ref('target_features.role_target_accountant_res_groups'))]"/>
+        </record>
+        
+        <record id="crm.menu_crm_case_phone" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_farmer_res_groups'))]"/>
+        </record>
+        
+    </data>            
+</openerp>

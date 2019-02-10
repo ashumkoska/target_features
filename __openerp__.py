@@ -13,7 +13,8 @@
         'purchase',
         'Target_Neodata',
         'marketing_crm',
-        'base_user_role'
+        'base_user_role',
+        'account_analytic_analysis'
     ],
     'data': [        
         'security/target_roles.xml',
@@ -25,7 +26,8 @@
         'views/partner_note_views.xml',
         'views/target_views.xml',
         'views/activation_templates.xml',
-        'views/expiration_templates.xml'
+        'views/expiration_templates.xml',
+        'views/target_menu.xml',
     ],
     'installable': True,
     'auto_install': True
