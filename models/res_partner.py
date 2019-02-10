@@ -26,3 +26,4 @@ class partner_note(models.Model):
     _description = 'Partner Tag'
     
     name = fields.Char(string='Name', required=True)
+    partner_ids = fields.Many2many('res.partner', 'partner_note_rel', 'note_id', 'partner_id', string='Partners')
