@@ -15,15 +15,15 @@
         'marketing_crm',
         'base_user_role'
     ],
-    'data': [
+    'data': [        
+        'security/target_roles.xml',
         'security/ir.model.access.csv',
-        'security/target_roles.xml', 
-        'security/target_rules.xml', 
-        'data/target_data.xml', 
+        'security/target_rules.xml',
+        'data/target_data.xml',
         'wizard/user_type_wiz.xml',
         'wizard/import_partners_leads_wiz.xml',
         'views/partner_note_views.xml',
-        'views/target_views.xml', 
+        'views/target_views.xml',
         'views/activation_templates.xml',
         'views/expiration_templates.xml'
     ],
