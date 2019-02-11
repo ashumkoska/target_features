@@ -1,0 +1,750 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* target_features
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-11 08:38+0000\n"
+"PO-Revision-Date: 2019-02-11 09:52+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: mk\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: target_features
+#: model:email.template,body_html:target_features.mail_contract_expiration_3
+msgid ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
+"<p>\n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"односно Ви преостанува уште 1 (еден) месец за користење на споменатата услуга.\n"
+"</p>\n"
+"<p>\n"
+"Воедно, би сакале да Ве известиме дека во најскоро време ќе бидете исконтактирани од нашиот тим со цел да утврдиме дали постои интерес од Ваша страна и за понатамошно\n"
+"продолжување на нашата досегашна соработка.\n"
+"</p>\n"
+"<p>\n"
+"За дополнителни прашања Ви стоиме на располагање.\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
+"<p>\n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"односно Ви преостанува уште 1 (еден) месец за користење на споменатата услуга.\n"
+"</p>\n"
+"<p>\n"
+"Воедно, би сакале да Ве известиме дека во најскоро време ќе бидете исконтактирани од нашиот тим со цел да утврдиме дали постои интерес од Ваша страна и за понатамошно\n"
+"продолжување на нашата досегашна соработка.\n"
+"</p>\n"
+"<p>\n"
+"За дополнителни прашања Ви стоиме на располагање.\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"                \n"
+"            "
+
+#. module: target_features
+#: model:email.template,body_html:target_features.mail_contract_expiration_2
+msgid ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
+"<p>\n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"односно Ви преостануваат уште 2 (два) месеци за користење на споменатата услуга.\n"
+"</p>\n"
+"<p>\n"
+"За дополнителни прашања Ви стоиме на располагање.\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
+"<p>\n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"односно Ви преостануваат уште 2 (два) месеци за користење на споменатата услуга.\n"
+"</p>\n"
+"<p>\n"
+"За дополнителни прашања Ви стоиме на располагање.\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"                \n"
+"            "
+
+#. module: target_features
+#: model:email.template,body_html:target_features.mail_contract_expiration_1
+msgid ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
+"<p>\n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"односно Ви преостануваат уште 3 (три) месеци за користење на споменатата услуга.\n"
+"</p>\n"
+"<p>\n"
+"Се надеваме дека во текот на изминатиот период стекнавте позитивен впечаток за БизнисМрежа.мк и веруваме во успешно продолжување на нашата досегашна соработка, \n"
+"а доколку имате било какви критики ќе Ве замолиме да не исконтактирате или да ни одговорите повратно на овој меил со цел да ги разгледаме и доколку постои можност да ги\n"
+"усвоиме Вашите забелешки.\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
+"<p>\n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"односно Ви преостануваат уште 3 (три) месеци за користење на споменатата услуга.\n"
+"</p>\n"
+"<p>\n"
+"Се надеваме дека во текот на изминатиот период стекнавте позитивен впечаток за БизнисМрежа.мк и веруваме во успешно продолжување на нашата досегашна соработка, \n"
+"а доколку имате било какви критики ќе Ве замолиме да не исконтактирате или да ни одговорите повратно на овој меил со цел да ги разгледаме и доколку постои можност да ги\n"
+"усвоиме Вашите забелешки.\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"                \n"
+"            "
+
+#. module: target_features
+#: model:email.template,body_html:target_features.mail_package_activation_notif
+msgid ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
+"<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
+"<p>\n"
+"    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>\n"
+"    <span>Лозинка: </span><b>${object.password or ''}</b>\n"
+"</p>\n"
+"<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
+"\n"
+"<img src=\"/target_features/static/src/img/activation.jpg\" style=\"max-width: 444px;\"/>\n"
+"\n"
+"<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
+"<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
+"<p>\n"
+"    <span>Ваш советник: </span><b>Елена Цветкова</b><br/>\n"
+"    <span>Телефон: </span><b>076/265-661</b><br/>\n"
+"    <span>Е-пошта: </span><a href=\"mailto:support@targetgroup.mk\">support@targetgroup.mk</a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <hr/>\n"
+"    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
+"    <hr/>\n"
+"    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
+"    <hr/>\n"
+"    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
+"</p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
+"<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
+"<p>\n"
+"    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>\n"
+"    <span>Лозинка: </span><b>${object.password or ''}</b>\n"
+"</p>\n"
+"<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
+"\n"
+"<img src=\"/target_features/static/src/img/activation.jpg\" style=\"max-width: 444px;\"/>\n"
+"\n"
+"<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
+"<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
+"<p>\n"
+"    <span>Ваш советник: </span><b>Елена Цветкова</b><br/>\n"
+"    <span>Телефон: </span><b>076/265-661</b><br/>\n"
+"    <span>Е-пошта: </span><a href=\"mailto:support@targetgroup.mk\">support@targetgroup.mk</a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <hr/>\n"
+"    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
+"    <hr/>\n"
+"    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
+"    <hr/>\n"
+"    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
+"</p>\n"
+"                \n"
+"            "
+
+#. module: target_features
+#: model:email.template,body_html:target_features.mail_prepaid_activation_notif
+msgid ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
+"<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
+"<p>\n"
+"    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>\n"
+"    <span>Лозинка: </span><b>${object.password or ''}</b>\n"
+"</p>\n"
+"<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
+"\n"
+"<img src=\"/target_features/static/src/img/activation.jpg\" style=\"max-width: 444px;\"/>\n"
+"\n"
+"<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
+"<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
+"<p>\n"
+"    <span>Ваш советник: </span><b>Фросина Мирчески</b><br/>\n"
+"    <span>Телефон: </span><b>071/397-498</b><br/>\n"
+"    <span>Е-пошта: </span><a href=\"mailto:support@targetgroup.mk\">support@targetgroup.mk</a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <hr/>\n"
+"    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
+"    <hr/>\n"
+"    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
+"    <hr/>\n"
+"    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
+"</p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"<p>Почитувани, </p>\n"
+"<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
+"<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
+"<p>\n"
+"    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>\n"
+"    <span>Лозинка: </span><b>${object.password or ''}</b>\n"
+"</p>\n"
+"<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
+"\n"
+"<img src=\"/target_features/static/src/img/activation.jpg\" style=\"max-width: 444px;\"/>\n"
+"\n"
+"<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
+"<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
+"<p>\n"
+"    <span>Ваш советник: </span><b>Фросина Мирчески</b><br/>\n"
+"    <span>Телефон: </span><b>071/397-498</b><br/>\n"
+"    <span>Е-пошта: </span><a href=\"mailto:support@targetgroup.mk\">support@targetgroup.mk</a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <span>Со почит, </span><br/>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
+"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"</p>\n"
+"<p>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"    <a href=\"http://targetgroup.mk/\">\n"
+"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"    </a>\n"
+"</p>\n"
+"<p class=\"text-muted\">\n"
+"    <hr/>\n"
+"    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
+"    <hr/>\n"
+"    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
+"    <hr/>\n"
+"    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
+"</p>\n"
+"                \n"
+"            "
+
+#. module: target_features
+#: model:res.groups,name:target_features.role_target_accountant_res_groups
+msgid "Accountant"
+msgstr "Сметководител"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Аналитичка сметка"
+
+#. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_form
+msgid "Approve Quotation"
+msgstr "Потврди понуда"
+
+#. module: target_features
+#: field:user.type.wiz,email_body:0
+msgid "Body"
+msgstr "Содржина"
+
+#. module: target_features
+#: view:res.partner:target_features.view_res_partner_target_farmer_form
+msgid "Calls"
+msgstr "Повици"
+
+#. module: target_features
+#: view:import.partners.leads.wiz:target_features.view_import_partners_form
+#: view:user.type.wiz:target_features.view_user_type_form
+msgid "Cancel"
+msgstr "Откажи"
+
+#. module: target_features
+#: field:user.type.wiz,contract_id:0
+msgid "Contract"
+msgstr "Договор"
+
+#. module: target_features
+#: view:crm.lead:target_features.view_crm_lead_only_target_form
+msgid "Convert to Opportunity"
+msgstr "Претвори во можност"
+
+#. module: target_features
+#: field:import.partners.leads.wiz,create_uid:0 field:partner.note,create_uid:0
+#: field:user.type.wiz,create_uid:0
+msgid "Created by"
+msgstr "Креирано од"
+
+#. module: target_features
+#: field:import.partners.leads.wiz,create_date:0
+#: field:partner.note,create_date:0 field:user.type.wiz,create_date:0
+msgid "Created on"
+msgstr "Креирано на"
+
+#. module: target_features
+#: field:account.analytic.account,display_name:0
+#: field:crm.case.stage,display_name:0 field:crm.lead,display_name:0
+#: field:import.partners.leads.wiz,display_name:0
+#: field:partner.note,display_name:0 field:user.type.wiz,display_name:0
+msgid "Display Name"
+msgstr "Име"
+
+#. module: target_features
+#: field:account.analytic.account,expiration_sent_1:0
+msgid "Expiration Sent (1 Month)"
+msgstr "Испратено известување за истек (1 Месец)"
+
+#. module: target_features
+#: field:account.analytic.account,expiration_sent_2:0
+msgid "Expiration Sent (2 Month)"
+msgstr "Испратено известување за истек (2 Месеци)"
+
+#. module: target_features
+#: field:account.analytic.account,expiration_sent_3:0
+msgid "Expiration Sent (3 Month)"
+msgstr "Испратено известување за истек (3 Месеци)"
+
+#. module: target_features
+#: model:res.groups,name:target_features.role_target_farmer_res_groups
+msgid "Farmer"
+msgstr "Фармер"
+
+#. module: target_features
+#: field:import.partners.leads.wiz,leads_file:0
+msgid "File"
+msgstr "Датотека"
+
+#. module: target_features
+#: field:import.partners.leads.wiz,leads_filename:0
+msgid "Filename"
+msgstr "Име на датотека"
+
+#. module: target_features
+#: field:res.partner,partner_url:0
+msgid "Hyperlink"
+msgstr "Линк"
+
+#. module: target_features
+#: field:import.partners.leads.wiz,id:0 field:partner.note,id:0
+#: field:user.type.wiz,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: target_features
+#: view:import.partners.leads.wiz:target_features.view_import_partners_form
+msgid "Import"
+msgstr "Импортирај"
+
+#. module: target_features
+#: view:import.partners.leads.wiz:target_features.view_import_partners_form
+#: model:ir.actions.act_window,name:target_features.action_import_partners
+#: model:ir.ui.menu,name:target_features.menu_import_partners
+msgid "Import Leads"
+msgstr "Импортирај Траги"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_import_partners_leads_wiz
+msgid "Import Leads Wizard"
+msgstr "Импортирање на Траги"
+
+#. module: target_features
+#: field:account.analytic.account,__last_update:0
+#: field:crm.case.stage,__last_update:0 field:crm.lead,__last_update:0
+#: field:import.partners.leads.wiz,__last_update:0
+#: field:partner.note,__last_update:0 field:user.type.wiz,__last_update:0
+msgid "Last Modified on"
+msgstr "Последно ажурирано на"
+
+#. module: target_features
+#: field:import.partners.leads.wiz,write_uid:0 field:partner.note,write_uid:0
+#: field:user.type.wiz,write_uid:0
+msgid "Last Updated by"
+msgstr "Последно ажурирано од"
+
+#. module: target_features
+#: field:import.partners.leads.wiz,write_date:0 field:partner.note,write_date:0
+#: field:user.type.wiz,write_date:0
+msgid "Last Updated on"
+msgstr "Последно ажурирано од"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Трага/Можност"
+
+#. module: target_features
+#: model:res.groups,name:target_features.role_target_manager_res_groups
+msgid "Manager"
+msgstr "Менаџер"
+
+#. module: target_features
+#: view:res.partner:target_features.view_res_partner_target_farmer_form
+msgid "Meetings"
+msgstr "Состаноци"
+
+#. module: target_features
+#: field:partner.note,name:0
+msgid "Name"
+msgstr "Име"
+
+#. module: target_features
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:86
+#, python-format
+msgid "New Leads"
+msgstr "Нови Траги"
+
+#. module: target_features
+#: field:res.partner,note_ids:0
+msgid "Note"
+msgstr "Забелешка"
+
+#. module: target_features
+#: view:res.partner:target_features.view_res_partner_target_form
+#: field:res.partner,old_notes:0
+msgid "Old Notes"
+msgstr "Стари забелешки"
+
+#. module: target_features
+#: selection:user.type.wiz,user_type:0
+msgid "Package User"
+msgstr "Корисник на пакет"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_res_partner
+msgid "Partner"
+msgstr "Партнер"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_partner_note
+#: view:partner.note:target_features.view_partner_note_form
+#: view:partner.note:target_features.view_partner_note_search
+msgid "Partner Tag"
+msgstr "Етикета на партнер"
+
+#. module: target_features
+#: model:ir.actions.act_window,name:target_features.action_partner_notes
+#: model:ir.ui.menu,name:target_features.menu_partner_notes
+#: view:partner.note:target_features.view_partner_note_tree
+msgid "Partner Tags"
+msgstr "Етикети на партнер"
+
+#. module: target_features
+#: field:partner.note,partner_ids:0
+msgid "Partners"
+msgstr "Партнери"
+
+#. module: target_features
+#: field:account.analytic.account,password:0
+msgid "Password"
+msgstr "Лозинка"
+
+#. module: target_features
+#: code:addons/target_features/models/contract.py:32
+#, python-format
+msgid "Please enter a password."
+msgstr "Ве молиме внесете лозинка."
+
+#. module: target_features
+#: code:addons/target_features/models/contract.py:30
+#, python-format
+msgid "Please enter a username."
+msgstr "Ве молиме внесете корисничко име."
+
+#. module: target_features
+#: view:import.partners.leads.wiz:target_features.view_import_partners_form
+msgid "Please select the file containing the leads you want to import:"
+msgstr "Изберете ја датотеката што ги содржи трагите што сакате да ги импортирате:"
+
+#. module: target_features
+#: view:user.type.wiz:target_features.view_user_type_form
+msgid "Please select the type of user:"
+msgstr "Ве молиме изберете тип на корисник:"
+
+#. module: target_features
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:22
+#, python-format
+msgid "Please upload a valid Excel file."
+msgstr "Ве молиме прикачете валидна Excel датотека."
+
+#. module: target_features
+#: selection:user.type.wiz,user_type:0
+msgid "Prepaid User"
+msgstr "Pre-paid Корисник"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_sale_order
+msgid "Sales Order"
+msgstr "Налог за продажба"
+
+#. module: target_features
+#: model:res.groups,name:target_features.role_target_sales_res_groups
+msgid "Sales Person"
+msgstr "Продавач"
+
+#. module: target_features
+#: view:account.analytic.account:target_features.view_contract_target_form
+msgid "Send Activation Email"
+msgstr "Испрати порака за активација"
+
+#. module: target_features
+#: view:user.type.wiz:target_features.view_user_type_form
+msgid "Send Mail"
+msgstr "Испрати порака"
+
+#. module: target_features
+#: field:sale.order,second_approval:0
+msgid "Show Second Approval"
+msgstr "Прикажи двојна потврда"
+
+#. module: target_features
+#: field:crm.lead,source_readonly:0
+msgid "Source Readonly"
+msgstr "Source Readonly"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_crm_case_stage
+msgid "Stage of case"
+msgstr "Етапа од случај"
+
+#. module: target_features
+#: model:ir.module.category,name:target_features.categ_target
+msgid "Target Roles"
+msgstr "Таргет Улоги"
+
+#. module: target_features
+#: field:user.type.wiz,email_template_id:0
+msgid "Template"
+msgstr "Урнек"
+
+#. module: target_features
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:54
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:80
+#, python-format
+msgid ""
+"The following error has occurred while reading the file: \n"
+"%s"
+msgstr ""
+"Настана грешка при вчитување на датотеката: \n"
+"%s"
+
+#. module: target_features
+#: code:addons/target_features/models/contract.py:34
+#: model:ir.actions.act_window,name:target_features.action_user_type
+#: view:user.type.wiz:target_features.view_user_type_form
+#: field:user.type.wiz,user_type:0
+#, python-format
+msgid "Type of User"
+msgstr "Тип на корисник"
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_user_type_wiz
+msgid "User Type Wizard"
+msgstr "Тип на корисник"
+
+#. module: target_features
+#: field:account.analytic.account,username:0
+msgid "Username"
+msgstr "Корисничко име"
+
+#. module: target_features
+#: field:crm.case.stage,farmer_visible:0
+msgid "Visible for users of the role Farmer"
+msgstr "Видливо за корисниците од тип Фармер"
+
+#. module: target_features
+#: view:crm.lead:target_features.view_crm_lead_target_search
+msgid "my_leads"
+msgstr "my_leads"
+
+#. module: target_features
+#: view:import.partners.leads.wiz:target_features.view_import_partners_form
+#: view:user.type.wiz:target_features.view_user_type_form
+msgid "or"
+msgstr "или"
+
+#. module: target_features
+#: view:account.invoice:target_features.view_account_invoice_target_form
+msgid "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
+msgstr "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
+
+#. module: target_features
+#: view:crm.lead:target_features.view_crm_lead_target_form
+msgid "{'readonly': [('source_readonly', '=', True)]}"
+msgstr "{'readonly': [('source_readonly', '=', True)]}"
+
+#. module: target_features
+#: model:email.template,subject:target_features.mail_package_activation_notif
+#: model:email.template,subject:target_features.mail_prepaid_activation_notif
+msgid "Активација на кориснички профил на БизнисMрежа.мк"
+msgstr "Активација на кориснички профил на БизнисMрежа.мк"
+
+#. module: target_features
+#: model:email.template,subject:target_features.mail_contract_expiration_1
+#: model:email.template,subject:target_features.mail_contract_expiration_2
+#: model:email.template,subject:target_features.mail_contract_expiration_3
+msgid "Истекување на договор"
+msgstr "Истекување на договор"
