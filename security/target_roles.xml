@@ -24,8 +24,7 @@
             <field name="name">Manager</field>
             <field name="category_id" ref="target_features.categ_target"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user')),
-                                             (4, ref('base.group_sale_manager')),
-                                             (4, ref('base.group_sale_salesman_all_leads'))]"/>
+                                             (4, ref('base.group_sale_manager'))]"/>
         </record>
         <record id="role_target_accountant" model="res.users.role">
             <field name="name">Accountant</field>
