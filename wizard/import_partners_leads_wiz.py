@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-
-from xlrd import open_workbook
-from xlrd.sheet import ctype_text
+import csv
+try:
+    from cStringIO import StringIO
+except ImportError:
+    from StringIO import StringIO
 from openerp import api, models, fields, _
 from openerp.exceptions import ValidationError, Warning
 
@@ -18,37 +20,43 @@ class import_partners_wiz(models.TransientModel):
     def import_partners_leads(self):
         self.ensure_one()
         new_lead_ids = []
-        if not any(self.leads_filename.endswith(ext) for ext in ['xls', 'xlsx']):
-            raise ValidationError(_('Please upload a valid Excel file.'))
-        file_data = self.leads_file.decode('base64')
-        wb = open_workbook(file_contents=file_data)
-        leads_sheet = wb.sheet_by_index(0)
-        columns = {leads_sheet.cell(0, col_index).value: col_index for col_index in xrange(leads_sheet.ncols)}
-        for row_i in range(2, leads_sheet.nrows):
-            # xlsx columns: 
+        if not any(self.leads_filename.endswith(ext) for ext in ['csv']):
+            raise ValidationError(_('Please upload a valid CSV file.'))
+        
+        csv_content = self.leads_file.decode('base64')
+        csv_file = StringIO(csv_content)
+        reader = csv.DictReader(csv_file, delimiter=',')
+        for row in reader:
+            # csv columns: 
             # SubjectID, Subject, CustomerName, Street, City, Zip, Country, 
             # Email, Phone, Mobile, TaxNumber, RegNumber, source, SalesPerson
             try:
-                reg_number = str(int(leads_sheet.cell(row_i, columns['RegNumber']).value))
-                country_name = leads_sheet.cell(row_i, columns['Country']).value
-                source_name = leads_sheet.cell(row_i, columns['source']).value
-                user_name = leads_sheet.cell(row_i, columns['SalesPerson']).value
-                country = self.env['res.country'].search(['|', ('code', '=', country_name), 
-                                                          ('name', '=', country_name)], limit=1)
-                source = self.env['crm.tracking.source'].search([('name', '=', source_name)], limit=1)
-                user = self.env['res.users'].search([('name', '=', user_name)], limit=1)
+                reg_number = str(row.get('RegNumber')) if row.get('RegNumber') else ''
+                country_name = row.get('Country', '')
+                source_name = row.get('source', '')
+                user_name = row.get('SalesPerson', '')
+                country = False
+                if country_name:
+                    country = self.env['res.country'].search(['|', ('code', '=', country_name), 
+                                                              ('name', '=', country_name)], limit=1)
+                source = False
+                if source_name:
+                    source = self.env['crm.tracking.source'].search([('name', '=', source_name)], limit=1)                
+                user = False
+                if user_name:
+                    user = self.env['res.users'].search([('name', '=', user_name)], limit=1)
                 # partner values
                 partner_vals = {
-                    'SubjectID': str(int(leads_sheet.cell(row_i, columns['SubjectID']).value)),
-                    'name': leads_sheet.cell(row_i, columns['CustomerName']).value,
-                    'street': leads_sheet.cell(row_i, columns['Street']).value,
-                    'city': leads_sheet.cell(row_i, columns['City']).value,
-                    'zip': str(int(leads_sheet.cell(row_i, columns['Zip']).value)),
+                    'SubjectID': str(row.get('SubjectID')) if row.get('SubjectID') else '',
+                    'name': row.get('CustomerName'),
+                    'street': row.get('Street'),
+                    'city': row.get('City'),
+                    'zip': str(row.get('Zip')) if row.get('Zip') else '',
                     'country_id': country.id if country else False,
-                    'email': leads_sheet.cell(row_i, columns['Email']).value,
-                    'phone': str(int(leads_sheet.cell(row_i, columns['Phone']).value)),
-                    'mobile': str(int(leads_sheet.cell(row_i, columns['Mobile']).value)),
-                    'TaxNumber': leads_sheet.cell(row_i, columns['TaxNumber']).value
+                    'email': row.get('Email'),
+                    'phone': str(row.get('Phone')) if row.get('Phone') else '',
+                    'mobile': str(row.get('Mobile')) if row.get('Mobile') else '',
+                    'TaxNumber': row.get('TaxNumber'),
                 }
             except Exception as e:
                 raise Warning(_('The following error has occurred while reading the file: \n%s' % e))
@@ -63,16 +71,16 @@ class import_partners_wiz(models.TransientModel):
             try:
                 # lead values
                 lead_vals = {
-                    'name': leads_sheet.cell(row_i, columns['Subject']).value,
-                    'partner_name': leads_sheet.cell(row_i, columns['CustomerName']).value,
+                    'name': row.get('Subject'),
+                    'partner_name': row.get('CustomerName'),
                     'partner_id': partner.id,
-                    'street': leads_sheet.cell(row_i, columns['Street']).value,
-                    'city': leads_sheet.cell(row_i, columns['City']).value,
-                    'zip': str(int(leads_sheet.cell(row_i, columns['Zip']).value)),
+                    'street': row.get('Street'),
+                    'city': row.get('City'),
+                    'zip': str(row.get('Zip')) if row.get('Zip') else '',
                     'country_id': country.id if country else False,
-                    'email_from': leads_sheet.cell(row_i, columns['Email']).value,
-                    'phone': str(int(leads_sheet.cell(row_i, columns['Phone']).value)),
-                    'mobile': str(int(leads_sheet.cell(row_i, columns['Mobile']).value)),
+                    'email_from': row.get('Email'),
+                    'phone': str(row.get('Phone')) if row.get('Phone') else '',
+                    'mobile': str(row.get('Mobile')) if row.get('Mobile') else '',
                     'source_id': source.id if source else False,
                     'user_id': user.id if user else False
                 }
