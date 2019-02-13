@@ -18,19 +18,22 @@
             <field name="name">Sales Person</field>
             <field name="category_id" ref="target_features.categ_target"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user')),
-                                             (4, ref('base.group_sale_salesman'))]"/>
+                                             (4, ref('base.group_sale_salesman')),
+                                             (4, ref('base.group_multi_salesteams'))]"/>
         </record>
         <record id="role_target_manager" model="res.users.role">
             <field name="name">Manager</field>
             <field name="category_id" ref="target_features.categ_target"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user')),
-                                             (4, ref('base.group_sale_manager'))]"/>
+                                             (4, ref('base.group_sale_manager')),
+                                             (4, ref('base.group_multi_salesteams'))]"/>
         </record>
         <record id="role_target_accountant" model="res.users.role">
             <field name="name">Accountant</field>
             <field name="category_id" ref="target_features.categ_target"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user')),
-                                             (4, ref('account.group_account_manager'))]"/>
+                                             (4, ref('account.group_account_manager')),
+                                             (4, ref('base.group_multi_salesteams'))]"/>
         </record>
         
         <!-- Changed Odoo Groups -->
