@@ -13,6 +13,11 @@
                     <field name="second_approval" invisible="1"/>
                     <field name="discount_approved" invisible="1"/>
                 </xpath>
+                <xpath expr="//button[@name='action_quotation_send']" position="before">
+                    <button name="action_approve_quot" string="Approve Quotation" type="object"
+                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'draft')]}"
+                            groups="target_features.role_target_manager_res_groups"/>
+                </xpath>
                 <xpath expr="//button[@name='action_quotation_send']" position="attributes">
                     <attribute name="states">draft,approved</attribute>
                 </xpath>
