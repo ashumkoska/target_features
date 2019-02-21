@@ -11,11 +11,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//header" position="inside">
                     <field name="second_approval" invisible="1"/>
-                </xpath>
-                <xpath expr="//button[@name='action_quotation_send']" position="before">
-                    <button name="action_approve_quot" string="Approve Quotation" type="object"
-                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'draft')]}"
-                            groups="target_features.role_target_manager_res_groups"/>
+                    <field name="discount_approved" invisible="1"/>
                 </xpath>
                 <xpath expr="//button[@name='action_quotation_send']" position="attributes">
                     <attribute name="states">draft,approved</attribute>
@@ -28,6 +24,20 @@
                 </xpath>
                 <xpath expr="//button[@name='cancel']" position="attributes">
                     <attribute name="states">draft,approved,sent</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_sale_order_target_sales_form" model="ir.ui.view">
+            <field name="name">sale.order.target.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_sales_res_groups'))]"/>
+            <field name="priority">17</field>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_button_confirm']" position="attributes">
+                    <attribute name="states">approved</attribute>
+                    <attribute name="attrs">{'invisible': [('second_approval', '=', True), ('discount_approved', '=', False)]}</attribute>
                 </xpath>
             </field>
         </record>

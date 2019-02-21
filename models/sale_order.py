@@ -18,6 +18,7 @@ class sale_order(models.Model):
                               ('invoice_except', 'Invoice Exception'),
                               ('done', 'Done')])
     second_approval = fields.Boolean(string='Show Second Approval', compute='compute_second_approval', store=True)
+    discount_approved = fields.Boolean(string='Discount Approved', readonly=True, default=False)
     
     @api.one
     @api.depends('order_line', 'order_line.discount')
@@ -29,4 +30,5 @@ class sale_order(models.Model):
             
     @api.multi
     def action_approve_quot(self):
-        self.write({'state': 'approved'})
+        self.write({'state': 'approved', 'discount_approved': True})
+        

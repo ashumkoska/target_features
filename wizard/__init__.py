@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import user_type_wiz
-from . import import_partners_leads_wiz
+import user_type_wiz
+import import_partners_leads_wiz
