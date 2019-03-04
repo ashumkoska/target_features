@@ -15,20 +15,20 @@
                 </xpath>
                 <xpath expr="//button[@name='action_quotation_send']" position="before">
                     <button name="action_approve_quot" string="Approve Quotation" type="object"
-                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'draft')]}"
+                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'waiting_approval')]}"
                             groups="target_features.role_target_manager_res_groups"/>
                 </xpath>
                 <xpath expr="//button[@name='action_quotation_send']" position="attributes">
-                    <attribute name="states">draft,approved</attribute>
+                    <attribute name="states">draft,approved,waiting_approval</attribute>
                 </xpath>
                 <xpath expr="//button[@name='print_quotation']" position="attributes">
-                    <attribute name="states">draft,approved</attribute>
+                    <attribute name="states">draft,approved,waiting_approval</attribute>
                 </xpath>
                 <xpath expr="//button[@name='action_button_confirm']" position="attributes">
                     <attribute name="states">draft,approved</attribute>
                 </xpath>
                 <xpath expr="//button[@name='cancel']" position="attributes">
-                    <attribute name="states">draft,approved,sent</attribute>
+                    <attribute name="states">draft,approved,sent,waiting_approval</attribute>
                 </xpath>
             </field>
         </record>
@@ -193,13 +193,10 @@
         
         <!-- Actions -->
         <record id="sale.action_quotations" model="ir.actions.act_window">
-            <field name="domain">[('state','in',('draft', 'approved', 'sent', 'cancel'))]</field>
+            <field name="domain">[('state','in',('draft', 'waiting_approval', 'approved', 'sent', 'cancel'))]</field>
         </record>
         <record id="crm.crm_case_category_act_leads_all" model="ir.actions.act_window">
             <field name="context">{'default_type': 'lead', 'stage_type': 'lead', 'needaction_menu_ref': 'crm.menu_crm_opportunities', 'search_default_my_leads': 1}</field>
-        </record>
-        <record id="sale.action_quotations" model="ir.actions.act_window">
-            <field name="domain">[('state','in',('draft', 'approved', 'sent', 'cancel'))]</field>
         </record>
             
     </data>            

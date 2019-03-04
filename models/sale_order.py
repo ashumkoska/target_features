@@ -8,6 +8,7 @@ class sale_order(models.Model):
     _inherit = 'sale.order'
     
     state = fields.Selection([('draft', 'Draft Quotation'),
+                              ('waiting_approval', 'Waiting Approval'),
                               ('approved', 'Approved Quotation'),
                               ('sent', 'Quotation Sent'),
                               ('cancel', 'Cancelled'),
@@ -32,3 +33,17 @@ class sale_order(models.Model):
     def action_approve_quot(self):
         self.write({'state': 'approved', 'discount_approved': True})
         
+    @api.model
+    def create(self, vals):
+        res = super(sale_order, self).create(vals)
+        if res.second_approval and res.state == 'draft':
+            res.update({'state': 'waiting_approval'})
+        return res
+        
+    @api.multi
+    def write(self, vals):
+        res = super(sale_order, self).write(vals)
+        for order in self:
+            if order.second_approval and order.state == 'draft':
+                order.update({'state': 'waiting_approval'})
+        return res
