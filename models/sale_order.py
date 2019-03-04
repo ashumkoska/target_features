@@ -24,7 +24,7 @@ class sale_order(models.Model):
     @api.one
     @api.depends('order_line', 'order_line.discount')
     def compute_second_approval(self):
-        if any(l.discount > 30 for l in self.order_line):
+        if any(l.discount > 20 for l in self.order_line):
             self.second_approval = True
         else:
             self.second_approval = False
