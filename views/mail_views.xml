@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+    
+        <record id="view_mail_target_form" model="ir.ui.view">
+            <field name="name">mail.target.form</field>
+            <field name="model">mail.mail</field>
+            <field name="arch" type="xml">
+                <form string="Email message" create="false" edit="false">
+                    <header>
+                        <button name="send" string="Send Now" type="object" states="outgoing" class="oe_highlight"/>
+                        <button name="mark_outgoing" string="Retry" type="object" states="exception,cancel"/>
+                        <button name="cancel" string="Cancel" type="object" states="outgoing"/>
+                        <field name="state" widget="statusbar" statusbar_visible="outgoing,sent,received,exception,cancel"/>
+                    </header>
+                    <sheet>
+                        <field name="mail_message_id" required="0" invisible="1"/>
+                        <label for="subject" class="oe_edit_only"/>
+                        <h2><field name="subject"/></h2>
+                        <div style="vertical-align: top;">
+                            by <field name="author_id" class="oe_inline" string="User"/> on <field name="date" readonly="1" class="oe_inline"/>
+                            <button name="%(mail.action_email_compose_message_wizard)d" string="Reply" type="action" icon="terp-mail-replied"
+                                context="{'default_composition_mode':'reply', 'default_parent_id': mail_message_id}" states='received,sent,exception,cancel'/>
+                        </div>
+                        <group>
+                            <field name="email_from"/>
+                            <field name="email_to"/>
+                            <field name="recipient_ids" widget="many2many_tags"/>
+                            <field name="email_cc"/>
+                            <field name="reply_to"/>
+                        </group>
+                        <notebook>
+                            <page string="Body">
+                                <field name="body_c_html"/>
+                            </page>
+                            <page string="Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_mail_target_tree" model="ir.ui.view">
+            <field name="name">mail.target.tree</field>
+            <field name="model">mail.mail</field>
+            <field name="arch" type="xml">
+                <tree string="Emails" create="false" colors="grey:state in ('sent', 'cancel');blue:state=='outgoing';red:state=='exception';black:state=='received'">
+                    <field name="date"/>
+                    <field name="subject"/>
+                    <field name="author_id" string="User"/>
+                    <field name="message_id" invisible="1"/>
+                    <field name="recipient_ids" invisible="1"/>
+                    <field name="model" invisible="1"/>
+                    <field name="res_id" invisible="1"/>
+                    <field name="email_from" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                    <field name="type" invisible="1"/>
+                    <button name="send" string="Send Now" type="object" icon="gtk-media-play" states='outgoing'/>
+                    <button name="mark_outgoing" string="Retry" type="object" icon="gtk-redo" states='exception,cancel'/>
+                    <button name="cancel" string="Cancel Email" type="object" icon="terp-gtk-stop" states='outgoing'/>
+                </tree>
+            </field>
+        </record>
+
+    </data>            
+</openerp>

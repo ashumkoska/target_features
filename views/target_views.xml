@@ -19,7 +19,7 @@
                             groups="target_features.role_target_manager_res_groups"/>
                 </xpath>
                 <xpath expr="//button[@name='action_quotation_send']" position="attributes">
-                    <attribute name="states">draft,approved,waiting_approval</attribute>
+                    <attribute name="states">draft,approved</attribute>
                 </xpath>
                 <xpath expr="//button[@name='print_quotation']" position="attributes">
                     <attribute name="states">draft,approved,waiting_approval</attribute>
@@ -77,6 +77,17 @@
             </field>
         </record>
         
+        <record id="view_contract_inv_target_form" model="ir.ui.view">
+            <field name="name">contract.target.inv.form</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="account_analytic_analysis.account_analytic_account_form_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='recurring_invoice_line_ids']/tree" position="inside">
+                    <field name="tax_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+        
         <record id="view_res_partner_target_form" model="ir.ui.view">
             <field name="name">res.partner.target.form</field>
             <field name="model">res.partner</field>
@@ -92,6 +103,43 @@
                 </xpath>
                 <xpath expr="//field[@name='function']" position="replace">
                     <field name="note_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_res_partner_invoice_stat_form" model="ir.ui.view">
+            <field name="name">res.partner.invoice.stat.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.partner_view_buttons"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@id='invoice_button']" position="attributes">
+                    <attribute name="groups" eval="[(4, ref('target_features.role_target_sales_res_groups'))]"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_account_invoice_readonly_form" model="ir.ui.view">
+            <field name="name">res.account.invoice.readonly.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_sales_res_groups'))]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <!-- TODO: check if he should create or not at this point -->
+                    <attribute name="create">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_account_invoice_readonly_tree" model="ir.ui.view">
+            <field name="name">res.account.invoice.readonly.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="groups_id" eval="[(4, ref('target_features.role_target_sales_res_groups'))]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <!-- TODO: check if he should create or not at this point -->
+                    <attribute name="create">1</attribute>
                 </xpath>
             </field>
         </record>
@@ -166,6 +214,9 @@
                     <button name="%(crm.action_crm_lead2opportunity_partner)d" string="Convert to Opportunity" type="action"
                             help="Convert to Opportunity" class="oe_highlight" groups="target_features.role_target_sales_res_groups"/>
                 </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
             </field>
         </record>
         
@@ -198,6 +249,17 @@
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='invoice_open']" position="attributes">
                     <attribute name="groups">target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_contract_target_search" model="ir.ui.view">
+            <field name="name">contract.target.search</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="account_analytic_analysis.view_account_analytic_account_overdue_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='pending']" position="attributes">
+                    <attribute name="domain">[('to_renew', '=', True)]</attribute>               
                 </xpath>
             </field>
         </record>

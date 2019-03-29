@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-11 08:37+0000\n"
-"PO-Revision-Date: 2019-02-11 08:37+0000\n"
+"POT-Creation-Date: 2019-03-29 13:10+0000\n"
+"PO-Revision-Date: 2019-03-29 13:10+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: target_features
-#: model:email.template,body_html:target_features.mail_contract_expiration_3
+#: model:email.template,body_html:target_features.mail_contract_expiration_1
 msgid "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
-"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[2] + '/' + object.date.split('-')[1] + '/' + object.date.split('-')[0] or ''}, \n"
 "односно Ви преостанува уште 1 (еден) месец за користење на споменатата услуга.\n"
 "</p>\n"
 "<p>\n"
@@ -43,7 +43,7 @@ msgid "\n"
 "<p>\n"
 "    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
 "    <a href=\"http://targetgroup.mk/\">\n"
-"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"      <img src=\"http://targetgroup.mk/wp-content/uploads/2019/03/logo.jpg\" style=\"max-width: 156px;\"/>\n"
 "    </a>\n"
 "</p>\n"
 "                \n"
@@ -56,7 +56,7 @@ msgid "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
-"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[2] + '/' + object.date.split('-')[1] + '/' + object.date.split('-')[0] or ''}, \n"
 "односно Ви преостануваат уште 2 (два) месеци за користење на споменатата услуга.\n"
 "</p>\n"
 "<p>\n"
@@ -74,7 +74,7 @@ msgid "\n"
 "<p>\n"
 "    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
 "    <a href=\"http://targetgroup.mk/\">\n"
-"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"      <img src=\"http://targetgroup.mk/wp-content/uploads/2019/03/logo.jpg\" style=\"max-width: 156px;\"/>\n"
 "    </a>\n"
 "</p>\n"
 "                \n"
@@ -82,12 +82,12 @@ msgid "\n"
 msgstr ""
 
 #. module: target_features
-#: model:email.template,body_html:target_features.mail_contract_expiration_1
+#: model:email.template,body_html:target_features.mail_contract_expiration_3
 msgid "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
-"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[1] + '/' + object.date.split('-')[2] + '/' + object.date.split('-')[0] or ''}, \n"
+"Со овој меил би сакале да Ве информираме дека Вашиот договор истекува на ${object.date and object.date.split('-')[2] + '/' + object.date.split('-')[1] + '/' + object.date.split('-')[0] or ''}, \n"
 "односно Ви преостануваат уште 3 (три) месеци за користење на споменатата услуга.\n"
 "</p>\n"
 "<p>\n"
@@ -107,7 +107,7 @@ msgid "\n"
 "<p>\n"
 "    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
 "    <a href=\"http://targetgroup.mk/\">\n"
-"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"      <img src=\"http://targetgroup.mk/wp-content/uploads/2019/03/logo.jpg\" style=\"max-width: 156px;\"/>\n"
 "    </a>\n"
 "</p>\n"
 "                \n"
@@ -116,96 +116,89 @@ msgstr ""
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_package_activation_notif
-msgid "\n"
-"<p>Почитувани, </p>\n"
-"<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
-"<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
-"<p>\n"
-"    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>\n"
+msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <span>Корисничко име: </span><b>${object.username or ''}</b><br>\n"
 "    <span>Лозинка: </span><b>${object.password or ''}</b>\n"
 "</p>\n"
-"<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
 "\n"
-"<img src=\"/target_features/static/src/img/activation.jpg\" style=\"max-width: 444px;\"/>\n"
+"<span style=\"font-size: 13px;\"><img src=\"http://targetgroup.mk/wp-content/uploads/2019/03/activation.jpg\" style=\"max-width: 444px;\"></span>\n"
 "\n"
-"<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
-"<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
-"<p>\n"
-"    <span>Ваш советник: </span><b>Елена Цветкова</b><br/>\n"
-"    <span>Телефон: </span><b>076/265-661</b><br/>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
+"<p style=\"\"><span style=\"font-size: 13px;\">Ваш советник: ${object.manager_id.name or ''} </span></p><p style=\"\"><span style='font-size: 13px; color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif;'>Телефон: ${object.manager_id.partner_id.phone or ''}</span></p><p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
 "    <span>Е-пошта: </span><a href=\"mailto:support@targetgroup.mk\">support@targetgroup.mk</a>\n"
 "</p>\n"
-"<p class=\"text-muted\">\n"
-"    <span>Со почит, </span><br/>\n"
-"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
-"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
-"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
-"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
-"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
-"    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
+"<p class=\"text-muted\" style=\"\">\n"
+"    <span style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Со почит, </span><br>\n"
+"    <b style='color: red; font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>ТАРГЕТ ГРУП ДОО Скопје</b><br><span style=\"font-size: 13px;\">Ул. Кеј Димитар Влахов бр.3-1/1/3</span><br>\n"
+"    <span style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>1000 Скопје, Р. Македонија</span><br>\n"
+"    <span style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Тел/Факс: +389 (2) 3117 100</span><br>\n"
+"    <span style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\" style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>info@targetgroup.mk</a><br>\n"
+"    <a href=\"http://targetgroup.mk/\" style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>www.targetgroup.mk</a>\n"
 "</p>\n"
-"<p>\n"
-"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br>\n"
 "    <a href=\"http://targetgroup.mk/\">\n"
-"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"     <img src=\"http://targetgroup.mk/wp-content/uploads/2019/03/logo.jpg\" style=\"max-width: 156px;\">\n"
 "    </a>\n"
 "</p>\n"
-"<p class=\"text-muted\">\n"
-"    <hr/>\n"
-"    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
-"    <hr/>\n"
-"    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
-"    <hr/>\n"
-"    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
-"</p>\n"
+"<p class=\"text-muted\" style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    </p><hr style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <small style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
+"    <hr style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <small style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
+"    <hr style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <small style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'></p>\n"
 "                \n"
 "            "
 msgstr ""
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_prepaid_activation_notif
-msgid "\n"
-"<p>Почитувани, </p>\n"
-"<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
-"<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
-"<p>\n"
-"    <span>Корисничко име: </span><b>${object.username or ''}</b><br/>\n"
+msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <span>Корисничко име: </span><b>${object.username or ''}</b><br>\n"
 "    <span>Лозинка: </span><b>${object.password or ''}</b>\n"
 "</p>\n"
-"<p>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Ве молиме да извршите промена на лозинката во “Моја БизнисМрежа” со притискање на <b>промени податоци</b>. </p>         \n"
 "\n"
-"<img src=\"/target_features/static/src/img/activation.jpg\" style=\"max-width: 444px;\"/>\n"
+"<span style=\"font-size: 13px;\"><img src=\"http://targetgroup.mk/wp-content/uploads/2019/03/activation.jpg\" style=\"max-width: 444px;\"></span>\n"
 "\n"
-"<p>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
-"<p>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
-"<p>\n"
-"    <span>Ваш советник: </span><b>Фросина Мирчески</b><br/>\n"
-"    <span>Телефон: </span><b>071/397-498</b><br/>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Ве молиме детално да ги прочитате општите услови за користење на БизнисМрежа и да не известите дали се согласувате со истите во рок од 5 работни дена. Доколку не добиеме повратен одговор во рок од 5 работни дена, ќе сметаме дека целосно се согласувате и ги прифаќате општите услови. </p>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>За било какви прашања околу апликацијата контактирајте го вашиот личен советник. </p>\n"
+"<p style=\"\"><span style=\"font-size: 13px;\">Ваш советник: ${object.manager_id.name or ''} </span></p><p style=\"\"><span style='font-size: 13px; color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif;'>Телефон: ${object.manager_id.partner_id.phone or ''}</span></p><p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
 "    <span>Е-пошта: </span><a href=\"mailto:support@targetgroup.mk\">support@targetgroup.mk</a>\n"
 "</p>\n"
-"<p class=\"text-muted\">\n"
-"    <span>Со почит, </span><br/>\n"
-"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
-"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
-"    <span>1000 Скопје, Р. Македонија</span><br/>\n"
-"    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
-"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
+"<p class=\"text-muted\" style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <span>Со почит, </span><br>\n"
+"    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br>\n"
+"    <span>Ул. Кеј Димитар Влахов бр.3-1/1/3</span><br>\n"
+"    <span>1000 Скопје, Р. Македонија</span><br>\n"
+"    <span>Тел/Факс: +389 (2) 3117 100</span><br>\n"
+"    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br>\n"
 "    <a href=\"http://targetgroup.mk/\">www.targetgroup.mk</a>\n"
 "</p>\n"
-"<p>\n"
-"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br/>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <b style=\"color: red;\"><i>Успех е да се биде во тек со промените</i></b><br>\n"
 "    <a href=\"http://targetgroup.mk/\">\n"
-"      <img src=\"/target_features/static/src/img/logo.jpg\" style=\"max-width: 156px;\"/>\n"
+"     <img src=\"http://targetgroup.mk/wp-content/uploads/2019/03/logo.jpg\" style=\"max-width: 156px;\">\n"
 "    </a>\n"
 "</p>\n"
-"<p class=\"text-muted\">\n"
-"    <hr/>\n"
-"    <small>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
-"    <hr/>\n"
-"    <small>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
-"    <hr/>\n"
-"    <small>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
-"</p>\n"
+"<p class=\"text-muted\" style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    </p><hr style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <small style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Оваа порака содржи доверливи информации. Информациите се наменети за лицата наведени погоре. Ако Вие не сте наведениот примач, и ја имате добиено оваа електронска порака по грешка, Ве молиме веднаш да го информирате испраќачот. Секаков вид на репродукција, копирање, модификација, цитат, дистрибуција и/или публикација на оваа електронска порака е строго забрането. </small>\n"
+"    <hr style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <small style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Нашата компанија не превзема никаква одговорност за содржината на оваа електронска порака, или за последиците од акции превземени како резултат на преглед на доставените информации, освен ако информациите не се потврдени писмено. Било какви изјави или мислења наведени во оваа електронска порака се изјави на авторот и не ги претставуваат ставовите на компанијата. Напомена: Иако компанијата превзема мерки за претпазливост да спречи дистрибуција на вируси преку оваа електронска порака, компанијата не може да преземе одговорност за било какви загуби или штети кои би произлегле од содржината на оваа порака или прилозите. </small>\n"
+"    <hr style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
+"    <small style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Ве молиме да не ја печатите оваа електронска порака доколку не е потребно! Мислете на природата! </small>\n"
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'></p>\n"
 "                \n"
 "            "
 msgstr ""
@@ -226,6 +219,13 @@ msgid "Approve Quotation"
 msgstr ""
 
 #. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+msgid "Attachments"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+#: field:mail.mail,body_c_html:0
 #: field:user.type.wiz,email_body:0
 msgid "Body"
 msgstr ""
@@ -237,13 +237,37 @@ msgstr ""
 
 #. module: target_features
 #: view:import.partners.leads.wiz:target_features.view_import_partners_form
+#: view:mail.mail:target_features.view_mail_target_form
 #: view:user.type.wiz:target_features.view_user_type_form
 msgid "Cancel"
 msgstr ""
 
 #. module: target_features
+#: view:mail.mail:target_features.view_mail_target_tree
+msgid "Cancel Email"
+msgstr ""
+
+#. module: target_features
+#: code:addons/target_features/models/account_invoice.py:51
+#, python-format
+msgid "Cannot find a chart of accounts for this company, You should configure it. \n"
+"Please go to Account Configuration."
+msgstr ""
+
+#. module: target_features
 #: field:user.type.wiz,contract_id:0
 msgid "Contract"
+msgstr ""
+
+#. module: target_features
+#: model:ir.actions.act_window,name:target_features.action_contract_emails
+#: model:ir.ui.menu,name:target_features.menu_contract_emails
+msgid "Contract Notifications"
+msgstr ""
+
+#. module: target_features
+#: model:ir.ui.menu,name:target_features.menu_contract_emails_main
+msgid "Contracts"
 msgstr ""
 
 #. module: target_features
@@ -266,13 +290,29 @@ msgid "Created on"
 msgstr ""
 
 #. module: target_features
+#: field:sale.order,discount_approved:0
+msgid "Discount Approved"
+msgstr ""
+
+#. module: target_features
 #: field:account.analytic.account,display_name:0
+#: field:account.analytic.invoice.line,display_name:0
 #: field:crm.case.stage,display_name:0
 #: field:crm.lead,display_name:0
 #: field:import.partners.leads.wiz,display_name:0
 #: field:partner.note,display_name:0
 #: field:user.type.wiz,display_name:0
 msgid "Display Name"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+msgid "Email message"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_tree
+msgid "Emails"
 msgstr ""
 
 #. module: target_features
@@ -306,6 +346,12 @@ msgid "Filename"
 msgstr ""
 
 #. module: target_features
+#: code:addons/target_features/models/account_invoice.py:52
+#, python-format
+msgid "Go to the configuration panel"
+msgstr ""
+
+#. module: target_features
 #: field:res.partner,partner_url:0
 msgid "Hyperlink"
 msgstr ""
@@ -335,7 +381,18 @@ msgid "Import Leads Wizard"
 msgstr ""
 
 #. module: target_features
+#: model:ir.model,name:target_features.model_import_partners_wiz
+msgid "Import Partners Wizard"
+msgstr ""
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: target_features
 #: field:account.analytic.account,__last_update:0
+#: field:account.analytic.invoice.line,__last_update:0
 #: field:crm.case.stage,__last_update:0
 #: field:crm.lead,__last_update:0
 #: field:import.partners.leads.wiz,__last_update:0
@@ -379,7 +436,7 @@ msgid "Name"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/wizard/import_partners_leads_wiz.py:86
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:97
 #, python-format
 msgid "New Leads"
 msgstr ""
@@ -390,9 +447,19 @@ msgid "Note"
 msgstr ""
 
 #. module: target_features
+#: view:website:sale.report_saleorder_document
+msgid "Offer N°"
+msgstr ""
+
+#. module: target_features
 #: view:res.partner:target_features.view_res_partner_target_form
 #: field:res.partner,old_notes:0
 msgid "Old Notes"
+msgstr ""
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_mail_mail
+msgid "Outgoing Mails"
 msgstr ""
 
 #. module: target_features
@@ -430,13 +497,13 @@ msgid "Password"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:32
+#: code:addons/target_features/models/contract.py:41
 #, python-format
 msgid "Please enter a password."
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:30
+#: code:addons/target_features/models/contract.py:39
 #, python-format
 msgid "Please enter a username."
 msgstr ""
@@ -452,14 +519,30 @@ msgid "Please select the type of user:"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/wizard/import_partners_leads_wiz.py:22
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:24
 #, python-format
-msgid "Please upload a valid Excel file."
+msgid "Please upload a valid CSV file."
 msgstr ""
 
 #. module: target_features
 #: selection:user.type.wiz,user_type:0
 msgid "Prepaid User"
+msgstr ""
+
+#. module: target_features
+#: view:website:sale.report_saleorder_document
+msgid "Quotation N°"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+msgid "Reply"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+#: view:mail.mail:target_features.view_mail_target_tree
+msgid "Retry"
 msgstr ""
 
 #. module: target_features
@@ -483,6 +566,12 @@ msgid "Send Mail"
 msgstr ""
 
 #. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+#: view:mail.mail:target_features.view_mail_target_tree
+msgid "Send Now"
+msgstr ""
+
+#. module: target_features
 #: field:sale.order,second_approval:0
 msgid "Show Second Approval"
 msgstr ""
@@ -503,25 +592,46 @@ msgid "Target Roles"
 msgstr ""
 
 #. module: target_features
+#: field:account.analytic.invoice.line,tax_ids:0
+msgid "Taxes"
+msgstr ""
+
+#. module: target_features
 #: field:user.type.wiz,email_template_id:0
 msgid "Template"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/wizard/import_partners_leads_wiz.py:54
-#: code:addons/target_features/wizard/import_partners_leads_wiz.py:80
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:62
+#: code:addons/target_features/wizard/import_partners_leads_wiz.py:91
 #, python-format
 msgid "The following error has occurred while reading the file: \n"
 "%s"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:34
+#: field:account.analytic.account,to_renew:0
+msgid "To Renew"
+msgstr ""
+
+#. module: target_features
+#: view:website:sale.report_saleorder_document
+msgid "To:"
+msgstr ""
+
+#. module: target_features
+#: code:addons/target_features/models/contract.py:43
 #: model:ir.actions.act_window,name:target_features.action_user_type
 #: view:user.type.wiz:target_features.view_user_type_form
 #: field:user.type.wiz,user_type:0
 #, python-format
 msgid "Type of User"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+#: view:mail.mail:target_features.view_mail_target_tree
+msgid "User"
 msgstr ""
 
 #. module: target_features
@@ -540,8 +650,48 @@ msgid "Visible for users of the role Farmer"
 msgstr ""
 
 #. module: target_features
+#: view:account.analytic.account:target_features.view_contract_target_search
+msgid "[('to_renew', '=', True)]"
+msgstr ""
+
+#. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_sales_form
+msgid "approved"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+msgid "by"
+msgstr ""
+
+#. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_form
+msgid "draft,approved"
+msgstr ""
+
+#. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_form
+msgid "draft,approved,sent,waiting_approval"
+msgstr ""
+
+#. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_form
+msgid "draft,approved,waiting_approval"
+msgstr ""
+
+#. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_tree
+msgid "grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in ('invoice_except','shipping_except');green:state in ('waiting_approval');"
+msgstr ""
+
+#. module: target_features
 #: view:crm.lead:target_features.view_crm_lead_target_search
 msgid "my_leads"
+msgstr ""
+
+#. module: target_features
+#: view:mail.mail:target_features.view_mail_target_form
+msgid "on"
 msgstr ""
 
 #. module: target_features
@@ -553,6 +703,11 @@ msgstr ""
 #. module: target_features
 #: view:account.invoice:target_features.view_account_invoice_target_form
 msgid "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
+msgstr ""
+
+#. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_sales_form
+msgid "{'invisible': [('second_approval', '=', True), ('discount_approved', '=', False)]}"
 msgstr ""
 
 #. module: target_features

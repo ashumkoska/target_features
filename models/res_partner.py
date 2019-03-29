@@ -11,6 +11,7 @@ class res_partner(models.Model):
     is_company = fields.Boolean(default=True)
     old_notes = fields.Text(string='Old Notes')
     note_ids = fields.Many2many('partner.note', 'partner_note_rel', 'partner_id', 'note_id', string='Note')
+    lang = fields.Selection(default='mk_MK')
     
     @api.one
     @api.depends('SubjectID')

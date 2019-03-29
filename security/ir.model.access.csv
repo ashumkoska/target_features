@@ -25,3 +25,6 @@
 "crm_profiling_question_farmer","crm_profiling_question_farmer","crm_profiling.model_crm_profiling_question","target_features.role_target_farmer_res_groups","True","True","True","False"
 "crm_profiling_questionnarie_farmer","crm_profiling_questionnarie_farmer","crm_profiling.model_crm_profiling_questionnaire","target_features.role_target_farmer_res_groups","True","True","True","False"
 "account_move_line_farmer","account_move_line_farmer","account.model_account_move_line","target_features.role_target_farmer_res_groups","True","False","False","False"
+,,,,,,,
+"account_move_saleperson","account_move_saleperson","account.model_account_move","target_features.role_target_sales_res_groups","True","False","False","False"
+"account_move_line_saleperson","account_move_line_saleperson","account.model_account_move_line","target_features.role_target_sales_res_groups","True","False","False","False"

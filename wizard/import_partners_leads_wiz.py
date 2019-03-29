@@ -56,17 +56,20 @@ class import_partners_wiz(models.TransientModel):
                     'email': row.get('Email'),
                     'phone': str(row.get('Phone')) if row.get('Phone') else '',
                     'mobile': str(row.get('Mobile')) if row.get('Mobile') else '',
-                    'TaxNumber': row.get('TaxNumber'),
+                    'TaxNumber': row.get('TaxNumber')
                 }
             except Exception as e:
                 raise Warning(_('The following error has occurred while reading the file: \n%s' % e))
-            partner = self.env['res.partner'].search([('RegNumber', '=', reg_number)])
+            partners = self.env['res.partner'].search([('RegNumber', '=', reg_number)])
             # update values if partner exists
-            if partner:
+            for partner in partners:
                 partner.write(partner_vals)
             else:
                 # create new partner
-                partner_vals.update({'RegNumber': reg_number})
+                partner_vals.update({
+                    'RegNumber': reg_number,
+                    'lang': 'mk_MK'
+                })
                 partner = self.env['res.partner'].create(partner_vals)
             try:
                 # lead values

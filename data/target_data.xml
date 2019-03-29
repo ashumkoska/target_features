@@ -42,6 +42,18 @@
             <field name="function" eval="'check_expired_contracts'"/>
             <field eval="'()'" name="args"/>
         </record>
+        
+        <record id="ir_cron_contract_check_renew" model="ir.cron">
+            <field name="name">Check Contracts to Renew</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'account.analytic.account'"/>
+            <field name="function" eval="'check_contracts_to_renew'"/>
+            <field eval="'()'" name="args"/>
+        </record>
 
     </data>            
 </openerp>

@@ -28,5 +28,29 @@
             <field name="groups_id" eval="[(4, ref('target_features.role_target_farmer_res_groups'))]"/>
         </record>
         
+        <record id="menu_contract_emails_main" model="ir.ui.menu">
+            <field name="name">Contracts</field>
+            <field name="parent_id" ref="mail.mail_feeds_main"/>
+            <field name="sequence">20</field>
+        </record>
+        
+        <record id="action_contract_emails" model="ir.actions.act_window">
+            <field name="name">Contract Notifications</field>
+            <field name="res_model">mail.mail</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="target_features.view_mail_target_tree"/>
+            <!-- TODO: check this -->
+            <!--field name="view_ids" eval="[(0, 0, {'view_mode': 'tree', 'view_id': ref('target_features.view_mail_target_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('target_features.view_mail_target_form')})]"/-->
+            <field name="domain">[('model', '=', 'account.analytic.account')]</field>
+        </record>
+        
+        <record id="menu_contract_emails" model="ir.ui.menu">
+            <field name="name">Contract Notifications</field>
+            <field name="parent_id" ref="target_features.menu_contract_emails_main"/>
+            <field name="action" ref="target_features.action_contract_emails"/>
+            <field name="sequence">5</field>
+        </record>
+        
     </data>            
 </openerp>
