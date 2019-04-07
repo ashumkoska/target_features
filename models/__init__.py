@@ -6,3 +6,4 @@ import res_partner
 import crm_lead
 import account_invoice
 import mail
+import calendar

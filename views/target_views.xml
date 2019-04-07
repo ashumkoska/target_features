@@ -24,9 +24,6 @@
                 <xpath expr="//button[@name='print_quotation']" position="attributes">
                     <attribute name="states">draft,approved,waiting_approval</attribute>
                 </xpath>
-                <xpath expr="//button[@name='action_button_confirm']" position="attributes">
-                    <attribute name="states">draft,approved</attribute>
-                </xpath>
                 <xpath expr="//button[@name='cancel']" position="attributes">
                     <attribute name="states">draft,approved,sent,waiting_approval</attribute>
                 </xpath>
@@ -34,15 +31,30 @@
         </record>
         
         <record id="view_sale_order_target_sales_form" model="ir.ui.view">
-            <field name="name">sale.order.target.form</field>
+            <field name="name">sale.order.target.confirm.form</field>
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
-            <field name="groups_id" eval="[(4, ref('target_features.role_target_sales_res_groups'))]"/>
+            <field name="groups_id" eval="[(3, ref('target_features.role_target_sales_res_groups'))]"/>
             <field name="priority">17</field>
             <field name="arch" type="xml">
-                <xpath expr="//button[@name='action_button_confirm']" position="attributes">
-                    <attribute name="states">approved</attribute>
-                    <attribute name="attrs">{'invisible': [('second_approval', '=', True), ('discount_approved', '=', False)]}</attribute>
+                <xpath expr="//button[@name='action_button_confirm'][1]" position="replace">
+                    <button name="action_button_confirm" string="Confirm Sale" type="object" 
+                            groups="target_features.role_target_sales_res_groups" 
+                            attrs="{'invisible': ['|', ('second_approval', '=', True), 
+                                                  '&amp;', ('second_approval', '=', False), ('state', 'not in', ['draft'])]}"/>
+                    <button name="action_button_confirm" string="Confirm Sale" type="object" 
+                            groups="target_features.role_target_manager_res_groups,target_features.role_target_accountant_res_groups"
+                            attrs="{'invisible': [('state', 'not in', ['draft'])]}"/>
+                </xpath>
+                <xpath expr="//button[@name='action_button_confirm'][2]" position="replace">
+                    <button name="action_button_confirm" string="Confirm Sale" type="object" class="oe_highlight"
+                            groups="target_features.role_target_sales_res_groups" 
+                            attrs="{'invisible': ['|', '|', '&amp;', ('second_approval', '=', False), ('state', 'not in', ['sent', 'waiting_approval', 'approved']),
+                                                  '&amp;', ('second_approval', '=', True), ('discount_approved', '=', False),
+                                                  '&amp;', ('second_approval', '=', True), '&amp;', ('discount_approved', '=', True), ('state', 'not in', ['sent', 'waiting_approval', 'approved'])]}"/>
+                    <button name="action_button_confirm" string="Confirm Sale" type="object" class="oe_highlight" 
+                            groups="target_features.role_target_manager_res_groups,target_features.role_target_accountant_res_groups"
+                            attrs="{'invisible': [('state', 'not in', ['sent', 'waiting_approval', 'approved'])]}"/>
                 </xpath>
             </field>
         </record>
@@ -63,6 +75,11 @@
             <field name="model">account.analytic.account</field>
             <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
             <field name="arch" type="xml">
+                <xpath expr="//div[@name='buttons']" position="inside">
+                    <button class="oe_inline oe_stat_button" type="object" name="open_related_invoices" icon="fa-pencil-square-o">
+                        <field string="Invoices" name="invoices_count" widget="statinfo"/>
+                    </button>     
+                </xpath>
                 <xpath expr="//group[@name='main']" position="after">
                     <group name="user_info">
                         <group>
@@ -74,6 +91,9 @@
                         </group>
                     </group>
                 </xpath>
+                <xpath expr="//group[@name='contract']" position="inside">
+                    <field name="installments_no"/>
+                </xpath>
             </field>
         </record>
         
@@ -84,6 +104,54 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='recurring_invoice_line_ids']/tree" position="inside">
                     <field name="tax_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_contract_timesheets_target_form" model="ir.ui.view">
+            <field name="name">contract.target.timesheets.form</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="hr_timesheet.account_analytic_account_timesheet_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='use_timesheets']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='use_timesheets']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_contract_timesheets_details_form" model="ir.ui.view">
+            <field name="name">contract.target.timesheets.details.form</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="hr_timesheet_invoice.account_analytic_account_form_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='invoice_on_timesheets']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='use_timesheets']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_contract_timesheets_inv_form" model="ir.ui.view">
+            <field name="name">contract.target.timesheets.inv.form</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="account_analytic_analysis.account_analytic_account_form_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//separator[@name='toinvoice']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//table" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='invoice_on_timesheets']" position="attributes">
+                    <attribute name="invisible">1</attribute>
                 </xpath>
             </field>
         </record>
@@ -260,6 +328,9 @@
             <field name="arch" type="xml">
                 <xpath expr="//filter[@name='pending']" position="attributes">
                     <attribute name="domain">[('to_renew', '=', True)]</attribute>               
+                </xpath>
+                <xpath expr="//filter[6]" position="attributes">
+                    <attribute name="domain">[('date', '&lt;=', (context_today() + datetime.timedelta(30)).strftime('%Y-%m-%d')), ('date', '&gt;=', context_today().strftime('%Y-%m-%d'))]</attribute>               
                 </xpath>
             </field>
         </record>

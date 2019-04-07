@@ -4,60 +4,66 @@
     <data>
     
         <template id="report_invoice_target_document" inherit_id="account.report_invoice_document">
-            <xpath expr="//t" position="replace">
-                <t>
+            <xpath expr="//." position="replace">
+                <!--t t-call="report.external_layout"-->
                 <div class="header">
-                    <div style="height: 100%;">
+                     <div style="height: 100%;">
                         <img class="img img-responsive" src="/account/static/src/img/MemoTarget.JPG" style="width: 100%;"/>     
                     </div>
                 </div>
                 <div class="page">
-                    <div class="row">
-                        <div class="col-xs-5 col-xs-offset-7">
+                    <div class="row">                
+                        <div class="col-xs-5">
+                            <p>До: </p>                   
                             <address t-field="o.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/>
                             <span t-field="o.partner_id.vat"/>
-                            <span t-field="o.partner_id.TaxNumber"/>
+                             <span t-field="o.partner_id.TaxNumber"/>
                         </div>
                     </div>
+                    <br/>
                     <h2>
                         <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Invoice</span>
-                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
-                        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
-                        <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
-                        <span t-if="o.type == 'out_refund'">Refund</span>
-                        <span t-if="o.type == 'in_refund'">Supplier Refund</span>
-                        <span t-if="o.type == 'in_invoice'">Supplier Invoice</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">Профактура</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Нацрт Фактура</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Откажана Фактура</span>
+                        <span t-if="o.type == 'out_refund'">Сторна Сметка</span>
+                        <span t-if="o.type == 'in_refund'">Сторна Сметка кон Добавувач</span>
+                        <span t-if="o.type == 'in_invoice'">Фактура</span>
                         <span t-field="o.number"/>
                     </h2>
-
+        
                     <div class="row mt32 mb32">
                         <div class="col-xs-3" t-if="o.name">
-                            <strong>Description:</strong>
+                            <strong>Опис:</strong>
                             <p t-field="o.name"/>
                         </div>
                         <div class="col-xs-3" t-if="o.date_invoice">
-                            <strong>Invoice Date:</strong>
+                            <strong>Датум на фактура:</strong>
                             <p t-field="o.date_invoice"/>
                         </div>
                         <div class="col-xs-3" t-if="o.origin">
-                            <strong>Source:</strong>
+                            <strong>Извор:</strong>
                             <p t-field="o.origin"/>
                         </div>
+                        <div class="col-xs-3" t-if="o.currency_id">
+                            <strong>Валута:</strong>
+                            <p t-field="o.currency_id.symbol"/>
+                        </div>
                         <div class="col-xs-3" t-if="o.partner_id.ref">
-                            <strong>Customer Code:</strong>
+                            <strong>Код на клиент:</strong>
                             <p t-field="o.partner_id.ref"/>
                         </div>
                     </div>
-    
+        
                     <table class="table table-condensed">
                         <thead>
                             <tr>
-                                <th>Description</th>
-                                <th>Quantity</th>
-                                <th class="text-right">Unit Price</th>
-                                <th class="text-right" groups="sale.group_discount_per_so_line">Discount (%)</th>
-                                <th class="text-right">Taxes</th>
-                                <th class="text-right">Amount</th>
+                                <th>Опис</th>
+                                <th>Количина</th>
+                                <th class="text-right">Единечна цена</th>
+                                <th class="text-right" groups="sale.group_discount_per_so_line">Попуст (%)</th>
+                                <th class="text-right">Данок</th>
+                                <th class="text-right">Износ</th>
                             </tr>
                         </thead>
                         <tbody class="invoice_tbody">
@@ -80,40 +86,40 @@
                             </tr>
                         </tbody>
                     </table>
-    
+        
                     <div class="row">
                         <div class="col-xs-4 pull-right">
                             <table class="table table-condensed">
                                 <tr class="border-black">
-                                    <td><strong>Total Without Taxes</strong></td>
+                                    <td><strong>Вкупно без данок</strong></td>
                                     <td class="text-right">
                                         <span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Taxes</td>
+                                    <td>Данок</td>
                                     <td class="text-right">
                                         <span t-field="o.amount_tax" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
                                     </td>
                                 </tr>
                                 <tr class="border-black">
-                                    <td><strong>Total</strong></td>
+                                    <td><strong>Вкупно</strong></td>
                                     <td class="text-right">
-                                        <span t-field="o.amount_total" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
+                                         <span t-field="o.amount_total" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                     </div>
-    
+        
                     <div class="row" t-if="o.tax_line">
                         <div class="col-xs-6">
                             <table class="table table-condensed">
                                 <thead>
                                     <tr>
-                                        <th>Tax</th>
-                                        <th class="text-right">Base</th>
-                                        <th class="text-right">Amount</th>
+                                        <th>Данок</th>
+                                        <th class="text-right">Основица</th>
+                                        <th class="text-right">Износ</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -130,29 +136,31 @@
                             </table>
                         </div>
                     </div>
-    
+        
                     <p t-if="o.comment">
-                        <strong>Comment:</strong>
+                        <strong>Коментар:</strong>
                         <span t-field="o.comment"/>
                     </p>
                     <p t-if="o.payment_term">
-                        <strong>Payment Term:</strong>
+                        <strong>Рок на плаќање:</strong>
                         <span t-field="o.payment_term"/>
                     </p>
-                    <div class="row">
+                     <div class="row">
                         <div class="col-xs-5 col-xs-offset-7">
                             <h4 style="text-align: center;">ТАРГЕТ ГРУП</h4>
-                            <p style="text-align: center;">Законски застапник<br/>Лице овластено за потпишување на фактури<br/>Јованоска Марија</p>                                        
-                            <img style="position:absolute;right:150px" class="img img-responsive" src="/account/static/src/img/Jovanoska Marija - Potpis.jpg"/>
+                            <p style="text-align: center;">Законски застапник<br/>Лице овластено за потпишување на фактури<br/>Јованоска Марија</p>
+                                                
+                           <img style="position:absolute;right:150px" class="img img-responsive" src="/account/static/src/img/Jovanoska Marija - Potpis.jpg"/>
+                              
                         </div>
                     </div>
                     <p t-if="o.fiscal_position">
-                        <strong>Fiscal Position:</strong>
+                        <strong>Фискална позиција:</strong>
                         <span t-field="o.fiscal_position"/>
                     </p>
                 </div>
-                <div class="footer"></div>
-                </t>
+            <!--/t-->
+            <div class="footer"></div>
             </xpath>
         </template>
 

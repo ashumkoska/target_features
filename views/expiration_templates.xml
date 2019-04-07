@@ -12,6 +12,7 @@
             <field name="email_from">${user.email or ''}</field>
             <field name="email_to">${object.partner_id.email|safe}</field>
             <field name="subject">Истекување на договор</field>
+            <field name="auto_delete" eval="False"/>
             <field name="body_html"><![CDATA[
 <p>Почитувани, </p>
 <p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>
@@ -52,6 +53,7 @@
             <field name="email_from">${user.email or ''}</field>
             <field name="email_to">${object.partner_id.email|safe}</field>
             <field name="subject">Истекување на договор</field>
+            <field name="auto_delete" eval="False"/>
             <field name="body_html"><![CDATA[
 <p>Почитувани, </p>
 <p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>
@@ -88,6 +90,7 @@
             <field name="email_from">${user.email or ''}</field>
             <field name="email_to">${object.partner_id.email|safe}</field>
             <field name="subject">Истекување на договор</field>
+            <field name="auto_delete" eval="False"/>
             <field name="body_html"><![CDATA[
 <p>Почитувани, </p>
 <p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>

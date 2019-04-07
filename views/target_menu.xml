@@ -40,8 +40,6 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="target_features.view_mail_target_tree"/>
-            <!-- TODO: check this -->
-            <!--field name="view_ids" eval="[(0, 0, {'view_mode': 'tree', 'view_id': ref('target_features.view_mail_target_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('target_features.view_mail_target_form')})]"/-->
             <field name="domain">[('model', '=', 'account.analytic.account')]</field>
         </record>
         

@@ -15,6 +15,7 @@
                                                         ref('target_features.mail_attach_2'),
                                                         ref('target_features.mail_attach_3'),
                                                         ref('target_features.mail_attach_4')])]"/>
+            <field name="auto_delete" eval="False"/>
             <field name="body_html"><![CDATA[
 <p>Почитувани, </p>
 <p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>
@@ -72,6 +73,7 @@
                                                         ref('target_features.mail_attach_2'),
                                                         ref('target_features.mail_attach_3'),
                                                         ref('target_features.mail_attach_4')])]"/>
+            <field name="auto_delete" eval="False"/>
             <field name="body_html"><![CDATA[
 <p>Почитувани, </p>
 <p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>

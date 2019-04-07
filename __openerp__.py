@@ -15,7 +15,9 @@
         'Target_Neodata',
         'marketing_crm',
         'base_user_role',
-        'account_analytic_analysis'
+        'account_analytic_analysis',
+        'portal_sale',
+        'calendar'
     ],
     'data': [        
         'security/target_roles.xml',
@@ -23,7 +25,7 @@
         'security/target_rules.xml',
         'data/target_data.xml',
         'report/sale_order_report.xml',
-        #'report/account_invoice_report.xml',
+        # 'report/account_invoice_report.xml',
         'wizard/user_type_wiz.xml',
         'wizard/import_partners_leads_wiz.xml',
         'views/partner_note_views.xml',
@@ -31,6 +33,7 @@
         'views/target_views.xml',
         'views/activation_templates.xml',
         'views/expiration_templates.xml',
+        'views/mail_templates.xml',
         'views/target_menu.xml',
     ],
     'installable': True,

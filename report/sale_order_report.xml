@@ -22,6 +22,33 @@
                     <span t-field="o.name"/>
                 </h2>
             </xpath>
+            <xpath expr="//t/div/div[last()-1]" position="after">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-7">
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                        <p>Respectfully, </p>
+                        <span t-field="o.company_id.partner_id.name"/><br/>
+                        <t t-if="o.company_id.partner_id.street">               
+                            <span t-field="o.company_id.partner_id.street"/><br/>                                
+                        </t>
+                        <t t-if="o.company_id.partner_id.street2">              
+                            <span t-field="o.company_id.partner_id.street2"/><br/>                                
+                        </t>
+                        <t t-if="o.company_id.partner_id.phone">
+                            <span>Phone: </span>                                
+                            <span t-field="o.company_id.partner_id.phone"/><br/>                                
+                        </t>
+                        <t t-if="o.company_id.partner_id.email">
+                            <span>E-mail: </span>                                
+                            <span t-field="o.company_id.partner_id.email"/><br/>
+                        </t>
+                        <t t-if="o.company_id.partner_id.website">
+                            <span>Website: </span>                                
+                            <span t-field="o.company_id.partner_id.website"/>
+                        </t>
+                    </div>                                       
+                </div>
+            </xpath>
         </template>
 
     </data>

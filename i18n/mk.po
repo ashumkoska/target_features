@@ -1,26 +1,194 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* target_features
+#	* target_features
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:11+0000\n"
-"PO-Revision-Date: 2019-03-29 14:17+0100\n"
+"POT-Creation-Date: 2019-04-07 22:00+0000\n"
+"PO-Revision-Date: 2019-04-07 22:00+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: mk\n"
-"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: target_features
+#: model:email.template,body_html:target_features.calendar_template_meeting_invitation_mk
+msgid "\n"
+"<html>\n"
+"    <head>\n"
+"        <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n"
+"        <title>${object.event_id.name}</title>\n"
+"        <style> \n"
+"            span.oe_mail_footer_access {\n"
+"                display:block;    \n"
+"                text-align:center;\n"
+"                color:grey;                                \n"
+"            }\n"
+"        </style>\n"
+"    </head>\n"
+"    <body>\n"
+"        <div style=\"border-radius: 2px; max-width: 1200px; height: auto;margin-left: auto;margin-right: auto;background-color:#f9f9f9;\">\n"
+"            <div style=\"height:auto;text-align: center;font-size : 30px;color: #8A89BA;\">\n"
+"                <strong>${object.event_id.name}</strong>\n"
+"            </div>\n"
+"            <div style=\"height: 50px;text-align: left;font-size : 14px;border-collapse: separate;margin-top:10px\">\n"
+"                <span>Почитувани</span> ,<br/>                    \n"
+"                <p>Вашиот портфолио менаџер ${object.event_id.user_id.partner_id.name} закажа состанок со Вас во: </p> \n"
+"            </div>\n"
+"            <div style=\"height: auto;margin-left:12px;margin-top:30px;\">\n"
+"                <table>\n"
+"                    <tr>\n"
+"                        <td>\n"
+"                            <div style=\"border-top-left-radius:3px;border-top-right-radius:3px;font-size:12px;border-collapse:separate;text-align:center;font-weight:bold;color:#ffffff;width:130px;min-height: 18px;border-color:#ffffff;background:#8a89ba;padding-top: 4px;\">${object.event_id.get_interval(object.event_id.start, 'dayname', tz=object.partner_id.tz if not object.event_id.allday else None)}</div>\n"
+"                            <div style=\"font-size:48px;min-height:auto;font-weight:bold;text-align:center;color: #5F5F5F;background-color: #E1E2F8;width: 130px;\">\n"
+"                                ${object.event_id.get_interval(object.event_id.start,'day', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"                            </div>\n"
+"                            <div style='font-size:12px;text-align:center;font-weight:bold;color:#ffffff;background-color:#8a89ba'>${object.event_id.get_interval(object.event_id.start, 'month', tz=object.partner_id.tz if not object.event_id.allday else None)}</div>\n"
+"                            <div style=\"border-collapse:separate;color:#8a89ba;text-align:center;width: 128px;font-size:12px;border-bottom-right-radius:3px;font-weight:bold;border:1px solid;border-bottom-left-radius:3px;\">${not object.event_id.allday and object.event_id.get_interval(object.event_id.start, 'time', tz=object.partner_id.tz) or ''}</div>\n"
+"                        </td>\n"
+"                        <td>\n"
+"                            <table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" style=\"margin-top: 15px; margin-left: 10px;font-size: 16px;\">\n"
+"                                    <tr>\n"
+"                                        <td style=\"vertical-align:top;\">\n"
+"                                            % if object.event_id.location:\n"
+"                                                <div style=\"width: 120px; background : #CCCCCC; font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;\">\n"
+"                                                    Локација\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                        <td  style=\"vertical-align:top;\">\n"
+"                                            % if object.event_id.location:\n"
+"                                                <div style = \"font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;   font-size: 14px\" >\n"
+"                                                    : ${object.event_id.location}\n"
+"                                                    <span style= \"color:#A9A9A9; \">(<a href=\"http://maps.google.com/maps?oi=map&q=${object.event_id.location}\">View Map</a>)\n"
+"                                                        </span>\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>                                                        \n"
+"                                    </tr> \n"
+"                                                                                \n"
+"                                    <tr>\n"
+"                                        <td style=\"vertical-align:top;\">\n"
+"                                            % if object.event_id.description :\n"
+"                                                <div style=\"width: 120px; background : #CCCCCC; font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;\">\n"
+"                                                    Опис\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                        <td style=\"vertical-align:text-top;\">\n"
+"                                            % if object.event_id.description :\n"
+"                                                <div style=\"font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;\">\n"
+"                                                    : ${object.event_id.description}\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </table>\n"
+"            </div>\n"
+"            <div style=\"height: auto;width:700px; margin:0 auto;padding-top:20px;padding-bottom:40px;\">\n"
+"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Прифати</a>\n"
+"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#808080;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Одбиј</a>\n"
+"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#D8D8D8;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Погледни детали за состанокот</a>\n"
+"            </div> \n"
+"        </div>\n"
+"    </body>\n"
+"</html>\n"
+"            "
+msgstr "\n"
+"<html>\n"
+"    <head>\n"
+"        <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n"
+"        <title>${object.event_id.name}</title>\n"
+"        <style> \n"
+"            span.oe_mail_footer_access {\n"
+"                display:block;    \n"
+"                text-align:center;\n"
+"                color:grey;                                \n"
+"            }\n"
+"        </style>\n"
+"    </head>\n"
+"    <body>\n"
+"        <div style=\"border-radius: 2px; max-width: 1200px; height: auto;margin-left: auto;margin-right: auto;background-color:#f9f9f9;\">\n"
+"            <div style=\"height:auto;text-align: center;font-size : 30px;color: #8A89BA;\">\n"
+"                <strong>${object.event_id.name}</strong>\n"
+"            </div>\n"
+"            <div style=\"height: 50px;text-align: left;font-size : 14px;border-collapse: separate;margin-top:10px\">\n"
+"                <span>Почитувани</span> ,<br/>                    \n"
+"                <p>Вашиот портфолио менаџер ${object.event_id.user_id.partner_id.name} закажа состанок со Вас во: </p> \n"
+"            </div>\n"
+"            <div style=\"height: auto;margin-left:12px;margin-top:30px;\">\n"
+"                <table>\n"
+"                    <tr>\n"
+"                        <td>\n"
+"                            <div style=\"border-top-left-radius:3px;border-top-right-radius:3px;font-size:12px;border-collapse:separate;text-align:center;font-weight:bold;color:#ffffff;width:130px;min-height: 18px;border-color:#ffffff;background:#8a89ba;padding-top: 4px;\">${object.event_id.get_interval(object.event_id.start, 'dayname', tz=object.partner_id.tz if not object.event_id.allday else None)}</div>\n"
+"                            <div style=\"font-size:48px;min-height:auto;font-weight:bold;text-align:center;color: #5F5F5F;background-color: #E1E2F8;width: 130px;\">\n"
+"                                ${object.event_id.get_interval(object.event_id.start,'day', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"                            </div>\n"
+"                            <div style='font-size:12px;text-align:center;font-weight:bold;color:#ffffff;background-color:#8a89ba'>${object.event_id.get_interval(object.event_id.start, 'month', tz=object.partner_id.tz if not object.event_id.allday else None)}</div>\n"
+"                            <div style=\"border-collapse:separate;color:#8a89ba;text-align:center;width: 128px;font-size:12px;border-bottom-right-radius:3px;font-weight:bold;border:1px solid;border-bottom-left-radius:3px;\">${not object.event_id.allday and object.event_id.get_interval(object.event_id.start, 'time', tz=object.partner_id.tz) or ''}</div>\n"
+"                        </td>\n"
+"                        <td>\n"
+"                            <table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" style=\"margin-top: 15px; margin-left: 10px;font-size: 16px;\">\n"
+"                                    <tr>\n"
+"                                        <td style=\"vertical-align:top;\">\n"
+"                                            % if object.event_id.location:\n"
+"                                                <div style=\"width: 120px; background : #CCCCCC; font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;\">\n"
+"                                                    Локација\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                        <td  style=\"vertical-align:top;\">\n"
+"                                            % if object.event_id.location:\n"
+"                                                <div style = \"font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;   font-size: 14px\" >\n"
+"                                                    : ${object.event_id.location}\n"
+"                                                    <span style= \"color:#A9A9A9; \">(<a href=\"http://maps.google.com/maps?oi=map&q=${object.event_id.location}\">View Map</a>)\n"
+"                                                        </span>\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>                                                        \n"
+"                                    </tr> \n"
+"                                                                                \n"
+"                                    <tr>\n"
+"                                        <td style=\"vertical-align:top;\">\n"
+"                                            % if object.event_id.description :\n"
+"                                                <div style=\"width: 120px; background : #CCCCCC; font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;\">\n"
+"                                                    Опис\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                        <td style=\"vertical-align:text-top;\">\n"
+"                                            % if object.event_id.description :\n"
+"                                                <div style=\"font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;\">\n"
+"                                                    : ${object.event_id.description}\n"
+"                                                </div>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </table>\n"
+"            </div>\n"
+"            <div style=\"height: auto;width:700px; margin:0 auto;padding-top:20px;padding-bottom:40px;\">\n"
+"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Прифати</a>\n"
+"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#808080;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Одбиј</a>\n"
+"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#D8D8D8;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Погледни детали за состанокот</a>\n"
+"            </div> \n"
+"        </div>\n"
+"    </body>\n"
+"</html>\n"
+"            "
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_contract_expiration_1
-msgid ""
-"\n"
+msgid "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -51,8 +219,7 @@ msgid ""
 "</p>\n"
 "                \n"
 "            "
-msgstr ""
-"\n"
+msgstr "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -86,8 +253,7 @@ msgstr ""
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_contract_expiration_2
-msgid ""
-"\n"
+msgid "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -114,8 +280,7 @@ msgid ""
 "</p>\n"
 "                \n"
 "            "
-msgstr ""
-"\n"
+msgstr "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -145,8 +310,7 @@ msgstr ""
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_contract_expiration_3
-msgid ""
-"\n"
+msgid "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -175,8 +339,7 @@ msgid ""
 "</p>\n"
 "                \n"
 "            "
-msgstr ""
-"\n"
+msgstr "\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -207,9 +370,13 @@ msgstr ""
 "            "
 
 #. module: target_features
+#: model:email.template,subject:target_features.calendar_template_meeting_invitation_mk
+msgid "${object.event_id.name}"
+msgstr "${object.event_id.name}"
+
+#. module: target_features
 #: model:email.template,body_html:target_features.mail_package_activation_notif
-msgid ""
-"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
@@ -249,8 +416,7 @@ msgid ""
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'></p>\n"
 "                \n"
 "            "
-msgstr ""
-"<p>Почитувани, </p>\n"
+msgstr "<p>Почитувани, </p>\n"
 "<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p>\n"
@@ -296,8 +462,7 @@ msgstr ""
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_prepaid_activation_notif
-msgid ""
-"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
@@ -338,8 +503,7 @@ msgid ""
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'></p>\n"
 "                \n"
 "            "
-msgstr ""
-"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+msgstr "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
@@ -402,8 +566,14 @@ msgid "Attachments"
 msgstr "Прилози"
 
 #. module: target_features
+#: model:ir.model,name:target_features.model_calendar_attendee
+msgid "Attendee information"
+msgstr "Информации за учесник"
+
+#. module: target_features
 #: view:mail.mail:target_features.view_mail_target_form
-#: field:mail.mail,body_c_html:0 field:user.type.wiz,email_body:0
+#: field:mail.mail,body_c_html:0
+#: field:user.type.wiz,email_body:0
 msgid "Body"
 msgstr "Тело"
 
@@ -425,16 +595,20 @@ msgid "Cancel Email"
 msgstr "Откажи Email"
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:51
+#: code:addons/target_features/models/account_invoice.py:52
 #, python-format
-msgid ""
-"Cannot find a chart of accounts for this company, You should configure it. \n"
+msgid "Cannot find a chart of accounts for this company, You should configure it. \n"
 "Please go to Account Configuration."
-msgstr ""
-"Cannot find a chart of accounts for this company, You should configure it. \n"
+msgstr "Cannot find a chart of accounts for this company, You should configure it. \n"
 "Please go to Account Configuration."
 
 #. module: target_features
+#: view:sale.order:target_features.view_sale_order_target_sales_form
+msgid "Confirm Sale"
+msgstr "Потврди продажба"
+
+#. module: target_features
+#: field:account.invoice,contract_id:0
 #: field:user.type.wiz,contract_id:0
 msgid "Contract"
 msgstr "Договор"
@@ -456,14 +630,16 @@ msgid "Convert to Opportunity"
 msgstr "Претвори во можност"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,create_uid:0 field:partner.note,create_uid:0
+#: field:import.partners.leads.wiz,create_uid:0
+#: field:partner.note,create_uid:0
 #: field:user.type.wiz,create_uid:0
 msgid "Created by"
 msgstr "Креирано од"
 
 #. module: target_features
 #: field:import.partners.leads.wiz,create_date:0
-#: field:partner.note,create_date:0 field:user.type.wiz,create_date:0
+#: field:partner.note,create_date:0
+#: field:user.type.wiz,create_date:0
 msgid "Created on"
 msgstr "Креирано на"
 
@@ -475,11 +651,19 @@ msgstr "Одобрен попуст"
 #. module: target_features
 #: field:account.analytic.account,display_name:0
 #: field:account.analytic.invoice.line,display_name:0
-#: field:crm.case.stage,display_name:0 field:crm.lead,display_name:0
+#: field:calendar.attendee,display_name:0
+#: field:crm.case.stage,display_name:0
+#: field:crm.lead,display_name:0
 #: field:import.partners.leads.wiz,display_name:0
-#: field:partner.note,display_name:0 field:user.type.wiz,display_name:0
+#: field:partner.note,display_name:0
+#: field:user.type.wiz,display_name:0
 msgid "Display Name"
 msgstr "Име"
+
+#. module: target_features
+#: view:website:sale.report_saleorder_document
+msgid "E-mail:"
+msgstr "E-mail:"
 
 #. module: target_features
 #: view:mail.mail:target_features.view_mail_target_form
@@ -522,7 +706,7 @@ msgid "Filename"
 msgstr "Име на датотека"
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:52
+#: code:addons/target_features/models/account_invoice.py:53
 #, python-format
 msgid "Go to the configuration panel"
 msgstr "Оди во конфигурациски панел"
@@ -533,7 +717,8 @@ msgid "Hyperlink"
 msgstr "Линк"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,id:0 field:partner.note,id:0
+#: field:import.partners.leads.wiz,id:0
+#: field:partner.note,id:0
 #: field:user.type.wiz,id:0
 msgid "ID"
 msgstr "ID"
@@ -548,12 +733,12 @@ msgstr "Импортирај"
 #: model:ir.actions.act_window,name:target_features.action_import_partners
 #: model:ir.ui.menu,name:target_features.menu_import_partners
 msgid "Import Leads"
-msgstr "Импортирај траги"
+msgstr "Импортирај Траги"
 
 #. module: target_features
 #: model:ir.model,name:target_features.model_import_partners_leads_wiz
 msgid "Import Leads Wizard"
-msgstr "Импортирање на траги"
+msgstr "Импортирање на Траги"
 
 #. module: target_features
 #: model:ir.model,name:target_features.model_import_partners_wiz
@@ -566,22 +751,32 @@ msgid "Invoice"
 msgstr "Фактура"
 
 #. module: target_features
+#: view:account.analytic.account:target_features.view_contract_target_form
+msgid "Invoices"
+msgstr "Фактури"
+
+#. module: target_features
 #: field:account.analytic.account,__last_update:0
 #: field:account.analytic.invoice.line,__last_update:0
-#: field:crm.case.stage,__last_update:0 field:crm.lead,__last_update:0
+#: field:calendar.attendee,__last_update:0
+#: field:crm.case.stage,__last_update:0
+#: field:crm.lead,__last_update:0
 #: field:import.partners.leads.wiz,__last_update:0
-#: field:partner.note,__last_update:0 field:user.type.wiz,__last_update:0
+#: field:partner.note,__last_update:0
+#: field:user.type.wiz,__last_update:0
 msgid "Last Modified on"
 msgstr "Последно ажурирано на"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,write_uid:0 field:partner.note,write_uid:0
+#: field:import.partners.leads.wiz,write_uid:0
+#: field:partner.note,write_uid:0
 #: field:user.type.wiz,write_uid:0
 msgid "Last Updated by"
 msgstr "Последно ажурирано од"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,write_date:0 field:partner.note,write_date:0
+#: field:import.partners.leads.wiz,write_date:0
+#: field:partner.note,write_date:0
 #: field:user.type.wiz,write_date:0
 msgid "Last Updated on"
 msgstr "Последно ажурирано од"
@@ -616,6 +811,16 @@ msgstr "Нови Траги"
 #: field:res.partner,note_ids:0
 msgid "Note"
 msgstr "Забелешка"
+
+#. module: target_features
+#: field:account.analytic.account,invoices_count:0
+msgid "Number of Invoices"
+msgstr "Број на фактури"
+
+#. module: target_features
+#: field:account.analytic.account,installments_no:0
+msgid "Number of Istallments"
+msgstr "Број на рати"
 
 #. module: target_features
 #: view:website:sale.report_saleorder_document
@@ -668,13 +873,18 @@ msgid "Password"
 msgstr "Лозинка"
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:41
+#: view:website:sale.report_saleorder_document
+msgid "Phone:"
+msgstr "Телефон:"
+
+#. module: target_features
+#: code:addons/target_features/models/contract.py:51
 #, python-format
 msgid "Please enter a password."
 msgstr "Ве молиме внесете лозинка."
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:39
+#: code:addons/target_features/models/contract.py:49
 #, python-format
 msgid "Please enter a username."
 msgstr "Ве молиме внесете корисничко име."
@@ -706,9 +916,21 @@ msgid "Quotation N°"
 msgstr "Понуда бр."
 
 #. module: target_features
+#: field:account.analytic.account,invoice_ids:0
+#: code:addons/target_features/models/contract.py:173
+#, python-format
+msgid "Related Invoices"
+msgstr "Фактури"
+
+#. module: target_features
 #: view:mail.mail:target_features.view_mail_target_form
 msgid "Reply"
 msgstr "Одговори"
+
+#. module: target_features
+#: view:website:sale.report_saleorder_document
+msgid "Respectfully,"
+msgstr "Со почит,"
 
 #. module: target_features
 #: view:mail.mail:target_features.view_mail_target_form
@@ -776,11 +998,9 @@ msgstr "Урнек"
 #: code:addons/target_features/wizard/import_partners_leads_wiz.py:62
 #: code:addons/target_features/wizard/import_partners_leads_wiz.py:91
 #, python-format
-msgid ""
-"The following error has occurred while reading the file: \n"
+msgid "The following error has occurred while reading the file: \n"
 "%s"
-msgstr ""
-"Настана грешка при вчитување на датотеката: \n"
+msgstr "Настана грешка при вчитување на датотеката: \n"
 "%s"
 
 #. module: target_features
@@ -794,7 +1014,7 @@ msgid "To:"
 msgstr "До:"
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:43
+#: code:addons/target_features/models/contract.py:53
 #: model:ir.actions.act_window,name:target_features.action_user_type
 #: view:user.type.wiz:target_features.view_user_type_form
 #: field:user.type.wiz,user_type:0
@@ -824,14 +1044,19 @@ msgid "Visible for users of the role Farmer"
 msgstr "Видливо за корисниците од тип Фармер"
 
 #. module: target_features
+#: view:website:sale.report_saleorder_document
+msgid "Website:"
+msgstr "Веб страна:"
+
+#. module: target_features
+#: view:account.analytic.account:target_features.view_contract_target_search
+msgid "[('date', '<=', (context_today() + datetime.timedelta(30)).strftime('%Y-%m-%d')), ('date', '>=', context_today().strftime('%Y-%m-%d'))]"
+msgstr "[('date', '<=', (context_today() + datetime.timedelta(30)).strftime('%Y-%m-%d')), ('date', '>=', context_today().strftime('%Y-%m-%d'))]"
+
+#. module: target_features
 #: view:account.analytic.account:target_features.view_contract_target_search
 msgid "[('to_renew', '=', True)]"
 msgstr "[('to_renew', '=', True)]"
-
-#. module: target_features
-#: view:sale.order:target_features.view_sale_order_target_sales_form
-msgid "approved"
-msgstr "approved"
 
 #. module: target_features
 #: view:mail.mail:target_features.view_mail_target_form
@@ -880,11 +1105,6 @@ msgid "target_features.role_target_accountant_res_groups,target_features.role_ta
 msgstr "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
 
 #. module: target_features
-#: view:sale.order:target_features.view_sale_order_target_sales_form
-msgid "{'invisible': [('second_approval', '=', True), ('discount_approved', '=', False)]}"
-msgstr "{'invisible': [('second_approval', '=', True), ('discount_approved', '=', False)]}"
-
-#. module: target_features
 #: view:crm.lead:target_features.view_crm_lead_target_form
 msgid "{'readonly': [('source_readonly', '=', True)]}"
 msgstr "{'readonly': [('source_readonly', '=', True)]}"
@@ -901,3 +1121,4 @@ msgstr "Активација на кориснички профил на Биз�
 #: model:email.template,subject:target_features.mail_contract_expiration_3
 msgid "Истекување на договор"
 msgstr "Истекување на договор"
+

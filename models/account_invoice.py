@@ -13,6 +13,7 @@ class account_invoice(models.Model):
         return payment_term and payment_term.id
     
     payment_term = fields.Many2one(default=_get_default_payment_term)
+    contract_id = fields.Many2one('account.analytic.account', string='Contract')
     
     @api.one
     @api.onchange('payment_term')

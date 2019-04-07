@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data noupdate="0">
+    
+        <!-- Email Templates -->
+        
+        <!-- Quotation/Sale Order Template -->
+        <record id="portal_sale.email_template_edi_sale" model="email.template">
+            <field name="body_html"><![CDATA[
+<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+
+    <p>Hello ${object.partner_id.name},</p>
+    
+    <p>Here is your ${object.state in ('draft', 'sent') and 'quotation' or 'order confirmation'} from ${object.company_id.name}: </p>
+
+    <p style="border-left: 1px solid #8e0000; margin-left: 30px;">
+       &nbsp;&nbsp;<strong>REFERENCES</strong><br />
+       &nbsp;&nbsp;Order number: <strong>${object.name}</strong><br />
+       &nbsp;&nbsp;Order total: <strong>${object.amount_total} ${object.pricelist_id.currency_id.name}</strong><br />
+       &nbsp;&nbsp;Order date:  ${format_tz(object.date_order, tz=user.tz, context={'lang':object.partner_id.lang})}<br />
+       % if object.origin:
+       &nbsp;&nbsp;Order reference: ${object.origin}<br />
+       % endif
+       % if object.client_order_ref:
+       &nbsp;&nbsp;Your reference: ${object.client_order_ref}<br />
+       % endif
+       % if object.user_id:
+       &nbsp;&nbsp;Your contact: <a href="mailto:${object.user_id.email or ''}?subject=Order%20${object.name}">${object.user_id.name}</a>
+       % endif
+    </p>
+
+    <br/>
+    <p>If you have any question, do not hesitate to contact us.</p>
+    <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>
+    <br/>
+    <br/>
+    <div style="width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;">
+        <h3 style="margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;">
+            <strong style="text-transform:uppercase;">${object.company_id.name}</strong></h3>
+    </div>
+    <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
+        <span style="color: #222; margin-bottom: 5px; display: block; ">
+        % if object.company_id.street:
+            ${object.company_id.street}<br/>
+        % endif
+        % if object.company_id.street2:
+            ${object.company_id.street2}<br/>
+        % endif
+        % if object.company_id.city or object.company_id.zip:
+            ${object.company_id.zip} ${object.company_id.city}<br/>
+        % endif
+        % if object.company_id.country_id:
+            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>
+        % endif
+        </span>
+        % if object.company_id.phone:
+            <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
+                Phone:&nbsp; ${object.company_id.phone}
+            </div>
+        % endif
+        % if object.company_id.website:
+            <div>
+                Web :&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a>
+            </div>
+        % endif
+        <p></p>
+    </div>
+</div>
+            ]]></field>
+        </record>
+        
+        <!-- Meeting Invitation Template (MK) -->
+        <record id="calendar_template_meeting_invitation_mk" model="email.template">
+            <field name="name">Meeting Invitation (MK)</field>
+            <field name="email_from">${object.event_id.user_id.email or ''}</field>
+            <field name="subject">${object.event_id.name}</field>
+            <field name="model_id" ref="calendar.model_calendar_attendee"/>            
+            <field name="email_to" >${('' if object.partner_id and object.partner_id.email and object.partner_id.email==object.email else object.email|safe)}</field>
+            <field name="partner_to">${object.partner_id and object.partner_id.email and object.partner_id.email==object.email and object.partner_id.id or False }</field>
+            <field name="auto_delete" eval="True"/>            
+            <field name="body_html"><![CDATA[
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>${object.event_id.name}</title>
+        <style> 
+            span.oe_mail_footer_access {
+                display:block;    
+                text-align:center;
+                color:grey;                                
+            }
+        </style>
+    </head>
+    <body>
+        <div style="border-radius: 2px; max-width: 1200px; height: auto;margin-left: auto;margin-right: auto;background-color:#f9f9f9;">
+            <div style="height:auto;text-align: center;font-size : 30px;color: #8A89BA;">
+                <strong>${object.event_id.name}</strong>
+            </div>
+            <div style="height: 50px;text-align: left;font-size : 14px;border-collapse: separate;margin-top:10px">
+                <span>Почитувани</span> ,<br/>                    
+                <p>Вашиот портфолио менаџер ${object.event_id.user_id.partner_id.name} закажа состанок со Вас во: </p> 
+            </div>
+            <div style="height: auto;margin-left:12px;margin-top:30px;">
+                <table>
+                    <tr>
+                        <td>
+                            <div style="border-top-left-radius:3px;border-top-right-radius:3px;font-size:12px;border-collapse:separate;text-align:center;font-weight:bold;color:#ffffff;width:130px;min-height: 18px;border-color:#ffffff;background:#8a89ba;padding-top: 4px;">${object.event_id.get_interval(object.event_id.start, 'dayname', tz=object.partner_id.tz if not object.event_id.allday else None)}</div>
+                            <div style="font-size:48px;min-height:auto;font-weight:bold;text-align:center;color: #5F5F5F;background-color: #E1E2F8;width: 130px;">
+                                ${object.event_id.get_interval(object.event_id.start,'day', tz=object.partner_id.tz if not object.event_id.allday else None)}
+                            </div>
+                            <div style='font-size:12px;text-align:center;font-weight:bold;color:#ffffff;background-color:#8a89ba'>${object.event_id.get_interval(object.event_id.start, 'month', tz=object.partner_id.tz if not object.event_id.allday else None)}</div>
+                            <div style="border-collapse:separate;color:#8a89ba;text-align:center;width: 128px;font-size:12px;border-bottom-right-radius:3px;font-weight:bold;border:1px solid;border-bottom-left-radius:3px;">${not object.event_id.allday and object.event_id.get_interval(object.event_id.start, 'time', tz=object.partner_id.tz) or ''}</div>
+                        </td>
+                        <td>
+                            <table cellspacing="0" cellpadding="0" border="0" style="margin-top: 15px; margin-left: 10px;font-size: 16px;">
+                                    <tr>
+                                        <td style="vertical-align:top;">
+                                            % if object.event_id.location:
+                                                <div style="width: 120px; background : #CCCCCC; font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;">
+                                                    Локација
+                                                </div>
+                                            % endif
+                                        </td>
+                                        <td  style="vertical-align:top;">
+                                            % if object.event_id.location:
+                                                <div style = "font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;   font-size: 14px" >
+                                                    : ${object.event_id.location}
+                                                    <span style= "color:#A9A9A9; ">(<a href="http://maps.google.com/maps?oi=map&q=${object.event_id.location}">View Map</a>)
+                                                        </span>
+                                                </div>
+                                            % endif
+                                        </td>                                                        
+                                    </tr> 
+                                                                                
+                                    <tr>
+                                        <td style="vertical-align:top;">
+                                            % if object.event_id.description :
+                                                <div style="width: 120px; background : #CCCCCC; font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;">
+                                                    Опис
+                                                </div>
+                                            % endif
+                                        </td>
+                                        <td style="vertical-align:text-top;">
+                                            % if object.event_id.description :
+                                                <div style="font-family: Lucica Grande', Ubuntu, Arial, Verdana, sans-serif;">
+                                                    : ${object.event_id.description}
+                                                </div>
+                                            % endif
+                                        </td>
+                                    </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="height: auto;width:700px; margin:0 auto;padding-top:20px;padding-bottom:40px;">
+                <a style="padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;" href="/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}">Прифати</a>
+                <a style="padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#808080;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;" href="/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}">Одбиј</a>
+                <a style="padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#D8D8D8;text-decoration: none;color:#FFFFFF;" href="/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}">Погледни детали за состанокот</a>
+            </div> 
+        </div>
+    </body>
+</html>
+            ]]></field>
+        </record>
+
+    </data>            
+</openerp>

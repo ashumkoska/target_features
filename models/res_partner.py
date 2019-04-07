@@ -12,6 +12,7 @@ class res_partner(models.Model):
     old_notes = fields.Text(string='Old Notes')
     note_ids = fields.Many2many('partner.note', 'partner_note_rel', 'partner_id', 'note_id', string='Note')
     lang = fields.Selection(default='mk_MK')
+    total_invoiced = fields.Float(groups='target_features.role_target_sales_res_groups')
     
     @api.one
     @api.depends('SubjectID')

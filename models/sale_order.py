@@ -19,7 +19,7 @@ class sale_order(models.Model):
                               ('invoice_except', 'Invoice Exception'),
                               ('done', 'Done')])
     second_approval = fields.Boolean(string='Show Second Approval', compute='compute_second_approval', store=True)
-    discount_approved = fields.Boolean(string='Discount Approved', readonly=True, default=False)
+    discount_approved = fields.Boolean(string='Discount Approved', default=False)
     
     @api.one
     @api.depends('order_line', 'order_line.discount')
