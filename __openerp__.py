@@ -16,7 +16,6 @@
         'marketing_crm',
         'base_user_role',
         'account_analytic_analysis',
-        'portal_sale',
         'calendar'
     ],
     'data': [        
