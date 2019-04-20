@@ -34,7 +34,6 @@
             <field name="name">sale.order.target.confirm.form</field>
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
-            <field name="groups_id" eval="[(3, ref('target_features.role_target_sales_res_groups'))]"/>
             <field name="priority">17</field>
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='action_button_confirm'][1]" position="replace">
@@ -59,6 +58,17 @@
             </field>
         </record>
         
+        <record id="view_sale_order_proforma_target_form" model="ir.ui.view">
+            <field name="name">sale.order.proforma.target.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="account_proforma_invoice.sale_order_proforma_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='create_proforma']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('state','not in',['draft', 'sent', 'waiting_approval', 'approved'])]}</attribute>
+                </xpath>
+            </field>
+        </record>
+        
         <record id="view_sale_order_target_tree" model="ir.ui.view">
             <field name="name">sale.order.target.tree</field>
             <field name="model">sale.order</field>
@@ -66,6 +76,52 @@
             <field name="arch" type="xml">
                 <xpath expr="//tree" position="attributes">
                     <attribute name="colors">grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in ('invoice_except','shipping_except');green:state in ('waiting_approval');</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_account_proforma_target_form" model="ir.ui.view">
+            <field name="name">account.proforma.target.form</field>
+            <field name="model">account.proforma.invoice</field>
+            <field name="inherit_id" ref="account_proforma_invoice.view_proforma_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <field name="second_approval" invisible="1"/>
+                    <field name="discount_approved" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[@name='validate_proforma']" position="replace">
+                    <button name="action_approve_proforma" string="Approve Discount" type="object"
+                            class="oe_highlight" attrs="{'invisible': ['|', ('second_approval', '=', False), ('state', '!=', 'waiting_approval')]}"
+                            groups="target_features.role_target_manager_res_groups"/>
+                    <button name="validate_proforma" string="Validate" type="object" class="oe_highlight"
+                            groups="target_features.role_target_sales_res_groups" 
+                            attrs="{'invisible': ['|', ('second_approval', '=', True), 
+                                                  '&amp;', ('second_approval', '=', False), ('state', 'not in', ['draft'])]}"/>
+                    <button name="validate_proforma" string="Validate" type="object" class="oe_highlight"
+                            groups="target_features.role_target_manager_res_groups,target_features.role_target_accountant_res_groups"
+                            attrs="{'invisible': [('state', 'not in', ['draft'])]}"/>
+                    <button name="validate_proforma" string="Validate" type="object" class="oe_highlight"
+                            groups="target_features.role_target_sales_res_groups" 
+                            attrs="{'invisible': ['|', '|', '&amp;', ('second_approval', '=', False), ('state', 'not in', ['waiting_approval', 'approved']),
+                                                  '&amp;', ('second_approval', '=', True), ('discount_approved', '=', False),
+                                                  '&amp;', ('second_approval', '=', True), '&amp;', ('discount_approved', '=', True), ('state', 'not in', ['waiting_approval', 'approved'])]}"/>
+                    <button name="validate_proforma" string="Validate" type="object" class="oe_highlight" 
+                            groups="target_features.role_target_manager_res_groups,target_features.role_target_accountant_res_groups"
+                            attrs="{'invisible': [('state', 'not in', ['waiting_approval', 'approved'])]}"/>
+                </xpath>
+                <xpath expr="//button[@name='register_payment']" position="attributes">
+                    <attribute name="groups">target_features.role_target_accountant_res_groups</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_account_proforma_target_tree" model="ir.ui.view">
+            <field name="name">account.proforma.target.tree</field>
+            <field name="model">account.proforma.invoice</field>
+            <field name="inherit_id" ref="account_proforma_invoice.view_proforma_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="colors">grey:state=='cancel';green:state in ('waiting_approval');</attribute>
                 </xpath>
             </field>
         </record>
@@ -341,6 +397,11 @@
         </record>
         <record id="crm.crm_case_category_act_leads_all" model="ir.actions.act_window">
             <field name="context">{'default_type': 'lead', 'stage_type': 'lead', 'needaction_menu_ref': 'crm.menu_crm_opportunities', 'search_default_my_leads': 1}</field>
+        </record>
+        
+        <!-- Reports -->
+        <record id="account_proforma_invoice.report_proforma_invoice" model="ir.actions.report.xml">
+            <field name="report_name">target_features.report_proforma_target</field>
         </record>
             
     </data>            

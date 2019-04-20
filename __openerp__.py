@@ -25,6 +25,7 @@
         'data/target_data.xml',
         'report/sale_order_report.xml',
         # 'report/account_invoice_report.xml',
+        'report/account_proforma_invoice_report.xml',
         'wizard/user_type_wiz.xml',
         'wizard/import_partners_leads_wiz.xml',
         'views/partner_note_views.xml',

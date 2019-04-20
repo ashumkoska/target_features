@@ -1,23 +1,95 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* target_features
+# 	* target_features
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 22:00+0000\n"
-"PO-Revision-Date: 2019-04-07 22:00+0000\n"
+"POT-Creation-Date: 2019-04-20 15:53+0000\n"
+"PO-Revision-Date: 2019-04-20 17:57+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: mk\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: target_features
+#: model:email.template,body_html:target_features.proforma_email_template_mk
+msgid ""
+"\n"
+"                \n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Почитувани,</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Во прилог Ви ја доставувам профактурата за користење на нашите услуги.</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Доколку имате било какви прашања, Ви стојам на располагање.</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Со почит,</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"                \n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Почитувани,</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Во прилог Ви ја доставувам профактурата за користење на нашите услуги.</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Доколку имате било какви прашања, Ви стојам на располагање.</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Со почит,</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                \n"
+"            "
 
 #. module: target_features
 #: model:email.template,body_html:target_features.calendar_template_meeting_invitation_mk
-msgid "\n"
+msgid ""
+"\n"
 "<html>\n"
 "    <head>\n"
 "        <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n"
@@ -101,7 +173,8 @@ msgid "\n"
 "    </body>\n"
 "</html>\n"
 "            "
-msgstr "\n"
+msgstr ""
+"\n"
 "<html>\n"
 "    <head>\n"
 "        <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n"
@@ -188,7 +261,8 @@ msgstr "\n"
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_contract_expiration_1
-msgid "\n"
+msgid ""
+"\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -219,7 +293,8 @@ msgid "\n"
 "</p>\n"
 "                \n"
 "            "
-msgstr "\n"
+msgstr ""
+"\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -253,7 +328,8 @@ msgstr "\n"
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_contract_expiration_2
-msgid "\n"
+msgid ""
+"\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -280,7 +356,8 @@ msgid "\n"
 "</p>\n"
 "                \n"
 "            "
-msgstr "\n"
+msgstr ""
+"\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -310,7 +387,8 @@ msgstr "\n"
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_contract_expiration_3
-msgid "\n"
+msgid ""
+"\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -339,7 +417,8 @@ msgid "\n"
 "</p>\n"
 "                \n"
 "            "
-msgstr "\n"
+msgstr ""
+"\n"
 "<p>Почитувани, </p>\n"
 "<p>Вашата компанија е корисник на нашата платформа за бизнис информации, БизнисМрежа.мк и во моментов има активна претплата за користење на истата. </p>\n"
 "<p>\n"
@@ -368,6 +447,11 @@ msgstr "\n"
 "</p>\n"
 "                \n"
 "            "
+
+#. module: target_features
+#: model:email.template,subject:target_features.proforma_email_template_mk
+msgid "${object.company_id.name|safe}Профактура (${object.number or 'n/a'})"
+msgstr "${object.company_id.name|safe}Профактура (${object.number or 'n/a'})"
 
 #. module: target_features
 #: model:email.template,subject:target_features.calendar_template_meeting_invitation_mk
@@ -376,7 +460,8 @@ msgstr "${object.event_id.name}"
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_package_activation_notif
-msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+msgid ""
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
@@ -416,7 +501,8 @@ msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helveti
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'></p>\n"
 "                \n"
 "            "
-msgstr "<p>Почитувани, </p>\n"
+msgstr ""
+"<p>Почитувани, </p>\n"
 "<p>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p>\n"
@@ -462,7 +548,8 @@ msgstr "<p>Почитувани, </p>\n"
 
 #. module: target_features
 #: model:email.template,body_html:target_features.mail_prepaid_activation_notif
-msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+msgid ""
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
@@ -503,7 +590,8 @@ msgid "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helveti
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'></p>\n"
 "                \n"
 "            "
-msgstr "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
+msgstr ""
+"<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Почитувани, </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>Вашиот кориснички профил и лозинка се активни и истите ќе можете да ги користите веднаш. </p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'><a href=\"http://www.biznismreza.mk/\">www.biznismreza.mk</a></p>\n"
 "<p style='color: rgb(76, 76, 76); font-family: \"Lucida Grande\", Helvetica, Verdana, Arial, sans-serif; font-size: 13px;'>\n"
@@ -556,6 +644,11 @@ msgid "Analytic Account"
 msgstr "Аналитичка сметка"
 
 #. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_form
+msgid "Approve Discount"
+msgstr "Потврди попуст"
+
+#. module: target_features
 #: view:sale.order:target_features.view_sale_order_target_form
 msgid "Approve Quotation"
 msgstr "Потврди понуда"
@@ -572,8 +665,7 @@ msgstr "Информации за учесник"
 
 #. module: target_features
 #: view:mail.mail:target_features.view_mail_target_form
-#: field:mail.mail,body_c_html:0
-#: field:user.type.wiz,email_body:0
+#: field:mail.mail,body_c_html:0 field:user.type.wiz,email_body:0
 msgid "Body"
 msgstr "Тело"
 
@@ -597,10 +689,18 @@ msgstr "Откажи Email"
 #. module: target_features
 #: code:addons/target_features/models/account_invoice.py:52
 #, python-format
-msgid "Cannot find a chart of accounts for this company, You should configure it. \n"
+msgid ""
+"Cannot find a chart of accounts for this company, You should configure it. \n"
 "Please go to Account Configuration."
-msgstr "Cannot find a chart of accounts for this company, You should configure it. \n"
+msgstr ""
+"Cannot find a chart of accounts for this company, You should configure it. \n"
 "Please go to Account Configuration."
+
+#. module: target_features
+#: code:addons/target_features/models/account_proforma_invoice.py:45
+#, python-format
+msgid "Compose Email"
+msgstr "Креирај Email"
 
 #. module: target_features
 #: view:sale.order:target_features.view_sale_order_target_sales_form
@@ -608,8 +708,7 @@ msgid "Confirm Sale"
 msgstr "Потврди продажба"
 
 #. module: target_features
-#: field:account.invoice,contract_id:0
-#: field:user.type.wiz,contract_id:0
+#: field:account.invoice,contract_id:0 field:user.type.wiz,contract_id:0
 msgid "Contract"
 msgstr "Договор"
 
@@ -630,20 +729,19 @@ msgid "Convert to Opportunity"
 msgstr "Претвори во можност"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,create_uid:0
-#: field:partner.note,create_uid:0
+#: field:import.partners.leads.wiz,create_uid:0 field:partner.note,create_uid:0
 #: field:user.type.wiz,create_uid:0
 msgid "Created by"
 msgstr "Креирано од"
 
 #. module: target_features
 #: field:import.partners.leads.wiz,create_date:0
-#: field:partner.note,create_date:0
-#: field:user.type.wiz,create_date:0
+#: field:partner.note,create_date:0 field:user.type.wiz,create_date:0
 msgid "Created on"
 msgstr "Креирано на"
 
 #. module: target_features
+#: field:account.proforma.invoice,discount_approved:0
 #: field:sale.order,discount_approved:0
 msgid "Discount Approved"
 msgstr "Одобрен попуст"
@@ -651,12 +749,9 @@ msgstr "Одобрен попуст"
 #. module: target_features
 #: field:account.analytic.account,display_name:0
 #: field:account.analytic.invoice.line,display_name:0
-#: field:calendar.attendee,display_name:0
-#: field:crm.case.stage,display_name:0
-#: field:crm.lead,display_name:0
-#: field:import.partners.leads.wiz,display_name:0
-#: field:partner.note,display_name:0
-#: field:user.type.wiz,display_name:0
+#: field:calendar.attendee,display_name:0 field:crm.case.stage,display_name:0
+#: field:crm.lead,display_name:0 field:import.partners.leads.wiz,display_name:0
+#: field:partner.note,display_name:0 field:user.type.wiz,display_name:0
 msgid "Display Name"
 msgstr "Име"
 
@@ -717,8 +812,7 @@ msgid "Hyperlink"
 msgstr "Линк"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,id:0
-#: field:partner.note,id:0
+#: field:import.partners.leads.wiz,id:0 field:partner.note,id:0
 #: field:user.type.wiz,id:0
 msgid "ID"
 msgstr "ID"
@@ -733,12 +827,12 @@ msgstr "Импортирај"
 #: model:ir.actions.act_window,name:target_features.action_import_partners
 #: model:ir.ui.menu,name:target_features.menu_import_partners
 msgid "Import Leads"
-msgstr "Импортирај Траги"
+msgstr "Импортирај траги"
 
 #. module: target_features
 #: model:ir.model,name:target_features.model_import_partners_leads_wiz
 msgid "Import Leads Wizard"
-msgstr "Импортирање на Траги"
+msgstr "Импортирање на траги"
 
 #. module: target_features
 #: model:ir.model,name:target_features.model_import_partners_wiz
@@ -758,25 +852,21 @@ msgstr "Фактури"
 #. module: target_features
 #: field:account.analytic.account,__last_update:0
 #: field:account.analytic.invoice.line,__last_update:0
-#: field:calendar.attendee,__last_update:0
-#: field:crm.case.stage,__last_update:0
+#: field:calendar.attendee,__last_update:0 field:crm.case.stage,__last_update:0
 #: field:crm.lead,__last_update:0
 #: field:import.partners.leads.wiz,__last_update:0
-#: field:partner.note,__last_update:0
-#: field:user.type.wiz,__last_update:0
+#: field:partner.note,__last_update:0 field:user.type.wiz,__last_update:0
 msgid "Last Modified on"
 msgstr "Последно ажурирано на"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,write_uid:0
-#: field:partner.note,write_uid:0
+#: field:import.partners.leads.wiz,write_uid:0 field:partner.note,write_uid:0
 #: field:user.type.wiz,write_uid:0
 msgid "Last Updated by"
 msgstr "Последно ажурирано од"
 
 #. module: target_features
-#: field:import.partners.leads.wiz,write_date:0
-#: field:partner.note,write_date:0
+#: field:import.partners.leads.wiz,write_date:0 field:partner.note,write_date:0
 #: field:user.type.wiz,write_date:0
 msgid "Last Updated on"
 msgstr "Последно ажурирано од"
@@ -911,6 +1001,11 @@ msgid "Prepaid User"
 msgstr "Pre-paid Корисник"
 
 #. module: target_features
+#: model:ir.model,name:target_features.model_account_proforma_invoice
+msgid "Pro-Forma"
+msgstr "Профактура"
+
+#. module: target_features
 #: view:website:sale.report_saleorder_document
 msgid "Quotation N°"
 msgstr "Понуда бр."
@@ -965,6 +1060,7 @@ msgid "Send Now"
 msgstr "Испрати сега"
 
 #. module: target_features
+#: field:account.proforma.invoice,second_approval:0
 #: field:sale.order,second_approval:0
 msgid "Show Second Approval"
 msgstr "Прикажи двојна потврда"
@@ -998,9 +1094,11 @@ msgstr "Урнек"
 #: code:addons/target_features/wizard/import_partners_leads_wiz.py:62
 #: code:addons/target_features/wizard/import_partners_leads_wiz.py:91
 #, python-format
-msgid "The following error has occurred while reading the file: \n"
+msgid ""
+"The following error has occurred while reading the file: \n"
 "%s"
-msgstr "Настана грешка при вчитување на датотеката: \n"
+msgstr ""
+"Настана грешка при вчитување на датотеката: \n"
 "%s"
 
 #. module: target_features
@@ -1037,6 +1135,11 @@ msgstr "Тип на корисник"
 #: field:account.analytic.account,username:0
 msgid "Username"
 msgstr "Корисничко име"
+
+#. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_form
+msgid "Validate"
+msgstr "Потврди"
 
 #. module: target_features
 #: field:crm.case.stage,farmer_visible:0
@@ -1084,6 +1187,11 @@ msgid "grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in
 msgstr "grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in ('invoice_except','shipping_except');green:state in ('waiting_approval');"
 
 #. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_tree
+msgid "grey:state=='cancel';green:state in ('waiting_approval');"
+msgstr "grey:state=='cancel';green:state in ('waiting_approval');"
+
+#. module: target_features
 #: view:crm.lead:target_features.view_crm_lead_target_search
 msgid "my_leads"
 msgstr "my_leads"
@@ -1100,14 +1208,29 @@ msgid "or"
 msgstr "или"
 
 #. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_form
+msgid "target_features.role_target_accountant_res_groups"
+msgstr "target_features.role_target_accountant_res_groups"
+
+#. module: target_features
 #: view:account.invoice:target_features.view_account_invoice_target_form
 msgid "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
 msgstr "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
 
 #. module: target_features
+#: view:sale.order:target_features.view_sale_order_proforma_target_form
+msgid "{'invisible': [('state','not in',['draft', 'sent', 'waiting_approval', 'approved'])]}"
+msgstr "{'invisible': [('state','not in',['draft', 'sent', 'waiting_approval', 'approved'])]}"
+
+#. module: target_features
 #: view:crm.lead:target_features.view_crm_lead_target_form
 msgid "{'readonly': [('source_readonly', '=', True)]}"
 msgstr "{'readonly': [('source_readonly', '=', True)]}"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Јованоска Марија"
+msgstr "Јованоска Марија"
 
 #. module: target_features
 #: model:email.template,subject:target_features.mail_package_activation_notif
@@ -1116,9 +1239,113 @@ msgid "Активација на кориснички профил на Бизн
 msgstr "Активација на кориснички профил на БизнисMрежа.мк"
 
 #. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Валута:"
+msgstr "Валута:"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Вкупно"
+msgstr "Вкупно"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Вкупно без данок"
+msgstr "Вкупно без данок"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Данок"
+msgstr "Данок"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Датум на профактура:"
+msgstr "Датум на профактура:"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Единечна цена"
+msgstr "Единечна цена"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Законски застапник"
+msgstr "Законски застапник"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Извор:"
+msgstr "Извор:"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Износ"
+msgstr "Износ"
+
+#. module: target_features
 #: model:email.template,subject:target_features.mail_contract_expiration_1
 #: model:email.template,subject:target_features.mail_contract_expiration_2
 #: model:email.template,subject:target_features.mail_contract_expiration_3
 msgid "Истекување на договор"
 msgstr "Истекување на договор"
 
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Код на клиент:"
+msgstr "Код на клиент:"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Количина"
+msgstr "Количина"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Коментар:"
+msgstr "Коментар:"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Лице овластено за потпишување на фактури"
+msgstr "Лице овластено за потпишување на фактури"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Нацрт Профактура"
+msgstr "Нацрт Профактура"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Опис:"
+msgstr "Опис:"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Попуст (%)"
+msgstr "Попуст (%)"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Профактура"
+msgstr "Профактура"
+
+#. module: target_features
+#: model:email.template,report_name:target_features.proforma_email_template_mk
+msgid "Профактура_${(object.number or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}"
+msgstr "Профактура_${(object.number or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Рок на плаќање:"
+msgstr "Рок на плаќање:"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "ТАРГЕТ ГРУП"
+msgstr "ТАРГЕТ ГРУП"
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Фискална позиција:"
+msgstr "Фискална позиција:"

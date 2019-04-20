@@ -6,14 +6,50 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 22:00+0000\n"
-"PO-Revision-Date: 2019-04-07 22:00+0000\n"
+"POT-Creation-Date: 2019-04-20 15:53+0000\n"
+"PO-Revision-Date: 2019-04-20 15:53+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: target_features
+#: model:email.template,body_html:target_features.proforma_email_template_mk
+msgid "\n"
+"                \n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Почитувани,</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Во прилог Ви ја доставувам профактурата за користење на нашите услуги.</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Доколку имате било какви прашања, Ви стојам на располагање.</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                    <p style=\"margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"                        <font face=\"Times New Roman, serif\">\n"
+"                            <font style=\"font-size: 12pt;\">\n"
+"                                <span lang=\"mk-MK\">Со почит,</span>\n"
+"                            </font>\n"
+"                        </font>\n"
+"                    </p>\n"
+"                \n"
+"            "
+msgstr ""
 
 #. module: target_features
 #: model:email.template,body_html:target_features.calendar_template_meeting_invitation_mk
@@ -203,6 +239,11 @@ msgid "\n"
 msgstr ""
 
 #. module: target_features
+#: model:email.template,subject:target_features.proforma_email_template_mk
+msgid "${object.company_id.name|safe}Профактура (${object.number or 'n/a'})"
+msgstr ""
+
+#. module: target_features
 #: model:email.template,subject:target_features.calendar_template_meeting_invitation_mk
 msgid "${object.event_id.name}"
 msgstr ""
@@ -307,6 +348,11 @@ msgid "Analytic Account"
 msgstr ""
 
 #. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_form
+msgid "Approve Discount"
+msgstr ""
+
+#. module: target_features
 #: view:sale.order:target_features.view_sale_order_target_form
 msgid "Approve Quotation"
 msgstr ""
@@ -353,6 +399,12 @@ msgid "Cannot find a chart of accounts for this company, You should configure it
 msgstr ""
 
 #. module: target_features
+#: code:addons/target_features/models/account_proforma_invoice.py:45
+#, python-format
+msgid "Compose Email"
+msgstr ""
+
+#. module: target_features
 #: view:sale.order:target_features.view_sale_order_target_sales_form
 msgid "Confirm Sale"
 msgstr ""
@@ -394,6 +446,7 @@ msgid "Created on"
 msgstr ""
 
 #. module: target_features
+#: field:account.proforma.invoice,discount_approved:0
 #: field:sale.order,discount_approved:0
 msgid "Discount Approved"
 msgstr ""
@@ -661,6 +714,11 @@ msgid "Prepaid User"
 msgstr ""
 
 #. module: target_features
+#: model:ir.model,name:target_features.model_account_proforma_invoice
+msgid "Pro-Forma"
+msgstr ""
+
+#. module: target_features
 #: view:website:sale.report_saleorder_document
 msgid "Quotation N°"
 msgstr ""
@@ -715,6 +773,7 @@ msgid "Send Now"
 msgstr ""
 
 #. module: target_features
+#: field:account.proforma.invoice,second_approval:0
 #: field:sale.order,second_approval:0
 msgid "Show Second Approval"
 msgstr ""
@@ -788,6 +847,11 @@ msgid "Username"
 msgstr ""
 
 #. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_form
+msgid "Validate"
+msgstr ""
+
+#. module: target_features
 #: field:crm.case.stage,farmer_visible:0
 msgid "Visible for users of the role Farmer"
 msgstr ""
@@ -833,6 +897,11 @@ msgid "grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in
 msgstr ""
 
 #. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_tree
+msgid "grey:state=='cancel';green:state in ('waiting_approval');"
+msgstr ""
+
+#. module: target_features
 #: view:crm.lead:target_features.view_crm_lead_target_search
 msgid "my_leads"
 msgstr ""
@@ -849,13 +918,28 @@ msgid "or"
 msgstr ""
 
 #. module: target_features
+#: view:account.proforma.invoice:target_features.view_account_proforma_target_form
+msgid "target_features.role_target_accountant_res_groups"
+msgstr ""
+
+#. module: target_features
 #: view:account.invoice:target_features.view_account_invoice_target_form
 msgid "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
 msgstr ""
 
 #. module: target_features
+#: view:sale.order:target_features.view_sale_order_proforma_target_form
+msgid "{'invisible': [('state','not in',['draft', 'sent', 'waiting_approval', 'approved'])]}"
+msgstr ""
+
+#. module: target_features
 #: view:crm.lead:target_features.view_crm_lead_target_form
 msgid "{'readonly': [('source_readonly', '=', True)]}"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Јованоска Марија"
 msgstr ""
 
 #. module: target_features
@@ -865,9 +949,114 @@ msgid "Активација на кориснички профил на Бизн
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Валута:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Вкупно"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Вкупно без данок"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Данок"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Датум на профактура:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Единечна цена"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Законски застапник"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Извор:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Износ"
+msgstr ""
+
+#. module: target_features
 #: model:email.template,subject:target_features.mail_contract_expiration_1
 #: model:email.template,subject:target_features.mail_contract_expiration_2
 #: model:email.template,subject:target_features.mail_contract_expiration_3
 msgid "Истекување на договор"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Код на клиент:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Количина"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Коментар:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Лице овластено за потпишување на фактури"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Нацрт Профактура"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Опис:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Попуст (%)"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Профактура"
+msgstr ""
+
+#. module: target_features
+#: model:email.template,report_name:target_features.proforma_email_template_mk
+msgid "Профактура_${(object.number or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Рок на плаќање:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "ТАРГЕТ ГРУП"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_proforma_target_document
+msgid "Фискална позиција:"
 msgstr ""
 
