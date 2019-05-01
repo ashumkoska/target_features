@@ -160,6 +160,10 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='recurring_invoice_line_ids']/tree" position="inside">
                     <field name="tax_ids" widget="many2many_tags"/>
+                    <field name="total_amount"/>
+                </xpath>
+                <xpath expr="//button[@name='recurring_create_invoice']" position="replace">
+                    <button class="oe_link" name="recurring_create_invoice" attrs="{'invisible': [('recurring_invoices','!=',True)]}" string="⇒ create invoices" type="object"/>
                 </xpath>
             </field>
         </record>
@@ -391,6 +395,17 @@
             </field>
         </record>
         
+        <record id="view_crm_phonecall_target_tree" model="ir.ui.view">
+            <field name="name">crm.phonecall.target.tree</field>
+            <field name="model">crm.phonecall</field>
+            <field name="inherit_id" ref="crm.crm_case_inbound_phone_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="inside">
+                    <field name="state"/>
+                </xpath>
+            </field>
+        </record>
+        
         <!-- Actions -->
         <record id="sale.action_quotations" model="ir.actions.act_window">
             <field name="domain">[('state','in',('draft', 'waiting_approval', 'approved', 'sent', 'cancel'))]</field>
@@ -398,11 +413,22 @@
         <record id="crm.crm_case_category_act_leads_all" model="ir.actions.act_window">
             <field name="context">{'default_type': 'lead', 'stage_type': 'lead', 'needaction_menu_ref': 'crm.menu_crm_opportunities', 'search_default_my_leads': 1}</field>
         </record>
+        <record id="crm.crm_case_categ_phone_incoming0" model="ir.actions.act_window">
+            <field name="context">{}</field>
+        </record>
         
         <!-- Reports -->
         <record id="account_proforma_invoice.report_proforma_invoice" model="ir.actions.report.xml">
             <field name="report_name">target_features.report_proforma_target</field>
         </record>
-            
+        
+        <record id="account.account_invoices" model="ir.actions.report.xml">
+            <field name="report_name">target_features.report_invoice_target</field>
+        </record>
+        
+        <record id="sale.report_sale_order" model="ir.actions.report.xml">
+            <field name="report_name">target_features.report_saleorder_target</field>
+        </record>
+        
     </data>            
 </openerp>

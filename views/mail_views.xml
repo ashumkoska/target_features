@@ -10,7 +10,7 @@
                 <form string="Email message" create="false" edit="false">
                     <header>
                         <button name="send" string="Send Now" type="object" states="outgoing" class="oe_highlight"/>
-                        <button name="mark_outgoing" string="Retry" type="object" states="exception,cancel"/>
+                        <button name="mark_outgoing" string="Retry" type="object" attrs="{'invisible': [('state', 'in', ['outgoing'])]}"/>
                         <button name="cancel" string="Cancel" type="object" states="outgoing"/>
                         <field name="state" widget="statusbar" statusbar_visible="outgoing,sent,exception,cancel"/>
                     </header>
@@ -59,7 +59,7 @@
                     <field name="state" invisible="1"/>
                     <field name="type" invisible="1"/>
                     <button name="send" string="Send Now" type="object" icon="gtk-media-play" states='outgoing'/>
-                    <button name="mark_outgoing" string="Retry" type="object" icon="gtk-redo" states='exception,cancel'/>
+                    <button name="mark_outgoing" string="Retry" type="object" icon="gtk-redo" attrs="{'invisible': [('state', 'in', ['outgoing'])]}"/>
                     <button name="cancel" string="Cancel Email" type="object" icon="terp-gtk-stop" states='outgoing'/>
                 </tree>
             </field>

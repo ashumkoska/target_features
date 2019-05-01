@@ -6,6 +6,7 @@ from datetime import date, datetime
 import time
 from dateutil.relativedelta import relativedelta
 from openerp.exceptions import ValidationError
+from openerp.addons.decimal_precision import decimal_precision as dp
 
 _logger = logging.getLogger(__name__)
 
@@ -209,3 +210,13 @@ class account_analytic_invoice_line(models.Model):
     
     tax_ids = fields.Many2many('account.tax', 'contract_invoice_line_tax', 'invoice_line_id', 'tax_id', string='Taxes', 
                                domain=[('parent_id', '=', False), '|', ('active', '=', False), ('active', '=', True)])
+    total_amount = fields.Float(string='Total', digits= dp.get_precision('Account'), store=True, readonly=True, 
+                                compute='_compute_total_price')
+    
+    @api.one
+    @api.depends('price_unit', 'tax_ids', 'quantity', 'product_id', 'analytic_account_id.partner_id')
+    def _compute_total_price(self):
+        taxes = self.tax_ids.compute_all(self.price_unit, self.quantity, product=self.product_id, partner=self.analytic_account_id.partner_id)
+        print(taxes)
+        self.total_amount = taxes['total_included']
+        

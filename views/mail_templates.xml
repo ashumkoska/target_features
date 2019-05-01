@@ -5,8 +5,44 @@
     
         <!-- Email Templates -->
         
-        <!-- Quotation/Sale Order Template -->
+        <!-- Quotation/Sale Order Template (MK) -->
         <record id="portal_sale.email_template_edi_sale" model="email.template">
+            <field name="body_html"><![CDATA[
+<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Почитувани,</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Во прилог Ви ја доставувам понудата за користење на нашите услуги.</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Доколку имате било какви прашања, Ви стојам на располагање.</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Со почит,</span>
+            </font>
+        </font>
+    </p>
+</div>
+            ]]></field>
+        </record>
+        
+        <!-- Quotation/Sale Order Template (portal template without link) -->
+        <!-- record id="portal_sale.email_template_edi_sale" model="email.template">
             <field name="body_html"><![CDATA[
 <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
 
@@ -68,7 +104,7 @@
     </div>
 </div>
             ]]></field>
-        </record>
+        </record -->
         
         <!-- Meeting Invitation Template (MK) -->
         <record id="calendar_template_meeting_invitation_mk" model="email.template">

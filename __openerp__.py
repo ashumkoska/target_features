@@ -16,7 +16,8 @@
         'marketing_crm',
         'base_user_role',
         'account_analytic_analysis',
-        'calendar'
+        'calendar',
+        'crm'
     ],
     'data': [        
         'security/target_roles.xml',
@@ -24,7 +25,7 @@
         'security/target_rules.xml',
         'data/target_data.xml',
         'report/sale_order_report.xml',
-        # 'report/account_invoice_report.xml',
+        'report/account_invoice_report.xml',
         'report/account_proforma_invoice_report.xml',
         'wizard/user_type_wiz.xml',
         'wizard/import_partners_leads_wiz.xml',

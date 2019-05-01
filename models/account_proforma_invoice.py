@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from openerp import api, models, fields, _
+from datetime import date
+from dateutil.relativedelta import relativedelta
 
 
 class account_proforma_invoice(models.Model):
     
     _inherit = 'account.proforma.invoice'
+    
+    def _get_default_date_due(self):
+        next_day = date.today() + relativedelta(days=+1)
+        return next_day
     
     state = fields.Selection([('draft','Draft'),
                               ('waiting_approval', 'Waiting Approval'),
@@ -16,6 +22,7 @@ class account_proforma_invoice(models.Model):
                               ('invoiced', 'Invoiced')])
     second_approval = fields.Boolean(string='Show Second Approval', compute='compute_second_approval', store=True)
     discount_approved = fields.Boolean(string='Discount Approved', readonly=True, default=False)
+    date_due = fields.Date(default=_get_default_date_due)
     
     @api.one
     @api.depends('proforma_line', 'proforma_line.discount')

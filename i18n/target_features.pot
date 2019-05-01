@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-20 15:53+0000\n"
-"PO-Revision-Date: 2019-04-20 15:53+0000\n"
+"POT-Creation-Date: 2019-05-01 17:04+0000\n"
+"PO-Revision-Date: 2019-05-01 17:04+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -158,7 +158,7 @@ msgid "\n"
 "<p class=\"text-muted\">\n"
 "    <span>Со почит, </span><br/>\n"
 "    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
-"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>ул. Кеј Димитар Влахов бр. 3-1/1/3</span><br/>\n"
 "    <span>1000 Скопје, Р. Македонија</span><br/>\n"
 "    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
 "    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
@@ -189,7 +189,7 @@ msgid "\n"
 "<p class=\"text-muted\">\n"
 "    <span>Со почит, </span><br/>\n"
 "    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
-"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>ул. Кеј Димитар Влахов бр. 3-1/1/3</span><br/>\n"
 "    <span>1000 Скопје, Р. Македонија</span><br/>\n"
 "    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
 "    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
@@ -222,7 +222,7 @@ msgid "\n"
 "<p class=\"text-muted\">\n"
 "    <span>Со почит, </span><br/>\n"
 "    <b style=\"color: red;\">ТАРГЕТ ГРУП ДОО Скопје</b><br/>\n"
-"    <span>Ул. Загребска бр. 28А, 1/1-8</span><br/>\n"
+"    <span>ул. Кеј Димитар Влахов бр. 3-1/1/3</span><br/>\n"
 "    <span>1000 Скопје, Р. Македонија</span><br/>\n"
 "    <span>Тел/Факс: +389 (2) 3117 100</span><br/>\n"
 "    <span>Е-маил: </span><a href=\"mailto:info@targetgroup.mk\">info@targetgroup.mk</a><br/>\n"
@@ -392,21 +392,33 @@ msgid "Cancel Email"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:52
+#: code:addons/target_features/models/account_invoice.py:58
 #, python-format
 msgid "Cannot find a chart of accounts for this company, You should configure it. \n"
 "Please go to Account Configuration."
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_proforma_invoice.py:45
+#: code:addons/target_features/models/account_proforma_invoice.py:52
 #, python-format
 msgid "Compose Email"
 msgstr ""
 
 #. module: target_features
+#: code:addons/target_features/models/account_invoice.py:108
+#: code:addons/target_features/models/account_invoice.py:112
+#, python-format
+msgid "Configuration Error!"
+msgstr ""
+
+#. module: target_features
 #: view:sale.order:target_features.view_sale_order_target_sales_form
 msgid "Confirm Sale"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Contact:"
 msgstr ""
 
 #. module: target_features
@@ -446,6 +458,21 @@ msgid "Created on"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Date Ordered:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Description"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Disc.(%)"
+msgstr ""
+
+#. module: target_features
 #: field:account.proforma.invoice,discount_approved:0
 #: field:sale.order,discount_approved:0
 msgid "Discount Approved"
@@ -464,7 +491,7 @@ msgid "Display Name"
 msgstr ""
 
 #. module: target_features
-#: view:website:sale.report_saleorder_document
+#: view:website:target_features.report_saleorder_target_document_2
 msgid "E-mail:"
 msgstr ""
 
@@ -509,7 +536,12 @@ msgid "Filename"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:53
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "For smart business decisions"
+msgstr ""
+
+#. module: target_features
+#: code:addons/target_features/models/account_invoice.py:59
 #, python-format
 msgid "Go to the configuration panel"
 msgstr ""
@@ -544,12 +576,14 @@ msgid "Import Leads Wizard"
 msgstr ""
 
 #. module: target_features
-#: model:ir.model,name:target_features.model_import_partners_wiz
-msgid "Import Partners Wizard"
+#: code:addons/target_features/models/account_invoice.py:118
+#, python-format
+msgid "Incorrect Data"
 msgstr ""
 
 #. module: target_features
 #: model:ir.model,name:target_features.model_account_invoice
+#: view:website:target_features.report_invoice_target_document
 msgid "Invoice"
 msgstr ""
 
@@ -626,7 +660,7 @@ msgid "Number of Istallments"
 msgstr ""
 
 #. module: target_features
-#: view:website:sale.report_saleorder_document
+#: view:website:target_features.report_saleorder_target_document_2
 msgid "Offer N°"
 msgstr ""
 
@@ -676,18 +710,18 @@ msgid "Password"
 msgstr ""
 
 #. module: target_features
-#: view:website:sale.report_saleorder_document
-msgid "Phone:"
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Payment Term:"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:51
+#: code:addons/target_features/models/contract.py:52
 #, python-format
 msgid "Please enter a password."
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:49
+#: code:addons/target_features/models/contract.py:50
 #, python-format
 msgid "Please enter a username."
 msgstr ""
@@ -714,18 +748,33 @@ msgid "Prepaid User"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Price"
+msgstr ""
+
+#. module: target_features
 #: model:ir.model,name:target_features.model_account_proforma_invoice
 msgid "Pro-Forma"
 msgstr ""
 
 #. module: target_features
-#: view:website:sale.report_saleorder_document
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Quantity"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Quotation Date:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
 msgid "Quotation N°"
 msgstr ""
 
 #. module: target_features
 #: field:account.analytic.account,invoice_ids:0
-#: code:addons/target_features/models/contract.py:173
+#: code:addons/target_features/models/contract.py:174
 #, python-format
 msgid "Related Invoices"
 msgstr ""
@@ -736,7 +785,7 @@ msgid "Reply"
 msgstr ""
 
 #. module: target_features
-#: view:website:sale.report_saleorder_document
+#: view:website:target_features.report_saleorder_target_document_2
 msgid "Respectfully,"
 msgstr ""
 
@@ -754,6 +803,11 @@ msgstr ""
 #. module: target_features
 #: model:res.groups,name:target_features.role_target_sales_res_groups
 msgid "Sales Person"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Salesperson:"
 msgstr ""
 
 #. module: target_features
@@ -795,6 +849,7 @@ msgstr ""
 
 #. module: target_features
 #: field:account.analytic.invoice.line,tax_ids:0
+#: view:website:target_features.report_saleorder_target_document_2
 msgid "Taxes"
 msgstr ""
 
@@ -812,22 +867,56 @@ msgid "The following error has occurred while reading the file: \n"
 msgstr ""
 
 #. module: target_features
+#: code:addons/target_features/models/account_invoice.py:119
+#, python-format
+msgid "The value of Advance Amount must be positive."
+msgstr ""
+
+#. module: target_features
+#: code:addons/target_features/models/account_invoice.py:109
+#, python-format
+msgid "There is no income account defined as global property."
+msgstr ""
+
+#. module: target_features
+#: code:addons/target_features/models/account_invoice.py:113
+#, python-format
+msgid "There is no income account defined for this product: \"%s\" (id:%d)."
+msgstr ""
+
+#. module: target_features
 #: field:account.analytic.account,to_renew:0
 msgid "To Renew"
 msgstr ""
 
 #. module: target_features
-#: view:website:sale.report_saleorder_document
+#: view:website:target_features.report_saleorder_target_document_2
 msgid "To:"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/contract.py:53
+#: field:account.analytic.invoice.line,total_amount:0
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Total"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Total Without Taxes"
+msgstr ""
+
+#. module: target_features
+#: code:addons/target_features/models/contract.py:54
 #: model:ir.actions.act_window,name:target_features.action_user_type
 #: view:user.type.wiz:target_features.view_user_type_form
 #: field:user.type.wiz,user_type:0
 #, python-format
 msgid "Type of User"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Unit Price"
 msgstr ""
 
 #. module: target_features
@@ -857,8 +946,13 @@ msgid "Visible for users of the role Farmer"
 msgstr ""
 
 #. module: target_features
-#: view:website:sale.report_saleorder_document
-msgid "Website:"
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Web:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_saleorder_target_document_2
+msgid "Your Reference:"
 msgstr ""
 
 #. module: target_features
@@ -938,6 +1032,7 @@ msgid "{'readonly': [('source_readonly', '=', True)]}"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Јованоска Марија"
 msgstr ""
@@ -949,23 +1044,27 @@ msgid "Активација на кориснички профил на Бизн
 msgstr ""
 
 #. module: target_features
-#: view:website:target_features.report_proforma_target_document
-msgid "Валута:"
-msgstr ""
-
-#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Вкупно"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Вкупно без данок"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Данок"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
+#: view:website:target_features.report_proforma_target_document
+msgid "Датум на доспевање:"
 msgstr ""
 
 #. module: target_features
@@ -974,21 +1073,24 @@ msgid "Датум на профактура:"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
+msgid "Датум на фактура:"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Единечна цена"
 msgstr ""
 
 #. module: target_features
-#: view:website:target_features.report_proforma_target_document
-msgid "Законски застапник"
-msgstr ""
-
-#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Извор:"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Износ"
 msgstr ""
@@ -1001,22 +1103,30 @@ msgid "Истекување на договор"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Код на клиент:"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Количина"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Коментар:"
 msgstr ""
 
 #. module: target_features
 #: view:website:target_features.report_proforma_target_document
+msgid "Лице овластено за потпишување на про-фактури"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 msgid "Лице овластено за потпишување на фактури"
 msgstr ""
 
@@ -1026,16 +1136,34 @@ msgid "Нацрт Профактура"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
+msgid "Нацрт Фактура"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Опис:"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
+msgid "Основица"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
+msgid "Откажана Фактура"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Попуст (%)"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Профактура"
 msgstr ""
@@ -1046,16 +1174,34 @@ msgid "Профактура_${(object.number or '').replace('/','_')}_${object.s
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Рок на плаќање:"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
+msgid "Сторна Сметка"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
+msgid "Сторна Сметка кон Добавувач"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "ТАРГЕТ ГРУП"
 msgstr ""
 
 #. module: target_features
+#: view:website:target_features.report_invoice_target_document
+msgid "Фактура"
+msgstr ""
+
+#. module: target_features
+#: view:website:target_features.report_invoice_target_document
 #: view:website:target_features.report_proforma_target_document
 msgid "Фискална позиција:"
 msgstr ""
