@@ -38,6 +38,19 @@ class sale_order(models.Model):
     def action_approve_quot(self):
         self.write({'state': 'approved', 'discount_approved': True})
         
+    def action_quotation_send(self, cr, uid, ids, context=None):
+        '''  Override to use a modified template '''
+        action_dict = super(sale_order, self).action_quotation_send(cr, uid, ids, context=context)
+        try:
+            template_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'target_features', 'sale_order_email_template_mk')[1]
+            # assume context is still a dict, as prepared by super
+            ctx = action_dict['context']
+            ctx['default_template_id'] = template_id
+            ctx['default_use_template'] = True
+        except Exception:
+            pass
+        return action_dict
+        
     def print_quotation(self, cr, uid, ids, context=None):
         '''
         This function prints the sales order and mark it as sent, so that we can see more easily the next step of the workflow
@@ -47,7 +60,7 @@ class sale_order(models.Model):
         return self.pool['report'].get_action(cr, uid, ids, 'target_features.report_saleorder_target', context=context)
     
     def _prepare_invoice(self, cr, uid, order, lines, context=None):
-        """Prepare the dict of values to create the new invoice for a
+        '''Prepare the dict of values to create the new invoice for a
            sales order. This method may be overridden to implement custom
            invoice generation (making sure to call super() to establish
            a clean extension chain).
@@ -56,7 +69,7 @@ class sale_order(models.Model):
            :param list(int) line: list of invoice line IDs that must be
                                   attached to the invoice
            :return: dict of value to create() the invoice
-        """
+        '''
         if context is None:
             context = {}
         journal_id = self.pool['account.invoice'].default_get(cr, uid, ['journal_id'], context=context)['journal_id']

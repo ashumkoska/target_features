@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+    
+        <record id="view_res_users_reset_form" model="ir.ui.view">
+            <field name="name">res.users.reset.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='signature']/.." position="after">
+                    <button name="reset_signature" string="Reset Signature" type="object"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>            
+</openerp>

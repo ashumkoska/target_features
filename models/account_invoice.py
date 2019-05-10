@@ -177,6 +177,20 @@ class account_invoice(models.Model):
         self.sent = True
         return self.env['report'].get_action(self, 'target_features.report_invoice_target')
     
+    def action_invoice_sent(self, cr, uid, ids, context=None):
+        '''  Override to use a modified template '''
+        action_dict = super(account_invoice, self).action_invoice_sent(cr, uid, ids, context=context)
+        try:
+            template_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'target_features', 'account_invoice_email_template_mk')[1]
+            # assume context is still a dict, as prepared by super
+            ctx = action_dict['context']
+            ctx['default_template_id'] = template_id
+            ctx['default_use_template'] = True
+        except Exception:
+            pass
+        return action_dict
+
+    
     @api.model
     def create(self, vals):
         reference = vals.get('reference', False)

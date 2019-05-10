@@ -31,6 +31,7 @@
         'wizard/import_partners_leads_wiz.xml',
         'views/partner_note_views.xml',
         'views/mail_views.xml',
+        'views/res_users_views.xml',
         'views/target_views.xml',
         'views/activation_templates.xml',
         'views/expiration_templates.xml',

@@ -8,3 +8,4 @@ import account_invoice
 import account_proforma_invoice
 import mail
 import calendar
+import res_users

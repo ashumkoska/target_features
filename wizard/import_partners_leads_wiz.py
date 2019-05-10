@@ -44,7 +44,7 @@ class import_partners_wiz(models.TransientModel):
                     source = self.env['crm.tracking.source'].search([('name', '=', source_name)], limit=1)                
                 user = False
                 if user_name:
-                    user = self.env['res.users'].search([('name', '=', user_name)], limit=1)
+                    user = self.env['res.users'].search(['|', ('name', '=', user_name), ('login', '=', user_name)], limit=1)
                 # partner values
                 partner_vals = {
                     'SubjectID': str(row.get('SubjectID')) if row.get('SubjectID') else '',
@@ -56,7 +56,8 @@ class import_partners_wiz(models.TransientModel):
                     'email': row.get('Email'),
                     'phone': str(row.get('Phone')) if row.get('Phone') else '',
                     'mobile': str(row.get('Mobile')) if row.get('Mobile') else '',
-                    'TaxNumber': row.get('TaxNumber')
+                    'TaxNumber': row.get('TaxNumber'),
+                    'user_id': user.id if user else False
                 }
             except Exception as e:
                 raise Warning(_('The following error has occurred while reading the file: \n%s' % e))
@@ -64,7 +65,7 @@ class import_partners_wiz(models.TransientModel):
             # update values if partner exists
             for partner in partners:
                 partner.write(partner_vals)
-            else:
+            if not partners:
                 # create new partner
                 partner_vals.update({
                     'RegNumber': reg_number,
@@ -92,7 +93,6 @@ class import_partners_wiz(models.TransientModel):
             # create new lead
             lead = self.env['crm.lead'].create(lead_vals)
             new_lead_ids.append(lead.id)
-
         return {            
             'name': _('New Leads'),
             'type': 'ir.actions.act_window',

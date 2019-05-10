@@ -3,43 +3,7 @@
 <openerp>
     <data noupdate="0">
     
-        <!-- Email Templates -->
-        
-        <!-- Quotation/Sale Order Template (MK) -->
-        <record id="portal_sale.email_template_edi_sale" model="email.template">
-            <field name="body_html"><![CDATA[
-<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
-    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
-        <font face="Times New Roman, serif" style="box-sizing: border-box;">
-            <font style="box-sizing: border-box; font-size: 12pt;">
-                <span lang="mk-MK" style="box-sizing: border-box;">Почитувани,</span>
-            </font>
-        </font>
-    </p>
-    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
-        <font face="Times New Roman, serif" style="box-sizing: border-box;">
-            <font style="box-sizing: border-box; font-size: 12pt;">
-                <span lang="mk-MK" style="box-sizing: border-box;">Во прилог Ви ја доставувам понудата за користење на нашите услуги.</span>
-            </font>
-        </font>
-    </p>
-    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
-        <font face="Times New Roman, serif" style="box-sizing: border-box;">
-            <font style="box-sizing: border-box; font-size: 12pt;">
-                <span lang="mk-MK" style="box-sizing: border-box;">Доколку имате било какви прашања, Ви стојам на располагање.</span>
-            </font>
-        </font>
-    </p>
-    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
-        <font face="Times New Roman, serif" style="box-sizing: border-box;">
-            <font style="box-sizing: border-box; font-size: 12pt;">
-                <span lang="mk-MK" style="box-sizing: border-box;">Со почит,</span>
-            </font>
-        </font>
-    </p>
-</div>
-            ]]></field>
-        </record>
+        <!-- Email Templates -->        
         
         <!-- Quotation/Sale Order Template (portal template without link) -->
         <!-- record id="portal_sale.email_template_edi_sale" model="email.template">
@@ -205,7 +169,7 @@
         <record id="proforma_email_template_mk" model="email.template">
             <field name="name">Pro-Forma Email Template (MK)</field>
             <field name="email_from">${(object.user_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
-            <field name="subject">${object.company_id.name|safe}Профактура (${object.number or 'n/a'})</field>
+            <field name="subject">${object.company_id.name|safe} Профактура (${object.number or 'n/a'})</field>
             <field name="partner_to">${object.partner_id.id}</field>
             <field name="model_id" ref="model_account_proforma_invoice"/>
             <field name="auto_delete" eval="False"/>
@@ -215,34 +179,130 @@
             <field name="lang">${object.partner_id.lang}</field>
             <field name="body_html">
                 <![CDATA[
-                    <p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
-                        <font face="Times New Roman, serif">
-                            <font style="font-size: 12pt;">
-                                <span lang="mk-MK">Почитувани,</span>
-                            </font>
-                        </font>
-                    </p>
-                    <p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
-                        <font face="Times New Roman, serif">
-                            <font style="font-size: 12pt;">
-                                <span lang="mk-MK">Во прилог Ви ја доставувам профактурата за користење на нашите услуги.</span>
-                            </font>
-                        </font>
-                    </p>
-                    <p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
-                        <font face="Times New Roman, serif">
-                            <font style="font-size: 12pt;">
-                                <span lang="mk-MK">Доколку имате било какви прашања, Ви стојам на располагање.</span>
-                            </font>
-                        </font>
-                    </p>
-                    <p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
-                        <font face="Times New Roman, serif">
-                            <font style="font-size: 12pt;">
-                                <span lang="mk-MK">Со почит,</span>
-                            </font>
-                        </font>
-                    </p>
+<p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
+    <font face="Times New Roman, serif">
+        <font style="font-size: 12pt;">
+            <span lang="mk-MK">Почитувани,</span>
+        </font>
+    </font>
+</p>
+<p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
+    <font face="Times New Roman, serif">
+        <font style="font-size: 12pt;">
+            <span lang="mk-MK">Во прилог Ви ја доставувам профактурата за користење на нашите услуги.</span>
+        </font>
+    </font>
+</p>
+<p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
+    <font face="Times New Roman, serif">
+        <font style="font-size: 12pt;">
+            <span lang="mk-MK">Доколку имате било какви прашања, Ви стојам на располагање.</span>
+        </font>
+    </font>
+</p>
+<p style="margin-bottom: 0.11in; direction: ltr; line-height: 12.96px; color: rgb(34, 34, 34); font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;">
+    <font face="Times New Roman, serif">
+        <font style="font-size: 12pt;">
+            <span lang="mk-MK">Со почит,</span>
+        </font>
+    </font>
+</p>
+                ]]>
+            </field>
+        </record>
+        
+        <!-- Quotation Template -->
+        <record id="sale_order_email_template_mk" model="email.template">
+            <field name="name">Sale Order Email Template (MK)</field>
+            <field name="email_from">${(object.user_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+            <field name="subject">${object.company_id.name|safe} ${object.state in ('draft', 'sent') and 'Понуда' or 'Нарачка'} (Ref ${object.name or 'n/a' })</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="model_id" ref="model_sale_order"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="user_signature" eval="True"/>
+            <field name="report_template" ref="sale.report_sale_order"/>
+            <field name="report_name">${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="body_html">
+                <![CDATA[
+<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Почитувани,</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Во прилог Ви ја доставувам понудата за користење на нашите услуги.</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Доколку имате било какви прашања, Ви стојам на располагање.</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Со почит,</span>
+            </font>
+        </font>
+    </p>
+</div>
+                ]]>
+            </field>
+        </record>
+        
+        <!-- Invoice Template -->
+        <record id="account_invoice_email_template_mk" model="email.template">
+            <field name="name">Invoice Email Template (MK)</field>
+            <field name="email_from">${(object.user_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+            <field name="subject">${object.company_id.name|safe} Фактура (Ref ${object.number or 'n/a'})</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="model_id" ref="account.model_account_invoice"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="user_signature" eval="True"/>
+            <field name="report_template" ref="account.account_invoices"/>
+            <field name="report_name">Фактура_${(object.number or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="body_html">
+                <![CDATA[
+<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Почитувани,</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Во прилог Ви ја доставувам фактурата за користење на нашите услуги.</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Доколку имате било какви прашања, Ви стојам на располагање.</span>
+            </font>
+        </font>
+    </p>
+    <p style="box-sizing: border-box; margin: 0px 0px 0.11in; direction: ltr; line-height: 12.96px; margin-block-start: 1em; margin-block-end: 1em;">
+        <font face="Times New Roman, serif" style="box-sizing: border-box;">
+            <font style="box-sizing: border-box; font-size: 12pt;">
+                <span lang="mk-MK" style="box-sizing: border-box;">Со почит,</span>
+            </font>
+        </font>
+    </p>
+</div>
                 ]]>
             </field>
         </record>

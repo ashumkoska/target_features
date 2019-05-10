@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <openerp>
-    <data noupdate="1">
+    <data noupdate="0">
     
         <!-- Email Templates -->
         <!-- Prepaid Users -->
@@ -71,7 +71,6 @@
             <field name="subject">Активација на кориснички профил на БизнисMрежа.мк</field>
             <field name="attachment_ids" eval="[(6, 0, [ref('target_features.mail_attach_1'),
                                                         ref('target_features.mail_attach_2'),
-                                                        ref('target_features.mail_attach_3'),
                                                         ref('target_features.mail_attach_4')])]"/>
             <field name="auto_delete" eval="False"/>
             <field name="body_html"><![CDATA[
