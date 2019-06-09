@@ -403,6 +403,9 @@
                 <xpath expr="//tree" position="inside">
                     <field name="state"/>
                 </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="description"/>
+                </xpath>
             </field>
         </record>
         
