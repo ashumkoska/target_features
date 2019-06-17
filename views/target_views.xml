@@ -304,6 +304,17 @@
             </field>
         </record>
         
+        <record id="view_res_partner_target_search" model="ir.ui.view">
+            <field name="name">res.partner.target.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="RegNumber" filter_domain="[('RegNumber', 'ilike', self)]"/>
+                </xpath>
+            </field>
+        </record>
+        
         <record id="view_crm_lead_target_form" model="ir.ui.view">
             <field name="name">crm.lead.form</field>
             <field name="model">crm.lead</field>
@@ -403,7 +414,7 @@
                 <xpath expr="//tree" position="inside">
                     <field name="state"/>
                 </xpath>
-                <xpath expr="//field[@name='name']" position="after">
+                <xpath expr="//field[@name='partner_id']" position="replace">
                     <field name="description"/>
                 </xpath>
             </field>
