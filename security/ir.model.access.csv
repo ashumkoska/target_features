@@ -3,6 +3,7 @@
 ,,,,,,,
 "partner_note_manager","partner_note_manager","target_features.model_partner_note","target_features.role_target_manager_res_groups","True","True","True","True"
 "account_period_manager","account_period_manager","account.model_account_period","target_features.role_target_manager_res_groups","True","True","True","True"
+"pricelist_item_manager","pricelist_item_manager","product.model_product_pricelist_item","target_features.role_target_manager_res_groups","True","True","True","True"
 ,,,,,,,
 "case_section_farmer","case_section_farmer","crm.model_crm_case_section","target_features.role_target_farmer_res_groups","True","False","False","False"
 "calendar_event_farmer","calendar_event_farmer","calendar.model_calendar_event","target_features.role_target_farmer_res_groups","True","True","True","False"
