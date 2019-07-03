@@ -389,9 +389,9 @@
                 <xpath expr="//button[@name='invoice_open']" position="attributes">
                     <attribute name="groups">target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups</attribute>
                 </xpath>
-                <!--xpath expr="//field[@name='price_unit']" position="attributes">
+                <xpath expr="//field[@name='price_unit']" position="attributes">
                     <attribute name="readonly">1</attribute>
-                </xpath-->
+                </xpath>
             </field>
         </record>
         

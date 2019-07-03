@@ -4,6 +4,7 @@ from openerp import api, models, fields, _
 from openerp.exceptions import RedirectWarning
 from dateutil.relativedelta import relativedelta
 from datetime import date
+from openerp.osv import osv
 
 class account_invoice(models.Model):
     
@@ -72,6 +73,26 @@ class account_invoice(models.Model):
             # 'payment_term': payment_term_id,
             'fiscal_position': fiscal_position,
         }}
+        
+        if type in ('in_invoice', 'out_refund'):
+            bank_ids = p.commercial_partner_id.bank_ids
+            bank_id = bank_ids[0].id if bank_ids else False
+            result['value']['partner_bank_id'] = bank_id
+            result['domain'] = {'partner_bank_id':  [('id', 'in', bank_ids.ids)]}
+
+        if payment_term != payment_term_id:
+            if payment_term_id:
+                to_update = self.onchange_payment_term_date_invoice(payment_term_id, date_invoice)
+                result['value'].update(to_update.get('value', {}))
+            else:
+                result['value']['date_due'] = False
+
+        if partner_bank_id != bank_id:
+            to_update = self.onchange_partner_bank(bank_id)
+            result['value'].update(to_update.get('value', {}))
+
+        return result
+    
         
     @api.multi
     def onchange_payment_term_date_invoice(self, payment_term_id, date_invoice):
