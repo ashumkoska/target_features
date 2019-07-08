@@ -112,6 +112,12 @@
                 <xpath expr="//button[@name='register_payment']" position="attributes">
                     <attribute name="groups">target_features.role_target_accountant_res_groups</attribute>
                 </xpath>
+                <xpath expr="//field[@name='price_unit']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='price_unit']" position="after">
+                    <field name="price_unit_cp"/>
+                </xpath>
             </field>
         </record>
         
@@ -231,6 +237,12 @@
                 </xpath>
                 <xpath expr="//field[@name='function']" position="replace">
                     <field name="note_ids" widget="many2many_tags"/>
+                </xpath>
+                <xpath expr="//field[@name='child_ids']" position="attributes">
+                    <attribute name="context">{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True, 'default_is_company': False}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='child_ids']/form//field[@name='category_id']" position="after">
+                    <field name="is_company" invisible="1"/>
                 </xpath>
             </field>
         </record>
@@ -390,7 +402,10 @@
                     <attribute name="groups">target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups</attribute>
                 </xpath>
                 <xpath expr="//field[@name='price_unit']" position="attributes">
-                    <attribute name="readonly">1</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='price_unit']" position="after">
+                    <field name="price_unit_cp"/>
                 </xpath>
             </field>
         </record>
@@ -419,6 +434,17 @@
                 </xpath>
                 <xpath expr="//field[@name='partner_id']" position="replace">
                     <field name="description"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_product_target_form" model="ir.ui.view">
+            <field name="name">ptoduct.target.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="account.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page" position="attributes">
+                    <attribute name="groups" eval="[(4, ref('target_features.role_target_manager_res_groups'))]"/>
                 </xpath>
             </field>
         </record>

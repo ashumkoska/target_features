@@ -74,3 +74,14 @@ class account_proforma_invoice(models.Model):
             if order.second_approval and order.state == 'draft':
                 order.update({'state': 'waiting_approval'})
         return res
+
+
+class account_proforma_line(models.Model):
+    
+    _inherit = 'account.proforma.invoice.line'
+    
+    price_unit_cp = fields.Float(string='Unit Price', compute='compute_price_unit_cp', required=True)
+    
+    @api.depends('price_unit')
+    def compute_price_unit_cp(self):
+        self.price_unit_cp = self.price_unit

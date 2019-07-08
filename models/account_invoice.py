@@ -220,3 +220,15 @@ class account_invoice(models.Model):
             if vals.get('comment', '') == sale.note:
                 vals['comment'] = ''
         return super(account_invoice, self).create(vals)
+    
+
+class account_invoice_line(models.Model):
+    
+    _inherit = 'account.invoice.line'
+    
+    price_unit_cp = fields.Float(string='Unit Price', compute='compute_price_unit_cp', required=True)
+    
+    @api.depends('price_unit')
+    def compute_price_unit_cp(self):
+        self.price_unit_cp = self.price_unit
+
