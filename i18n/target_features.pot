@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 22:02+0000\n"
-"PO-Revision-Date: 2019-06-17 22:02+0000\n"
+"POT-Creation-Date: 2019-07-09 05:09+0000\n"
+"PO-Revision-Date: 2019-07-09 05:09+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -204,11 +204,9 @@ msgid "\n"
 "                    </tr>\n"
 "                </table>\n"
 "            </div>\n"
-"            <div style=\"height: auto;width:700px; margin:0 auto;padding-top:20px;padding-bottom:40px;\">\n"
-"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Прифати</a>\n"
-"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#808080;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Одбиј</a>\n"
-"                <a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#D8D8D8;text-decoration: none;color:#FFFFFF;\" href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&token=${object.access_token}&action=${'action_id' in ctx and ctx['action_id'] or ''}&id=${object.event_id.id}\">Погледни детали за состанокот</a>\n"
-"            </div> \n"
+"            <div style=\"height: 50px;text-align: left;font-size : 14px;border-collapse: separate;margin-top:10px\">\n"
+"                <p>Ве молиме да го потврдите Вашето присуство со одговор на овој меил.</p> \n"
+"            </div>\n"
 "        </div>\n"
 "    </body>\n"
 "</html>\n"
@@ -490,7 +488,7 @@ msgid "Cancel Email"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:58
+#: code:addons/target_features/models/account_invoice.py:59
 #, python-format
 msgid "Cannot find a chart of accounts for this company, You should configure it. \n"
 "Please go to Account Configuration."
@@ -503,8 +501,8 @@ msgid "Compose Email"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:108
-#: code:addons/target_features/models/account_invoice.py:112
+#: code:addons/target_features/models/account_invoice.py:129
+#: code:addons/target_features/models/account_invoice.py:133
 #, python-format
 msgid "Configuration Error!"
 msgstr ""
@@ -645,7 +643,7 @@ msgid "For smart business decisions"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:59
+#: code:addons/target_features/models/account_invoice.py:60
 #, python-format
 msgid "Go to the configuration panel"
 msgstr ""
@@ -681,7 +679,7 @@ msgid "Import Leads Wizard"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:118
+#: code:addons/target_features/models/account_invoice.py:139
 #, python-format
 msgid "Incorrect Data"
 msgstr ""
@@ -690,6 +688,11 @@ msgstr ""
 #: model:ir.model,name:target_features.model_account_invoice
 #: view:website:target_features.report_invoice_target_document
 msgid "Invoice"
+msgstr ""
+
+#. module: target_features
+#: model:ir.model,name:target_features.model_account_invoice_line
+msgid "Invoice Line"
 msgstr ""
 
 #. module: target_features
@@ -871,6 +874,11 @@ msgid "Pro-Forma"
 msgstr ""
 
 #. module: target_features
+#: model:ir.model,name:target_features.model_account_proforma_invoice_line
+msgid "Pro-Forma Line"
+msgstr ""
+
+#. module: target_features
 #: view:website:target_features.report_saleorder_target_document_2
 msgid "Quantity"
 msgstr ""
@@ -985,19 +993,19 @@ msgid "The following error has occurred while reading the file: \n"
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:119
+#: code:addons/target_features/models/account_invoice.py:140
 #, python-format
 msgid "The value of Advance Amount must be positive."
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:109
+#: code:addons/target_features/models/account_invoice.py:130
 #, python-format
 msgid "There is no income account defined as global property."
 msgstr ""
 
 #. module: target_features
-#: code:addons/target_features/models/account_invoice.py:113
+#: code:addons/target_features/models/account_invoice.py:134
 #, python-format
 msgid "There is no income account defined for this product: \"%s\" (id:%d)."
 msgstr ""
@@ -1033,6 +1041,8 @@ msgid "Type of User"
 msgstr ""
 
 #. module: target_features
+#: field:account.invoice.line,price_unit_cp:0
+#: field:account.proforma.invoice.line,price_unit_cp:0
 #: view:website:target_features.report_saleorder_target_document_2
 msgid "Unit Price"
 msgstr ""
@@ -1142,6 +1152,11 @@ msgstr ""
 #. module: target_features
 #: view:account.invoice:target_features.view_account_invoice_target_form
 msgid "target_features.role_target_accountant_res_groups,target_features.role_target_manager_res_groups"
+msgstr ""
+
+#. module: target_features
+#: view:res.partner:target_features.view_res_partner_target_form
+msgid "{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True, 'default_is_company': False}"
 msgstr ""
 
 #. module: target_features
