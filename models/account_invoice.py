@@ -228,6 +228,7 @@ class account_invoice_line(models.Model):
     
     price_unit_cp = fields.Float(string='Unit Price', compute='compute_price_unit_cp', required=True)
     
+    @api.one
     @api.depends('price_unit')
     def compute_price_unit_cp(self):
         self.price_unit_cp = self.price_unit
