@@ -463,14 +463,17 @@
         <!-- Reports -->
         <record id="account_proforma_invoice.report_proforma_invoice" model="ir.actions.report.xml">
             <field name="report_name">target_features.report_proforma_target</field>
+            <field name="attachment_use" eval="False"/>
         </record>
         
         <record id="account.account_invoices" model="ir.actions.report.xml">
             <field name="report_name">target_features.report_invoice_target</field>
+            <field name="attachment_use" eval="False"/>
         </record>
         
         <record id="sale.report_sale_order" model="ir.actions.report.xml">
             <field name="report_name">target_features.report_saleorder_target</field>
+            <field name="attachment_use" eval="False"/>
         </record>
         
     </data>            
