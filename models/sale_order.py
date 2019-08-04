@@ -2,6 +2,7 @@
 
 from openerp import api, models, fields, _
 from openerp.osv import osv
+from datetime import datetime
 
 
 class sale_order(models.Model):
@@ -92,7 +93,8 @@ class sale_order(models.Model):
             'date_invoice': context.get('date_invoice', False),
             'company_id': order.company_id.id,
             'user_id': order.user_id and order.user_id.id or False,
-            'section_id' : order.section_id.id
+            'section_id' : order.section_id.id,
+            'date_invoice': datetime.today()
         }
 
         # Care for deprecated _inv_get() hook - FIXME: to be removed after 6.1
