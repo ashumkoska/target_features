@@ -52,7 +52,9 @@ class user_type_wiz(models.TransientModel):
             self.email_body = False
     
     @api.one
-    def send_email(self):        
-        if cleanhtml(self.email_body) != cleanhtml(self.email_template_id.body_html):
+    def send_email(self):
+        original_body = self.email_template_id.body_html
+        if cleanhtml(self.email_body) != cleanhtml(original_body):
             self.email_template_id.write({'body_html': self.email_body})
         self.email_template_id.send_mail(self.contract_id.id)
+        self.email_template_id.write({'body_html': original_body})
