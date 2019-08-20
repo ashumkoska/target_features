@@ -217,6 +217,14 @@ class account_analytic_invoice_line(models.Model):
     @api.depends('price_unit', 'tax_ids', 'quantity', 'product_id', 'analytic_account_id.partner_id')
     def _compute_total_price(self):
         taxes = self.tax_ids.compute_all(self.price_unit, self.quantity, product=self.product_id, partner=self.analytic_account_id.partner_id)
-        print(taxes)
         self.total_amount = taxes['total_included']
         
+    def product_id_change(self, cr, uid, ids, product, uom_id, qty=0, name='', partner_id=False, price_unit=False, pricelist_id=False, company_id=None, context=None):
+        res_final = super(account_analytic_invoice_line, self).product_id_change(cr, uid, ids, product, uom_id, qty, name, partner_id, price_unit, pricelist_id, company_id, context)
+        if product:
+            prod = self.pool.get('product.product').browse(cr, uid, product, context=context)
+            tax = prod.taxes_id
+            values = res_final.get('value', {})            
+            values['tax_ids'] = [(6, 0, [tax.id] if tax else [])]
+        return res_final
+    
