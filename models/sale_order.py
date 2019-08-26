@@ -115,3 +115,15 @@ class sale_order(models.Model):
             if order.second_approval and order.state == 'draft':
                 order.update({'state': 'waiting_approval'})
         return res
+
+
+class sale_order_line(models.Model):
+    
+    _inherit = 'sale.order.line'
+    
+    price_unit_cp = fields.Float(string='Unit Price', compute='compute_price_unit_cp', required=True)
+    
+    @api.one
+    @api.depends('price_unit')
+    def compute_price_unit_cp(self):
+        self.price_unit_cp = self.price_unit
