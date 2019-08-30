@@ -461,6 +461,28 @@
             </field>
         </record>
         
+        <record id="view_stock_product_target_tree" model="ir.ui.view">
+            <field name="name">stock.product.target.tree</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.view_stock_product_template_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="colors" translation="off"></attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_stock_product_var_target_tree" model="ir.ui.view">
+            <field name="name">stock.product.var.target.tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.view_stock_product_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="colors" translation="off"></attribute>
+                </xpath>
+            </field>
+        </record>
+        
         <!-- Actions -->
         <record id="sale.action_quotations" model="ir.actions.act_window">
             <field name="domain">[('state','in',('draft', 'waiting_approval', 'approved', 'sent', 'cancel'))]</field>

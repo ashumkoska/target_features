@@ -1402,6 +1402,7 @@ msgstr "Тип на корисник"
 #. module: target_features
 #: field:account.invoice.line,price_unit_cp:0
 #: field:account.proforma.invoice.line,price_unit_cp:0
+#: field:sale.order.line,price_unit_cp:0
 #: view:website:target_features.report_saleorder_target_document_2
 msgid "Unit Price"
 msgstr "Единечна цена"
