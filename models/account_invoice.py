@@ -26,7 +26,7 @@ class account_invoice(models.Model):
     @api.onchange('payment_term')
     def onchange_payment_term(self):
         if self.payment_term and any(self.payment_term.name == name for name in [u'8 дена', u'8 dena', u'8 Дена', u'8 Dena', u'8 days', u'8 Days']) and self.date_invoice:
-            date_due = fields.Datetime.from_string(self.date_invoice) + relativedelta(months=1)
+            date_due = fields.Datetime.from_string(self.date_invoice) + relativedelta(days=+8)
             self.date_due = date_due
     
     @api.multi
@@ -84,8 +84,8 @@ class account_invoice(models.Model):
             if payment_term_id:
                 to_update = self.onchange_payment_term_date_invoice(payment_term_id, date_invoice)
                 result['value'].update(to_update.get('value', {}))
-            else:
-                result['value']['date_due'] = False
+            # else:
+            #     result['value']['date_due'] = False
 
         if partner_bank_id != bank_id:
             to_update = self.onchange_partner_bank(bank_id)
@@ -98,9 +98,10 @@ class account_invoice(models.Model):
     def onchange_payment_term_date_invoice(self, payment_term_id, date_invoice):
         if not date_invoice:
             date_invoice = fields.Date.context_today(self)
+            print type(date_invoice)
         # To make sure the invoice due date should contain due date which is
         # entered by user when there is no payment term defined
-        return {'value': {'date_due': self.date_due or date_invoice}}
+        return {'value': {'date_due': self.date_due or date_invoice + relativedelta(days=+8)}}
     
     def _prepare_advance_invoice_vals(self, cr, uid, ids, context=None):
         if context is None:
@@ -219,6 +220,7 @@ class account_invoice(models.Model):
             sale = self.env['sale.order'].search([('name', '=', reference)], limit=1)
             if vals.get('comment', '') == sale.note:
                 vals['comment'] = ''
+        print('VALS: ', vals)
         return super(account_invoice, self).create(vals)
     
 
